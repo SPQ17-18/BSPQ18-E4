@@ -1,4 +1,4 @@
-package bspq18_e4.GestionHotelera.client.gui;
+package main.java.bspq18_e4.GestionHotelera.client.gui;
 
 import java.awt.EventQueue;
 

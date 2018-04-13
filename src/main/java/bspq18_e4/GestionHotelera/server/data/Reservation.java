@@ -1,15 +1,17 @@
-package bspq18_e4.GestionHotelera.server.data;
+package main.java.bspq18_e4.GestionHotelera.server.data;
 
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 
 import javax.jdo.annotations.PersistenceCapable;
+import javax.jdo.annotations.PrimaryKey;
 
 @PersistenceCapable(detachable = "true")
 public class Reservation implements Serializable {
 
 	private static final long serialVersionUID = 1L;
+	@PrimaryKey
 	private int id;
 	private Date arrival;
 	private Date departure;

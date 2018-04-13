@@ -1,4 +1,4 @@
-package bspq18_e4.GestionHotelera.client.gui;
+package main.java.bspq18_e4.GestionHotelera.client.gui;
 
 import java.awt.EventQueue;
 
@@ -10,6 +10,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.JPasswordField;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.SwingConstants;
 import javax.swing.JSplitPane;
 import javax.swing.JButton;
@@ -78,6 +79,13 @@ public class Login {
 		frmSignIn.getContentPane().add(lblPassword);
 		
 		JButton login = new JButton("Sign in");
+		login.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				frmSignIn.dispose();
+				JOptionPane.showMessageDialog(null, "Welcome!");
+				new Home();
+			}
+		});
 		login.setBounds(75, 163, 89, 23);
 		frmSignIn.getContentPane().add(login);
 		

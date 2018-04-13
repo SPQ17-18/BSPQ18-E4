@@ -1,4 +1,4 @@
-package bspq18_e4.GestionHotelera;
+package main.java.bspq18_e4.GestionHotelera;
 
 /**
  * Hello world!

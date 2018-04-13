@@ -12,6 +12,8 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+ <maven.compiler.source>1.8</maven.compiler.source>
+ <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
 
   <dependencies>
@@ -34,6 +36,78 @@
 					<target>1.8</target>//versión de tu jre
 				</configuration>
 			</plugin>
+			
+			<plugin>
+        <!-- ( 1 ) plugin info -->
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>sql-maven-plugin</artifactId>
+        <version>1.5</version>
+
+        <!-- ( 2 ) jdbc dirver -->
+        <dependencies>
+                <dependency>
+                        <groupId>mysql</groupId>
+                        <artifactId>mysql-connector-java</artifactId>
+                        <version>5.1.9</version>
+                </dependency>
+        </dependencies>
+
+      <!-- ( 3 ) connection settings -->
+      <configuration>
+          <driver>com.mysql.jdbc.Driver</driver>
+          <url>jdbc:mysql://localhost:3306/hotelManagement</url>
+          <username>hotel</username>
+          <password>pass</password>
+        </configuration>
+
+      <!-- ( 4 ) phase, goal & SQL (command or file) -->
+      <executions>
+          <execution>
+            <id>drop-table</id>
+            <phase>process-test-resources</phase>
+            <goals>
+              <goal>execute</goal>
+            </goals>
+            <configuration>
+              <autocommit>true</autocommit>
+              <sqlCommand>DROP TABLE IF EXISTS user</sqlCommand>
+            </configuration>
+          </execution>
+          
+         <execution>
+            <id>create-table</id>
+            <phase>process-test-resources</phase>
+            <goals>
+              <goal>execute</goal>
+            </goals>
+            <configuration>
+              <autocommit>true</autocommit>
+              <srcFiles>
+                <srcFile>src/schema.sql</srcFile>
+              </srcFiles>
+            </configuration>
+          </execution>
+ 
+    <execution>
+            <id>insert-data</id>
+            <phase>process-test-resources</phase>
+            <goals>
+              <goal>execute</goal>
+            </goals>
+            <configuration>
+              <orderFile>ascending</orderFile>
+              <fileset>
+                <basedir>${basedir}</basedir>
+                <includes>
+                  <include>src/data.sql</include>
+                </includes>
+              </fileset>
+            </configuration>
+          </execution>
+          
+      </executions>
+</plugin>
+
 		</plugins>
 	</pluginManagement>
 

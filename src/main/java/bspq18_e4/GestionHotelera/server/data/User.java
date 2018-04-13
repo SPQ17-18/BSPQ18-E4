@@ -1,14 +1,16 @@
-package bspq18_e4.GestionHotelera.server.data;
+package main.java.bspq18_e4.GestionHotelera.server.data;
 
 import java.io.Serializable;
 import java.util.ArrayList;
 
 import javax.jdo.annotations.PersistenceCapable;
+import javax.jdo.annotations.PrimaryKey;
 
 @PersistenceCapable(detachable = "true")
 public class User implements Serializable {
 
 	private static final long serialVersionUID = 1L;
+	@PrimaryKey
 	private String email;
 	private String name;
 	private String pass;
