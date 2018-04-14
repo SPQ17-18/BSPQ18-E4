@@ -1,25 +1,17 @@
-package main.java.bspq18_e4.GestionHotelera.server.data;
+package main.java.bspq18_e4.GestionHotelera.server.dto;
 
 import java.io.Serializable;
 
-import javax.jdo.annotations.IdGeneratorStrategy;
-import javax.jdo.annotations.PersistenceCapable;
-import javax.jdo.annotations.Persistent;
-import javax.jdo.annotations.PrimaryKey;
-
-@PersistenceCapable(detachable = "true")
-public class Hotel implements Serializable {
+public class HotelDTO implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-	@PrimaryKey
-	@Persistent(valueStrategy=IdGeneratorStrategy.INCREMENT)
 	private int id;
 	private String name;
 	private String city;
 	private String dir;
 	private int stars;
-	
-	public Hotel(int id, String name, String city, String dir, int stars) {
+
+	public HotelDTO(int id, String name, String city, String dir, int stars) {
 		this.id = id;
 		this.name = name;
 		this.city = city;
@@ -67,9 +59,4 @@ public class Hotel implements Serializable {
 		this.stars = stars;
 	}
 
-	@Override
-	public String toString() {
-		return "Hotel [id=" + id + ", name=" + name + ", city=" + city + ", dir=" + dir + ", stars=" + stars + "]";
-	}
-	
 }

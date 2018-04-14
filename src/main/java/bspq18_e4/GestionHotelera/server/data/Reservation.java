@@ -4,7 +4,9 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 
+import javax.jdo.annotations.IdGeneratorStrategy;
 import javax.jdo.annotations.PersistenceCapable;
+import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
 
 @PersistenceCapable(detachable = "true")
@@ -12,20 +14,21 @@ public class Reservation implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	@PrimaryKey
+	@Persistent(valueStrategy=IdGeneratorStrategy.INCREMENT)
 	private int id;
 	private Date arrival;
 	private Date departure;
 	private User user;
 	private Hotel hotel;
-	private ArrayList<Room> rooms = new ArrayList<Room>();
+	private ArrayList<Room> rooms;
 
-	public Reservation(int id, Date arrival, Date departure, User user, Hotel hotel, ArrayList<Room> rooms) {
+	public Reservation(int id, Date arrival, Date departure, User user, Hotel hotel) {
 		this.id = id;
 		this.arrival = arrival;
 		this.departure = departure;
 		this.user = user;
 		this.hotel = hotel;
-		this.rooms = rooms;
+		rooms = new ArrayList<Room>();
 	}
 
 	public int getId() {

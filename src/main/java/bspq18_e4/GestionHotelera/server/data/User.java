@@ -15,14 +15,14 @@ public class User implements Serializable {
 	private String name;
 	private String pass;
 	private String cc;
-	private ArrayList<Reservation> reservations = new ArrayList<Reservation>();
+	private ArrayList<Reservation> reservations;
 	
-	public User(String email, String name, String pass, String cc, ArrayList<Reservation> reservations) {
+	public User(String email, String name, String pass, String cc) {
 		this.email = email;
 		this.name = name;
 		this.pass = pass;
 		this.cc = cc;
-		this.reservations = reservations;
+		reservations = new ArrayList<Reservation>();
 	}
 
 	public String getEmail() {
@@ -65,6 +65,19 @@ public class User implements Serializable {
 		this.reservations = reservations;
 	}
 
+	public void addReservation(Reservation reservation) {
+		Reservation newReserv = new Reservation(0, null, null, null, null);
+		newReserv.setId(reservation.getId());
+		newReserv.setArrival(reservation.getArrival());
+		newReserv.setDeparture(reservation.getDeparture());
+		newReserv.setUser(this);
+		newReserv.setHotel(reservation.getHotel());		
+		reservations.add(newReserv);
+	}
+	public void removeReserva(Reservation reservation) {
+		reservations.remove(reservation);
+	}
+	
 	@Override
 	public String toString() {
 		return "User [email=" + email + ", name=" + name + ", pass=" + pass + ", cc=" + cc + ", reservations="

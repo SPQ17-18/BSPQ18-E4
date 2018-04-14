@@ -1,0 +1,72 @@
+14-04-18_16:08:48 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.8) para el API "JDO" utilisando el JRE "{2}"
+14-04-18_16:08:49 (main) INFO  [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Hotel" esta enhanced.
+14-04-18_16:08:49 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bspq18_e4.GestionHotelera.server.data.Hotel
+14-04-18_16:08:49 (main) INFO  [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Reservation" esta enhanced.
+14-04-18_16:08:49 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bspq18_e4.GestionHotelera.server.data.Reservation
+14-04-18_16:08:49 (main) INFO  [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Room" esta enhanced.
+14-04-18_16:08:49 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bspq18_e4.GestionHotelera.server.data.Room
+14-04-18_16:08:49 (main) INFO  [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.User" esta enhanced.
+14-04-18_16:08:49 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bspq18_e4.GestionHotelera.server.data.User
+14-04-18_16:08:49 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\Users\Alejandro\git\BSPQ18-E4\target\classes\main\java\bspq18_e4\GestionHotelera\server\data\Hotel.class" con definicion enhanced
+14-04-18_16:08:49 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : main.java.bspq18_e4.GestionHotelera.server.data.Hotel
+14-04-18_16:08:49 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\Users\Alejandro\git\BSPQ18-E4\target\classes\main\java\bspq18_e4\GestionHotelera\server\data\Reservation.class" con definicion enhanced
+14-04-18_16:08:49 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : main.java.bspq18_e4.GestionHotelera.server.data.Reservation
+14-04-18_16:08:49 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\Users\Alejandro\git\BSPQ18-E4\target\classes\main\java\bspq18_e4\GestionHotelera\server\data\Room.class" con definicion enhanced
+14-04-18_16:08:49 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : main.java.bspq18_e4.GestionHotelera.server.data.Room
+14-04-18_16:08:49 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\Users\Alejandro\git\BSPQ18-E4\target\classes\main\java\bspq18_e4\GestionHotelera\server\data\User.class" con definicion enhanced
+14-04-18_16:08:49 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : main.java.bspq18_e4.GestionHotelera.server.data.User
+14-04-18_16:08:49 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 8 clases. Tiempos : input=787 ms, enhance=255 ms, total=1042 ms. Compruebe el LOG para los detalles
+14-04-18_16:09:16 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.8) para el API "JDO" utilisando el JRE "{2}"
+14-04-18_16:09:16 (main) INFO  [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Hotel" esta enhanced.
+14-04-18_16:09:16 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bspq18_e4.GestionHotelera.server.data.Hotel
+14-04-18_16:09:16 (main) INFO  [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Reservation" esta enhanced.
+14-04-18_16:09:16 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bspq18_e4.GestionHotelera.server.data.Reservation
+14-04-18_16:09:16 (main) INFO  [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Room" esta enhanced.
+14-04-18_16:09:16 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bspq18_e4.GestionHotelera.server.data.Room
+14-04-18_16:09:16 (main) INFO  [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.User" esta enhanced.
+14-04-18_16:09:16 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bspq18_e4.GestionHotelera.server.data.User
+14-04-18_16:09:16 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\Users\Alejandro\git\BSPQ18-E4\target\classes\main\java\bspq18_e4\GestionHotelera\server\data\Hotel.class" con definicion enhanced
+14-04-18_16:09:16 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : main.java.bspq18_e4.GestionHotelera.server.data.Hotel
+14-04-18_16:09:16 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\Users\Alejandro\git\BSPQ18-E4\target\classes\main\java\bspq18_e4\GestionHotelera\server\data\Reservation.class" con definicion enhanced
+14-04-18_16:09:17 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : main.java.bspq18_e4.GestionHotelera.server.data.Reservation
+14-04-18_16:09:17 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\Users\Alejandro\git\BSPQ18-E4\target\classes\main\java\bspq18_e4\GestionHotelera\server\data\Room.class" con definicion enhanced
+14-04-18_16:09:17 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : main.java.bspq18_e4.GestionHotelera.server.data.Room
+14-04-18_16:09:17 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\Users\Alejandro\git\BSPQ18-E4\target\classes\main\java\bspq18_e4\GestionHotelera\server\data\User.class" con definicion enhanced
+14-04-18_16:09:17 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : main.java.bspq18_e4.GestionHotelera.server.data.User
+14-04-18_16:09:17 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 8 clases. Tiempos : input=722 ms, enhance=300 ms, total=1022 ms. Compruebe el LOG para los detalles
+14-04-18_16:15:16 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.8) para el API "JDO" utilisando el JRE "{2}"
+14-04-18_16:15:16 (main) INFO  [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Hotel" esta enhanced.
+14-04-18_16:15:16 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bspq18_e4.GestionHotelera.server.data.Hotel
+14-04-18_16:15:16 (main) INFO  [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Reservation" esta enhanced.
+14-04-18_16:15:16 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bspq18_e4.GestionHotelera.server.data.Reservation
+14-04-18_16:15:16 (main) INFO  [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Room" esta enhanced.
+14-04-18_16:15:16 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bspq18_e4.GestionHotelera.server.data.Room
+14-04-18_16:15:16 (main) INFO  [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.User" esta enhanced.
+14-04-18_16:15:16 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bspq18_e4.GestionHotelera.server.data.User
+14-04-18_16:15:16 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\Users\Alejandro\git\BSPQ18-E4\target\classes\main\java\bspq18_e4\GestionHotelera\server\data\Hotel.class" con definicion enhanced
+14-04-18_16:15:16 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : main.java.bspq18_e4.GestionHotelera.server.data.Hotel
+14-04-18_16:15:16 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\Users\Alejandro\git\BSPQ18-E4\target\classes\main\java\bspq18_e4\GestionHotelera\server\data\Reservation.class" con definicion enhanced
+14-04-18_16:15:16 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : main.java.bspq18_e4.GestionHotelera.server.data.Reservation
+14-04-18_16:15:17 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\Users\Alejandro\git\BSPQ18-E4\target\classes\main\java\bspq18_e4\GestionHotelera\server\data\Room.class" con definicion enhanced
+14-04-18_16:15:17 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : main.java.bspq18_e4.GestionHotelera.server.data.Room
+14-04-18_16:15:17 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\Users\Alejandro\git\BSPQ18-E4\target\classes\main\java\bspq18_e4\GestionHotelera\server\data\User.class" con definicion enhanced
+14-04-18_16:15:17 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : main.java.bspq18_e4.GestionHotelera.server.data.User
+14-04-18_16:15:17 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 8 clases. Tiempos : input=467 ms, enhance=267 ms, total=734 ms. Compruebe el LOG para los detalles
+14-04-18_19:02:58 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.8) para el API "JDO" utilisando el JRE "{2}"
+14-04-18_19:02:59 (main) INFO  [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Hotel" esta enhanced.
+14-04-18_19:02:59 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bspq18_e4.GestionHotelera.server.data.Hotel
+14-04-18_19:02:59 (main) INFO  [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Reservation" esta enhanced.
+14-04-18_19:02:59 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bspq18_e4.GestionHotelera.server.data.Reservation
+14-04-18_19:02:59 (main) INFO  [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Room" esta enhanced.
+14-04-18_19:02:59 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bspq18_e4.GestionHotelera.server.data.Room
+14-04-18_19:02:59 (main) INFO  [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.User" esta enhanced.
+14-04-18_19:02:59 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bspq18_e4.GestionHotelera.server.data.User
+14-04-18_19:02:59 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\Users\Alejandro\git\BSPQ18-E4\target\classes\main\java\bspq18_e4\GestionHotelera\server\data\Hotel.class" con definicion enhanced
+14-04-18_19:02:59 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : main.java.bspq18_e4.GestionHotelera.server.data.Hotel
+14-04-18_19:02:59 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\Users\Alejandro\git\BSPQ18-E4\target\classes\main\java\bspq18_e4\GestionHotelera\server\data\Reservation.class" con definicion enhanced
+14-04-18_19:02:59 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : main.java.bspq18_e4.GestionHotelera.server.data.Reservation
+14-04-18_19:02:59 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\Users\Alejandro\git\BSPQ18-E4\target\classes\main\java\bspq18_e4\GestionHotelera\server\data\Room.class" con definicion enhanced
+14-04-18_19:02:59 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : main.java.bspq18_e4.GestionHotelera.server.data.Room
+14-04-18_19:02:59 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\Users\Alejandro\git\BSPQ18-E4\target\classes\main\java\bspq18_e4\GestionHotelera\server\data\User.class" con definicion enhanced
+14-04-18_19:02:59 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : main.java.bspq18_e4.GestionHotelera.server.data.User
+14-04-18_19:02:59 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 8 clases. Tiempos : input=464 ms, enhance=215 ms, total=679 ms. Compruebe el LOG para los detalles

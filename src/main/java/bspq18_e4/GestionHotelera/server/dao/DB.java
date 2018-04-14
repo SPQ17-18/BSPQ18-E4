@@ -10,7 +10,7 @@ import java.sql.Statement;
 public class DB {
 
 	private Connection connect = null;
-    private Statement statement = null;
+    private Statement stmt = null;
     private PreparedStatement preparedStatement = null;
     private ResultSet resultSet = null;
 
@@ -25,13 +25,19 @@ public class DB {
     }
     
     public void getHotels(){
-    	
+		try {
+			stmt = connect.createStatement();
+	    	ResultSet rs = stmt.executeQuery("SELECT Lname FROM Customers WHERE Snum = 2001");
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
     }
     
     
     public void close(){
     	try {
-			statement.close();
+			stmt.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
