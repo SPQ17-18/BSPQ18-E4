@@ -43,6 +43,33 @@ public class HotelDAO implements IHotelDAO {
 		store(user);
 	}
 
+	public User getUser(String email, String pass) {
+		PersistenceManager pm = pmf.getPersistenceManager();
+		pm.getFetchPlan().setMaxFetchDepth(3);
+		Transaction tx = pm.currentTransaction();
+		User userSel=null;
+		
+		try {
+			tx.begin();
+			Extent<User> ext = pm.getExtent(User.class, true);
+			for(User user : ext){
+				if(user.getEmail().equals(email)&& user.getPass().equals(pass)) {
+					userSel = new User(user.getEmail(), user.getName(), user.getPass(), user.getCc());
+				}
+			}
+			tx.commit();
+		} catch (Exception ex) {
+			System.out.println("# Error getting user: " + ex.getMessage());
+		} finally {
+			if (tx != null && tx.isActive()) {
+				tx.rollback();
+			}
+			pm.close();
+		}
+		
+		return userSel;
+	}
+	
 	public void book(Reservation reservation) {
 		store(reservation);
 	}
