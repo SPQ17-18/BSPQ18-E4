@@ -4,5 +4,6 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/3"/>
 	<classpathentry kind="lib" path="/SD01_EasyBooking_Server/lib/javax.jdo-3.2.0-m7.jar"/>
+	<classpathentry kind="lib" path="target/HotelManagement-1.0.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
