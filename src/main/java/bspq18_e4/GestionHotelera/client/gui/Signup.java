@@ -6,40 +6,42 @@ import javax.swing.JFrame;
 import javax.swing.JRadioButton;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
+
+import main.java.bspq18_e4.GestionHotelera.client.controller.Controller;
+
 import javax.swing.JTextField;
 import javax.swing.JPasswordField;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class Signup {
+public class Signup extends JFrame {
 
 	private JFrame frmSignUp;
 	private JTextField tmail;
 	private JTextField tuser;
 	private JTextField tcc;
 	private JPasswordField tpass;
+	private Controller ctrl;
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Signup window = new Signup();
-					window.frmSignUp.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+//	public static void main(String[] args) {
+//		EventQueue.invokeLater(new Runnable() {
+//			public void run() {
+//				try {
+//					Signup window = new Signup();
+//					window.frmSignUp.setVisible(true);
+//				} catch (Exception e) {
+//					e.printStackTrace();
+//				}
+//			}
+//		});
+//	}
 
 	/**
 	 * Create the application.
 	 */
-	public Signup() {
+	public Signup(Controller ctrl) {
+		this.ctrl = ctrl;
 		initialize();
 	}
 
@@ -99,8 +101,9 @@ public class Signup {
 		JButton bcancel = new JButton("Cancel");
 		bcancel.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				frmSignUp.dispose();
-				Login login = new Login();
+				dispose();
+				Login login = new Login(ctrl);
+				login.setVisible(true);
 			}
 		});
 		bcancel.setBounds(169, 216, 89, 23);

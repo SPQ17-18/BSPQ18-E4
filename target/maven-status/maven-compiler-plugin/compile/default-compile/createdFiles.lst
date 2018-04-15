@@ -1,4 +1,4 @@
-main\java\bspq18_e4\GestionHotelera\client\gui\Home$1.class
+main\java\bspq18_e4\GestionHotelera\client\controller\Controller.class
 main\java\bspq18_e4\GestionHotelera\server\dto\ReservationDTO.class
 main\java\bspq18_e4\GestionHotelera\client\gui\Login$2.class
 main\java\bspq18_e4\GestionHotelera\server\remote\Service.class
@@ -18,8 +18,6 @@ main\java\bspq18_e4\GestionHotelera\server\data\Hotel.class
 main\java\bspq18_e4\GestionHotelera\client\gui\Signup.class
 main\java\bspq18_e4\GestionHotelera\server\dto\HotelDTO.class
 main\java\bspq18_e4\GestionHotelera\server\data\User.class
-main\java\bspq18_e4\GestionHotelera\client\gui\Login$3.class
 main\java\bspq18_e4\GestionHotelera\server\dao\IHotelDAO.class
 main\java\bspq18_e4\GestionHotelera\server\dao\DB.class
-main\java\bspq18_e4\GestionHotelera\client\gui\Signup$2.class
 main\java\bspq18_e4\GestionHotelera\server\assembler\Assemble.class

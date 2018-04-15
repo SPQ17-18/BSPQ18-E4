@@ -22,7 +22,7 @@ public class Service extends UnicastRemoteObject implements IService {
 		ass = new Assemble();
 	}
 	
-	public UserDTO SignIn(String email, String pass) throws RemoteException{
+	public UserDTO signIn(String email, String pass) throws RemoteException{
 		User user = dao.getUser(email, pass);
 		if(user == null) {
 			return null;

@@ -3,32 +3,40 @@ package main.java.bspq18_e4.GestionHotelera.client.gui;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
+
+import main.java.bspq18_e4.GestionHotelera.client.controller.Controller;
+import main.java.bspq18_e4.GestionHotelera.server.dto.UserDTO;
+
 import javax.swing.JButton;
 
-public class Home {
+public class Home extends JFrame{
 
 	private JFrame frame;
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Home window = new Home();
-					window.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+	
+	private Controller ctrl;
+	private UserDTO userDTO;
+	
+
+//	public static void main(String[] args) {
+//		EventQueue.invokeLater(new Runnable() {
+//			public void run() {
+//				try {
+//					Home window = new Home();
+//					window.frame.setVisible(true);
+//				} catch (Exception e) {
+//					e.printStackTrace();
+//				}
+//			}
+//		});
+//	}
 
 	/**
 	 * Create the application.
 	 */
-	public Home() {
+	public Home(Controller ctrl, UserDTO userDTO) {
+		this.ctrl = ctrl;
+		this.userDTO=userDTO;
 		initialize();
 	}
 

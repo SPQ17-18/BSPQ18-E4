@@ -12,39 +12,46 @@ import javax.swing.JPasswordField;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.SwingConstants;
+
+import main.java.bspq18_e4.GestionHotelera.client.controller.Controller;
+import main.java.bspq18_e4.GestionHotelera.server.dto.UserDTO;
+
 import javax.swing.JSplitPane;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class Login {
+public class Login extends JFrame{
 
+	private static final long serialVersionUID = 1L;
 	private JFrame frmSignIn;
-	private JTextField usern;
+	private JTextField tmail;
 	private JPasswordField passw;
 	private JButton register;
 	private JLabel lblName;
+	private Controller ctrl;
 
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Login window = new Login();
-					window.frmSignIn.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+//	public static void main(String[] args) {
+//		EventQueue.invokeLater(new Runnable() {
+//			public void run() {
+//				try {
+//					Login window = new Login();
+//					window.frmSignIn.setVisible(true);
+//				} catch (Exception e) {
+//					e.printStackTrace();
+//				}
+//			}
+//		});
+//	}
 
 	/**
 	 * Create the application.
 	 */
-	public Login() {
+	public Login(Controller ctrl) {
+		this.ctrl = ctrl;
 		initialize();
 	}
 
@@ -59,10 +66,10 @@ public class Login {
 		frmSignIn.getContentPane().setLayout(null);
 		frmSignIn.setVisible(true);
 		
-		usern = new JTextField();
-		usern.setBounds(170, 66, 86, 20);
-		frmSignIn.getContentPane().add(usern);
-		usern.setColumns(10);
+		tmail = new JTextField();
+		tmail.setBounds(170, 66, 86, 20);
+		frmSignIn.getContentPane().add(tmail);
+		tmail.setColumns(10);
 		
 		passw = new JPasswordField();
 		passw.setBounds(170, 110, 86, 20);
@@ -81,9 +88,28 @@ public class Login {
 		JButton login = new JButton("Sign in");
 		login.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				frmSignIn.dispose();
+				char[] pass = passw.getPassword();
+				if(!tmail.getText().trim().equals("") && !String.valueOf(pass).trim().equals("")) {
+					try {
+						try {
+							UserDTO userDTO = ctrl.signIn(tmail.getText(), String.valueOf(pass));
+							if (userDTO!=null) {
+								Home home = new Home(ctrl, userDTO);
+								home.setVisible(true);
+								dispose();
+							} else {
+								JOptionPane.showMessageDialog(null, "Incorrect credentials!", "Error 509", JOptionPane.ERROR_MESSAGE);
+							}
+						} catch (Exception e) {
+							e.printStackTrace();
+						}
+					} catch (Exception e) {
+						e.printStackTrace();
+					}
+				} else {
+					JOptionPane.showMessageDialog(null, "Write something!", "Error 507", JOptionPane.ERROR_MESSAGE);
+				}
 				JOptionPane.showMessageDialog(null, "Welcome!");
-				new Home();
 			}
 		});
 		login.setBounds(75, 163, 89, 23);
@@ -93,7 +119,7 @@ public class Login {
 		register.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				frmSignIn.dispose();
-				new Signup();
+				Signup signup = new Signup(ctrl);
 			}
 		});
 		register.setBounds(167, 163, 89, 23);
