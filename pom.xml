@@ -155,7 +155,7 @@
 						 
 						<configuration> 
 						<!--  Server location  --> 
-									<mainClass>main.java.bspq18_e6.GestionHotelera.server.HotelManagementServer</mainClass>
+									<mainClass>main.java.bspq18_e6.GestionHotelera.server.HotelServer</mainClass>
 									<systemProperties>
 										
 										<systemProperty>
