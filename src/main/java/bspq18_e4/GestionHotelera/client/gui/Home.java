@@ -8,6 +8,7 @@ import main.java.bspq18_e4.GestionHotelera.client.controller.Controller;
 import main.java.bspq18_e4.GestionHotelera.server.dto.UserDTO;
 
 import javax.swing.JButton;
+import javax.swing.JPanel;
 
 public class Home extends JFrame{
 
@@ -52,6 +53,10 @@ public class Home extends JFrame{
 		JButton logOut = new JButton("Log out");
 		logOut.setBounds(420, 11, 89, 23);
 		frame.getContentPane().add(logOut);
+		
+		JPanel panel = new JPanel();
+		panel.setBounds(355, 178, 154, 159);
+		frame.getContentPane().add(panel);
 		frame.setVisible(true);
 	}
 }

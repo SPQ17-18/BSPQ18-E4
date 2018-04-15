@@ -2,7 +2,7 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>deusto.bspq18.e4</groupId>
+  <groupId>bspq18_e4</groupId>
   <artifactId>HotelManagement</artifactId>
   <version>1.0.0</version>
   <packaging>jar</packaging>
@@ -138,7 +138,7 @@
 						<configuration>
 							<filesets>
 								<fileset>
-									<directory>${basedir}</directory>
+									<directory>${basedir}/src/</directory>
 									<includes>
 										<include>*.log</include>
 										<include>*.ods</include>
@@ -155,7 +155,7 @@
 						 
 						<configuration> 
 						<!--  Server location  --> 
-									<mainClass>main.java.bspq18_e6.GestionHotelera.server.HotelServer</mainClass>
+									<mainClass>main.java.bspq18_e4.GestionHotelera.server.HotelServer</mainClass>
 									<systemProperties>
 										
 										<systemProperty>
@@ -194,7 +194,7 @@
 						<artifactId>exec-maven-plugin</artifactId>  
 						<version>1.2.1</version>  
 						<configuration>  
-									<mainClass>main.java.bspq18_e6.GestionHotelera.client.remote.ServiceLocator</mainClass>
+									<mainClass>main.java.bspq18_e4.GestionHotelera.client.remote.ServiceLocator</mainClass>
 									<systemProperties>
 										<systemProperty>
 											<key>java.security.manager</key>
@@ -227,7 +227,7 @@
 						<artifactId>exec-maven-plugin</artifactId>  
 						<version>1.2.1</version>  
 						<configuration>  
-									<mainClass>main.java.bspq18_e6.GestionHotelera.server.dao.HotelDAO</mainClass>
+									<mainClass>main.java.bspq18_e4.GestionHotelera.server.dao.HotelDAO</mainClass>
 									<systemProperties>
 										<systemProperty>
 											<key>java.security.manager</key>
