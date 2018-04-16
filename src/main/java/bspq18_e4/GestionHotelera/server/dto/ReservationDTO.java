@@ -1,4 +1,4 @@
-package main.java.bspq18_e4.GestionHotelera.server.dto;
+package bspq18_e4.GestionHotelera.server.dto;
 
 import java.io.Serializable;
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package main.java.bspq18_e4.GestionHotelera.server.dao;
+package bspq18_e4.GestionHotelera.server.dao;
 
 import java.util.ArrayList;
 
@@ -8,9 +8,9 @@ import javax.jdo.PersistenceManagerFactory;
 import javax.jdo.Transaction;
 import javax.jdo.Extent;
 
-import main.java.bspq18_e4.GestionHotelera.server.data.Hotel;
-import main.java.bspq18_e4.GestionHotelera.server.data.Reservation;
-import main.java.bspq18_e4.GestionHotelera.server.data.User;
+import bspq18_e4.GestionHotelera.server.data.Hotel;
+import bspq18_e4.GestionHotelera.server.data.Reservation;
+import bspq18_e4.GestionHotelera.server.data.User;
 
 public class HotelDAO implements IHotelDAO {
 

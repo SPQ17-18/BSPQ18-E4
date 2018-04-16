@@ -1,10 +1,10 @@
-package main.java.bspq18_e4.GestionHotelera.server.dao;
+package bspq18_e4.GestionHotelera.server.dao;
 
 import java.util.ArrayList;
 
-import main.java.bspq18_e4.GestionHotelera.server.data.Hotel;
-import main.java.bspq18_e4.GestionHotelera.server.data.Reservation;
-import main.java.bspq18_e4.GestionHotelera.server.data.User;
+import bspq18_e4.GestionHotelera.server.data.Hotel;
+import bspq18_e4.GestionHotelera.server.data.Reservation;
+import bspq18_e4.GestionHotelera.server.data.User;
 
 public interface IHotelDAO {
 

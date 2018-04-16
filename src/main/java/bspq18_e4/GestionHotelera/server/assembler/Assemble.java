@@ -1,13 +1,13 @@
-package main.java.bspq18_e4.GestionHotelera.server.assembler;
+package bspq18_e4.GestionHotelera.server.assembler;
 
-import main.java.bspq18_e4.GestionHotelera.server.data.Hotel;
-import main.java.bspq18_e4.GestionHotelera.server.data.Reservation;
-import main.java.bspq18_e4.GestionHotelera.server.data.Room;
-import main.java.bspq18_e4.GestionHotelera.server.data.User;
-import main.java.bspq18_e4.GestionHotelera.server.dto.HotelDTO;
-import main.java.bspq18_e4.GestionHotelera.server.dto.ReservationDTO;
-import main.java.bspq18_e4.GestionHotelera.server.dto.RoomDTO;
-import main.java.bspq18_e4.GestionHotelera.server.dto.UserDTO;
+import bspq18_e4.GestionHotelera.server.data.Hotel;
+import bspq18_e4.GestionHotelera.server.data.Reservation;
+import bspq18_e4.GestionHotelera.server.data.Room;
+import bspq18_e4.GestionHotelera.server.data.User;
+import bspq18_e4.GestionHotelera.server.dto.HotelDTO;
+import bspq18_e4.GestionHotelera.server.dto.ReservationDTO;
+import bspq18_e4.GestionHotelera.server.dto.RoomDTO;
+import bspq18_e4.GestionHotelera.server.dto.UserDTO;
 
 public class Assemble {
 

@@ -1,4 +1,4 @@
-package main.java.bspq18_e4.GestionHotelera.client.gui;
+package bspq18_e4.GestionHotelera.client.gui;
 
 import java.awt.EventQueue;
 
@@ -7,7 +7,7 @@ import javax.swing.JRadioButton;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 
-import main.java.bspq18_e4.GestionHotelera.client.controller.Controller;
+import bspq18_e4.GestionHotelera.client.controller.Controller;
 
 import javax.swing.JTextField;
 import javax.swing.JPasswordField;

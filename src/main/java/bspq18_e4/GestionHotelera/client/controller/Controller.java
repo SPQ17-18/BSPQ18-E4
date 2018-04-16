@@ -1,13 +1,13 @@
-package main.java.bspq18_e4.GestionHotelera.client.controller;
+package bspq18_e4.GestionHotelera.client.controller;
 
 import java.rmi.RemoteException;
 
 import javax.swing.UIManager;
 import javax.swing.UIManager.LookAndFeelInfo;
 
-import main.java.bspq18_e4.GestionHotelera.client.gui.Login;
-import main.java.bspq18_e4.GestionHotelera.client.remote.ServiceLocator;
-import main.java.bspq18_e4.GestionHotelera.server.dto.UserDTO;
+import bspq18_e4.GestionHotelera.client.gui.Login;
+import bspq18_e4.GestionHotelera.client.remote.ServiceLocator;
+import bspq18_e4.GestionHotelera.server.dto.UserDTO;
 
 public class Controller {
 
@@ -15,7 +15,7 @@ public class Controller {
 	
 	public Controller(String[] args) throws RemoteException {
 		sl = new ServiceLocator();
-		sl.setService("127.0.0.1", "1099", "EasyService");
+		sl.setService("127.0.0.1", "1099", "Service");
 	}
 	
 	public UserDTO signIn(String email, String pass) throws RemoteException {

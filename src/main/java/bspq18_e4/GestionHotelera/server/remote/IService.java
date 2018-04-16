@@ -1,9 +1,9 @@
-package main.java.bspq18_e4.GestionHotelera.server.remote;
+package bspq18_e4.GestionHotelera.server.remote;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 
-import main.java.bspq18_e4.GestionHotelera.server.dto.UserDTO;
+import bspq18_e4.GestionHotelera.server.dto.UserDTO;
 
 public interface IService extends Remote {
 

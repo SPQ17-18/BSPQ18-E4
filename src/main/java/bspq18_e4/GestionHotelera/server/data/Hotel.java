@@ -1,4 +1,4 @@
-package main.java.bspq18_e4.GestionHotelera.server.data;
+package bspq18_e4.GestionHotelera.server.data;
 
 import java.io.Serializable;
 

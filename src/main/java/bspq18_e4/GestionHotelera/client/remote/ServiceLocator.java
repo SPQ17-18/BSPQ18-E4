@@ -1,11 +1,11 @@
-package main.java.bspq18_e4.GestionHotelera.client.remote;
+package bspq18_e4.GestionHotelera.client.remote;
 
 import java.net.MalformedURLException;
 import java.rmi.Naming;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 
-import main.java.bspq18_e4.GestionHotelera.server.remote.IService;
+import bspq18_e4.GestionHotelera.server.remote.IService;
 
 public class ServiceLocator {
 

@@ -1,4 +1,4 @@
-package main.java.bspq18_e4.GestionHotelera.server.dao;
+package bspq18_e4.GestionHotelera.server.dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

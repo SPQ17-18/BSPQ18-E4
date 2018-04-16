@@ -1,15 +1,15 @@
-package main.java.bspq18_e4.GestionHotelera.server.remote;
+package bspq18_e4.GestionHotelera.server.remote;
 
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.ArrayList;
 
-import main.java.bspq18_e4.GestionHotelera.server.assembler.Assemble;
-import main.java.bspq18_e4.GestionHotelera.server.dao.HotelDAO;
-import main.java.bspq18_e4.GestionHotelera.server.dao.IHotelDAO;
-import main.java.bspq18_e4.GestionHotelera.server.data.Hotel;
-import main.java.bspq18_e4.GestionHotelera.server.data.User;
-import main.java.bspq18_e4.GestionHotelera.server.dto.UserDTO;
+import bspq18_e4.GestionHotelera.server.assembler.Assemble;
+import bspq18_e4.GestionHotelera.server.dao.HotelDAO;
+import bspq18_e4.GestionHotelera.server.dao.IHotelDAO;
+import bspq18_e4.GestionHotelera.server.data.Hotel;
+import bspq18_e4.GestionHotelera.server.data.User;
+import bspq18_e4.GestionHotelera.server.dto.UserDTO;
 
 public class Service extends UnicastRemoteObject implements IService {
 

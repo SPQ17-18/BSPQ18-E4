@@ -1,94 +1,79 @@
+
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>bspq18_e4</groupId>
-  <artifactId>HotelManagement</artifactId>
-  <version>1.0.0</version>
-  <packaging>jar</packaging>
+	<groupId>HotelManagement</groupId>
+	<artifactId>HotelManagementRMI-JDO-DAO</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<packaging>jar</packaging>
 
-  <name>HotelManagement</name>
-  <url>http://maven.apache.org</url>
+	<name>HotelManagementRMI-JDO-DAO</name>
+	<url>http://maven.apache.org</url>
 
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  	<server.IP>127.0.0.1</server.IP>
-	<server.port>1099</server.port>
-	<server.Name>HotelManagement</server.Name>
- <policy.file>${basedir}/src/main/resources/security/java.policy</policy.file>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<server.IP>127.0.0.1</server.IP>
+		<server.port>1099</server.port>
+		<server.Name>MessengerRMIDAO</server.Name>
+		<policy.file>${basedir}/src/main/resources/security/java.policy</policy.file>
 		<config.files.dir>${basedir}/src/main/resources</config.files.dir>
-  </properties>
+	</properties>
 
- <dependencies>
-
-        <dependency>
+	<!-- search for the latest version of dependencies in http://mvnrepository.com -->
+	<dependencies>
+      <dependency>
             <groupId>org.datanucleus</groupId>
             <artifactId>datanucleus-core</artifactId>
             <version>[5.1.6, 5.9)</version>
         </dependency>
-              
-        <dependency>
-            <groupId>org.datanucleus</groupId>
-            <artifactId>datanucleus-rdbms</artifactId>
-            <version>[5.1.6, 5.9)</version>
-        </dependency>
-        
         <dependency>
             <groupId>org.datanucleus</groupId>
             <artifactId>datanucleus-api-jdo</artifactId>
             <version>[5.1.4, 5.9)</version>
         </dependency>
-     	 <dependency>
-   			 <groupId>org.datanucleus</groupId>
-    		<artifactId>javax.jdo</artifactId>
-   			 <version>3.2.0-m8</version>
-		</dependency>
+       <dependency>
+            <groupId>org.datanucleus</groupId>
+            <artifactId>datanucleus-rdbms</artifactId>
+            <version>[5.1.6, 5.9)</version>
+        </dependency>
         <dependency>
-                <groupId>javax.jdo</groupId>
-   				<artifactId>jdo-api</artifactId>
-   				<version>3.1</version>
-         </dependency>
-        
+            <groupId>org.datanucleus</groupId>
+            <artifactId>javax.jdo</artifactId>
+            <version>[3.2.0-m8, )</version>
+        </dependency>
 		 <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>5.1.45</version>
-         </dependency>
-     
-		 <dependency>
+        </dependency>
+		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.12</version>
 			<scope>test</scope>
-		 </dependency>
-	 		
-		 <dependency>
+		</dependency>
+		<dependency>
+		 	<groupId>org.mockito</groupId>
+    		<artifactId>mockito-core</artifactId>
+  		  	<version>2.18.0</version>   	
+		</dependency>
+		<dependency>
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>
             <version>[1.2.17, )</version>
-         </dependency>
-
-      		<dependency>
- 		    <groupId>com.toedter</groupId>
- 		    <artifactId>jcalendar</artifactId>
-  		    <version>1.1.4</version>
-		</dependency>
-		<dependency>
-   			<groupId>org.java.net.substance</groupId>
-    		<artifactId>substance</artifactId>
-  			<version>6.0</version>
-		</dependency>
-     	   
+        </dependency>
     </dependencies>
  
   <build>
          <plugins>
             <plugin>
+				<groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
 				<version>3.7.0</version>
                  <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
+                    <source>1.7</source>
+                    <target>1.7</target>
 					<encoding>UTF-8</encoding>
                 </configuration>
             </plugin>
@@ -97,9 +82,8 @@
                 <artifactId>datanucleus-maven-plugin</artifactId>
                 <version>5.0.2</version>
                 <configuration>
-                    <log4jConfiguration>${config.files.dir}/log4j.properties</log4jConfiguration>
                     <verbose>true</verbose>
-                    <props>${config.files.dir}/datanucleus.properties</props>
+                    <props>datanucleus.properties</props>
                 </configuration>
                 <executions>
                     <execution>
@@ -111,10 +95,97 @@
                 </executions>
             </plugin>
 			
-						
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-report-plugin</artifactId>
+				<version>2.21.0</version>
+			</plugin>
+			
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>cobertura-maven-plugin</artifactId>
+				<version>2.6</version>
+				<configuration>
+					<formats>
+						<format>xml</format>
+						<format>html</format>
+					</formats> 
+				 <instrumentation>
+					 <!-- This line is for skipping set/get and constructor trivial methods. The coverage is higher-->
+					  <ignoreTrivial>true</ignoreTrivial>  
+						<excludes>
+							<exclude>es/deusto/client/*.class</exclude>
+							<exclude>es/deusto/server/Server.class</exclude>
+							<exclude>es/deusto/server/**/I*.*</exclude>
+							
+							<!-- This lines is for excluding from the instrumentation and the coverage calculations all the classes from server down							
+							<exclude>es/deusto/server/**/*</exclude> 
+							-->
+					
+						</excludes>
+				  </instrumentation>
+					<check>
+						<branchRate>50</branchRate>
+						<lineRate>60</lineRate>
+						<haltOnFailure>true</haltOnFailure>
+						<totalBranchRate>50</totalBranchRate>
+						<totalLineRate>60</totalLineRate>
+						<packageLineRate>50</packageLineRate>
+						<packageBranchRate>50</packageBranchRate>
+						<regexes>
+							<!--
+							<regex>
+								<pattern>com.example.boringcode.*</pattern>
+								<branchRate>40</branchRate>
+								<lineRate>30</lineRate>
+							</regex>
+							-->
+						</regexes>
+					</check>
+				</configuration>
+			</plugin>
         </plugins>
      </build>
      
+     <reporting>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-project-info-reports-plugin</artifactId>
+				<version>2.9</version>
+			</plugin>
+			<plugin>			
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-checkstyle-plugin</artifactId>
+				<version>3.0.0</version>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>cobertura-maven-plugin</artifactId>
+				<version>2.6</version> 
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>jdepend-maven-plugin</artifactId>
+				<version>2.0</version>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-report-plugin</artifactId>
+				<version>2.21.0</version>
+			</plugin>
+			<plugin>
+				<groupId>com.googlecode.maven-overview-plugin</groupId>
+				<artifactId>maven-overview-plugin</artifactId>
+				<version>1.6</version>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>dashboard-maven-plugin</artifactId>
+				<version>1.0.0-beta-1</version>
+			</plugin>
+		</plugins>
+	</reporting>
 		
 	<profiles> 
 		<!-- run as 'mvn exec:java -Pserver' -->
@@ -126,6 +197,7 @@
 						<directory>${config.files.dir}</directory>
 						<includes>
 							<include>**/*.jdo</include>
+							<include>**/*.orm</include>
 							<include>**/*.properties</include>
 						</includes>
 					</resource>
@@ -138,7 +210,7 @@
 						<configuration>
 							<filesets>
 								<fileset>
-									<directory>${basedir}/src/</directory>
+									<directory>${basedir}</directory>
 									<includes>
 										<include>*.log</include>
 										<include>*.ods</include>
@@ -151,11 +223,16 @@
 					<plugin>  
 						<groupId>org.codehaus.mojo</groupId>  
 						<artifactId>exec-maven-plugin</artifactId>  
-						<version>1.2.1</version> 
-						 
-						<configuration> 
-						<!--  Server location  --> 
-									<mainClass>main.java.bspq18_e4.GestionHotelera.server.HotelServer</mainClass>
+						<version>1.2.1</version>  
+						<configuration>  
+								<fork>true</fork>
+									<forkedVmArgs>
+										<!-- Disable verifier to avoid issues with Java 7 verifier and code          
+										instrumentation -->
+										<forkedVmArg>-Xverify:none</forkedVmArg>
+									</forkedVmArgs>
+												
+									<mainClass>bspq18_e4.GestionHotelera.server.HotelServer</mainClass>
 									<systemProperties>
 										
 										<systemProperty>
@@ -194,40 +271,7 @@
 						<artifactId>exec-maven-plugin</artifactId>  
 						<version>1.2.1</version>  
 						<configuration>  
-									<mainClass>main.java.bspq18_e4.GestionHotelera.client.remote.ServiceLocator</mainClass>
-									<systemProperties>
-										<systemProperty>
-											<key>java.security.manager</key>
-											<value>java.rmi.RMISecurityManager</value>
-										</systemProperty>
-										<systemProperty>
-											<key>java.security.policy</key>
-											<value>${policy.file}</value>
-										</systemProperty>
-									</systemProperties>
-									<arguments>  
-										<argument>${server.IP}</argument>  
-										<argument>${server.port}</argument>  
-										<argument>${server.Name}</argument>  
-									</arguments>  
-						</configuration>  
-					</plugin>
-					        				  
-				</plugins>  
-			</build>  
-		</profile>  
-		
-		<!-- run as 'mvn exec:java -Pload' -->
-		<profile>  
-			<id>load</id>  
-			<build>  
-				<plugins>  
-					<plugin>  
-						<groupId>org.codehaus.mojo</groupId>  
-						<artifactId>exec-maven-plugin</artifactId>  
-						<version>1.2.1</version>  
-						<configuration>  
-									<mainClass>main.java.bspq18_e4.GestionHotelera.server.dao.HotelDAO</mainClass>
+									<mainClass>bspq18_e4.GestionHotelera.client.gui.Login</mainClass>
 									<systemProperties>
 										<systemProperty>
 											<key>java.security.manager</key>
@@ -262,5 +306,5 @@
             <url>http://www.datanucleus.org/downloads/maven2/</url>
         </pluginRepository>
     </pluginRepositories>
-
+	
 </project>

@@ -1,14 +1,17 @@
-package main.java.bspq18_e4.GestionHotelera.server;
+package bspq18_e4.GestionHotelera.server;
 
 import java.rmi.Naming;
 
-import main.java.bspq18_e4.GestionHotelera.server.remote.IService;
-import main.java.bspq18_e4.GestionHotelera.server.remote.Service;
+import bspq18_e4.GestionHotelera.server.remote.IService;
+import bspq18_e4.GestionHotelera.server.remote.Service;
 
 public class HotelServer {
 
 	public static void main(String[] args) {
-
+		if (args.length != 3) {
+			System.out.println("How to invoke: java [policy] [codebase] Server.Server [host] [port] [server]");
+			System.exit(0);
+		}
 
 		if (System.getSecurityManager() == null) {
 			System.setSecurityManager(new SecurityManager());
@@ -19,6 +22,9 @@ public class HotelServer {
 		try {
 			IService deustoBox = new Service();
 			Naming.rebind(name, deustoBox);
+
+			System.out.println("alelya");
+
 			java.io.InputStreamReader inputStreamReader = new java.io.InputStreamReader(System.in);
 			java.io.BufferedReader stdin = new java.io.BufferedReader(inputStreamReader);
 			String line = stdin.readLine();
