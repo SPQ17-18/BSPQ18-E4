@@ -9,6 +9,10 @@ import main.java.bspq18_e4.GestionHotelera.server.dto.UserDTO;
 
 import javax.swing.JButton;
 import javax.swing.JPanel;
+import javax.swing.JLabel;
+import javax.swing.JToolBar;
+import javax.swing.JComboBox;
+import java.awt.Font;
 
 public class Home extends JFrame{
 
@@ -54,9 +58,45 @@ public class Home extends JFrame{
 		logOut.setBounds(420, 11, 89, 23);
 		frame.getContentPane().add(logOut);
 		
+		JLabel lblListOfHotels = new JLabel("List of hotels");
+		lblListOfHotels.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblListOfHotels.setBounds(326, 73, 130, 14);
+		frame.getContentPane().add(lblListOfHotels);
+		
+		JButton btnExit = new JButton("Exit");
+		btnExit.setBounds(420, 314, 89, 23);
+		frame.getContentPane().add(btnExit);
+		
+		JComboBox comboBox = new JComboBox();
+		comboBox.setBounds(22, 85, 113, 20);
+		frame.getContentPane().add(comboBox);
+		
 		JPanel panel = new JPanel();
-		panel.setBounds(355, 178, 154, 159);
+		panel.setBounds(326, 100, 75, 67);
 		frame.getContentPane().add(panel);
+		
+		JLabel lblCity = new JLabel("City");
+		lblCity.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblCity.setBounds(22, 60, 95, 14);
+		frame.getContentPane().add(lblCity);
+		
+		JLabel lblFirstDay = new JLabel("Arrival Day");
+		lblFirstDay.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblFirstDay.setBounds(22, 122, 95, 14);
+		frame.getContentPane().add(lblFirstDay);
+		
+		JLabel lblNewLabel = new JLabel("Departure Day");
+		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblNewLabel.setBounds(22, 189, 95, 14);
+		frame.getContentPane().add(lblNewLabel);
+		
+		JComboBox comboBox_1 = new JComboBox();
+		comboBox_1.setBounds(22, 147, 113, 20);
+		frame.getContentPane().add(comboBox_1);
+		
+		JComboBox comboBox_2 = new JComboBox();
+		comboBox_2.setBounds(22, 217, 113, 20);
+		frame.getContentPane().add(comboBox_2);
 		frame.setVisible(true);
 	}
 }
