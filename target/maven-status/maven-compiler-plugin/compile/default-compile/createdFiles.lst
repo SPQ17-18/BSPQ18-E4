@@ -16,6 +16,7 @@ bspq18_e4\GestionHotelera\client\gui\Signup$1.class
 bspq18_e4\GestionHotelera\client\gui\Login.class
 bspq18_e4\GestionHotelera\server\data\Hotel.class
 bspq18_e4\GestionHotelera\server\remote\IService.class
+bspq18_e4\GestionHotelera\client\gui\Login$3.class
 bspq18_e4\GestionHotelera\server\remote\Service.class
 bspq18_e4\GestionHotelera\client\gui\Login$1.class
 bspq18_e4\GestionHotelera\server\data\Room.class

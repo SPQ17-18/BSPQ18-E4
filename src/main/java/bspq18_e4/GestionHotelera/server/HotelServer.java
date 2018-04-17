@@ -20,10 +20,15 @@ public class HotelServer {
 		String name = "//" + args[0] + ":" + args[1] + "/" + args[2];
 
 		try {
+<<<<<<< HEAD
 			IService sedf = new Service();
 			Naming.rebind(name, sedf);
+=======
+			IService hotelServer = new Service();
+			Naming.rebind(name, hotelServer);
+>>>>>>> refs/remotes/origin/Alex
 
-			System.out.println("alelya");
+			System.out.println("Server ready and waiting...");
 
 			java.io.InputStreamReader inputStreamReader = new java.io.InputStreamReader(System.in);
 			java.io.BufferedReader stdin = new java.io.BufferedReader(inputStreamReader);
