@@ -101,9 +101,9 @@ public class Signup extends JFrame {
 		JButton bcancel = new JButton("Cancel");
 		bcancel.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				dispose();
 				Login login = new Login(ctrl);
 				login.setVisible(true);
+				dispose();
 			}
 		});
 		bcancel.setBounds(169, 216, 89, 23);

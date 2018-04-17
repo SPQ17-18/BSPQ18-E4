@@ -272,7 +272,7 @@
 						<artifactId>exec-maven-plugin</artifactId>  
 						<version>1.2.1</version>  
 						<configuration>  
-									<mainClass>bspq18_e4.GestionHotelera.client.gui.Login</mainClass>
+									<mainClass>bspq18_e4.GestionHotelera.App</mainClass>
 									<systemProperties>
 										<systemProperty>
 											<key>java.security.manager</key>
