@@ -7522,3 +7522,966 @@ Caused by: java.net.ConnectException: Connection refused: connect
 10:38:49,711 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Persistence] - ValueGeneration : txn-isolation=read-committed connection=New
 10:38:49,711 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Persistence] - Cache : Level1 (soft), Level2 (soft, mode=UNSPECIFIED), QueryResults (soft), Collections/Maps 
 10:38:49,711 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Persistence] - ================================================
+13:15:32,428 (main) DEBUG [DataNucleus.General] - Using PluginRegistry org.datanucleus.plugin.NonManagedPluginRegistry
+13:15:32,474 (main) DEBUG [DataNucleus.General] - Registering bundle org.sonatype.inject version 2.3.0 at URL file:/C:/Users/Alejandro/.m2/repository/org/sonatype/sisu/sisu-inject-bean/2.3.0/sisu-inject-bean-2.3.0.jar.
+13:15:32,515 (main) DEBUG [DataNucleus.General] - Loading extension points from plug-in file jar:file:/C:/Users/Alejandro/.m2/repository/org/sonatype/sisu/sisu-inject-bean/2.3.0/sisu-inject-bean-2.3.0.jar!/plugin.xml.
+13:15:32,518 (main) DEBUG [DataNucleus.General] - Loading extensions from plug-in file jar:file:/C:/Users/Alejandro/.m2/repository/org/sonatype/sisu/sisu-inject-bean/2.3.0/sisu-inject-bean-2.3.0.jar!/plugin.xml.
+13:15:32,522 (main) DEBUG [DataNucleus.General] - Registering bundle org.datanucleus version 5.1.8 at URL file:/C:/Users/Alejandro/.m2/repository/org/datanucleus/datanucleus-core/5.1.8/datanucleus-core-5.1.8.jar.
+13:15:32,530 (main) DEBUG [DataNucleus.General] - Loading extension points from plug-in file jar:file:/C:/Users/Alejandro/.m2/repository/org/datanucleus/datanucleus-core/5.1.8/datanucleus-core-5.1.8.jar!/plugin.xml.
+13:15:32,539 (main) DEBUG [DataNucleus.General] - Loading extensions from plug-in file jar:file:/C:/Users/Alejandro/.m2/repository/org/datanucleus/datanucleus-core/5.1.8/datanucleus-core-5.1.8.jar!/plugin.xml.
+13:15:32,540 (main) DEBUG [DataNucleus.General] - Registering bundle org.datanucleus.api.jdo version 5.1.5 at URL file:/C:/Users/Alejandro/.m2/repository/org/datanucleus/datanucleus-api-jdo/5.1.5/datanucleus-api-jdo-5.1.5.jar.
+13:15:32,552 (main) DEBUG [DataNucleus.General] - Loading extension points from plug-in file jar:file:/C:/Users/Alejandro/.m2/repository/org/datanucleus/datanucleus-api-jdo/5.1.5/datanucleus-api-jdo-5.1.5.jar!/plugin.xml.
+13:15:32,555 (main) DEBUG [DataNucleus.General] - Loading extensions from plug-in file jar:file:/C:/Users/Alejandro/.m2/repository/org/datanucleus/datanucleus-api-jdo/5.1.5/datanucleus-api-jdo-5.1.5.jar!/plugin.xml.
+13:15:32,558 (main) DEBUG [DataNucleus.General] - Registering bundle org.datanucleus.store.rdbms version 5.1.8 at URL file:/C:/Users/Alejandro/.m2/repository/org/datanucleus/datanucleus-rdbms/5.1.8/datanucleus-rdbms-5.1.8.jar.
+13:15:32,564 (main) DEBUG [DataNucleus.General] - Loading extension points from plug-in file jar:file:/C:/Users/Alejandro/.m2/repository/org/datanucleus/datanucleus-rdbms/5.1.8/datanucleus-rdbms-5.1.8.jar!/plugin.xml.
+13:15:32,568 (main) DEBUG [DataNucleus.General] - Loading extensions from plug-in file jar:file:/C:/Users/Alejandro/.m2/repository/org/datanucleus/datanucleus-rdbms/5.1.8/datanucleus-rdbms-5.1.8.jar!/plugin.xml.
+13:15:32,619 (main) DEBUG [DataNucleus.Persistence] - Tipos de Java inicializando ...
+13:15:32,708 (main) DEBUG [DataNucleus.Persistence] - Soporte para tipos de Java listo : tipos soportados = [B, [C, [D, [F, [I, [J, [Ljava.lang.Boolean;, [Ljava.lang.Byte;, [Ljava.lang.Character;, [Ljava.lang.Double;, [Ljava.lang.Enum;, [Ljava.lang.Float;, [Ljava.lang.Integer;, [Ljava.lang.Long;, [Ljava.lang.Number;, [Ljava.lang.Object;, [Ljava.lang.Short;, [Ljava.lang.String;, [Ljava.math.BigDecimal;, [Ljava.math.BigInteger;, [Ljava.util.Date;, [Ljava.util.Locale;, [S, [Z, boolean, byte, char, double, float, int, java.awt.Color, java.awt.image.BufferedImage, java.lang.Boolean, java.lang.Byte, java.lang.Character, java.lang.Class, java.lang.Double, java.lang.Enum, java.lang.Float, java.lang.Integer, java.lang.Long, java.lang.Number, java.lang.Short, java.lang.String, java.lang.StringBuffer, java.lang.StringBuilder, java.math.BigDecimal, java.math.BigInteger, java.net.URI, java.net.URL, java.sql.Date, java.sql.Time, java.sql.Timestamp, java.time.Duration, java.time.Instant, java.time.LocalDate, java.time.LocalDateTime, java.time.LocalTime, java.time.MonthDay, java.time.OffsetDateTime, java.time.OffsetTime, java.time.Period, java.time.Year, java.time.YearMonth, java.time.ZonedDateTime, java.time.ZoneId, java.time.ZoneOffset, java.util.ArrayList, java.util.Arrays$ArrayList, java.util.BitSet, java.util.Calendar, java.util.Collection, java.util.Currency, java.util.Date, java.util.GregorianCalendar, java.util.HashMap, java.util.HashSet, java.util.Hashtable, java.util.LinkedHashMap, java.util.LinkedHashSet, java.util.LinkedList, java.util.List, java.util.Locale, java.util.Map, java.util.Optional, java.util.PriorityQueue, java.util.Properties, java.util.Queue, java.util.Set, java.util.SortedMap, java.util.SortedSet, java.util.Stack, java.util.TimeZone, java.util.TreeMap, java.util.TreeSet, java.util.UUID, java.util.Vector, long, short
+13:15:32,711 (main) DEBUG [DataNucleus.MetaData] - MetaDataManager : Input=(XML,Annotations), XML-Validation=false, XML-Suffices=(persistence=*.jdo, orm=orm, query=*.jdoquery), JDO-listener=false
+13:15:32,712 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 5.1.8) para el API "JDO" utilisando el JRE "{2}"
+13:15:32,716 (main) DEBUG [DataNucleus.Enhancer] - DataNucleus Enhancer : Classpath
+13:15:32,719 (main) DEBUG [DataNucleus.Enhancer] - >>  C:\Program Files\apache-maven-3.5.3\bin\..\boot\plexus-classworlds-2.5.2.jar
+13:15:32,725 (main) DEBUG [DataNucleus.Enhancer] - Enhancing classes
+13:15:32,748 (main) DEBUG [DataNucleus.MetaData] - MetaData Management : Carga de Metadata de las clases "[bspq18_e4.GestionHotelera.App, bspq18_e4.GestionHotelera.client.controller.Controller, bspq18_e4.GestionHotelera.client.gui.Home, bspq18_e4.GestionHotelera.client.gui.Login$1, bspq18_e4.GestionHotelera.client.gui.Login$2, bspq18_e4.GestionHotelera.client.gui.Login$3, bspq18_e4.GestionHotelera.client.gui.Login, bspq18_e4.GestionHotelera.client.gui.Signup$1, bspq18_e4.GestionHotelera.client.gui.Signup, bspq18_e4.GestionHotelera.client.remote.ServiceLocator, bspq18_e4.GestionHotelera.server.assembler.Assemble, bspq18_e4.GestionHotelera.server.dao.DB, bspq18_e4.GestionHotelera.server.dao.HotelDAO, bspq18_e4.GestionHotelera.server.dao.IHotelDAO, bspq18_e4.GestionHotelera.server.data.Hotel, bspq18_e4.GestionHotelera.server.data.Reservation, bspq18_e4.GestionHotelera.server.data.Room, bspq18_e4.GestionHotelera.server.data.User, bspq18_e4.GestionHotelera.server.dto.HotelDTO, bspq18_e4.GestionHotelera.server.dto.ReservationDTO, bspq18_e4.GestionHotelera.server.dto.RoomDTO, bspq18_e4.GestionHotelera.server.dto.UserDTO, bspq18_e4.GestionHotelera.server.HotelServer, bspq18_e4.GestionHotelera.server.remote.IService, bspq18_e4.GestionHotelera.server.remote.Service]" ...
+13:15:32,756 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.App" en /META-INF/package.jdo
+13:15:32,757 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.App" en /WEB-INF/package.jdo
+13:15:32,757 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.App" en /package.jdo
+13:15:32,757 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.App" en /bspq18_e4/package.jdo
+13:15:32,758 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.App" en /bspq18_e4/GestionHotelera/package.jdo
+13:15:32,758 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.App" en /bspq18_e4/GestionHotelera/App.jdo
+13:15:32,758 (main) DEBUG [DataNucleus.MetaData] - No hemos encontrado el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.App"
+13:15:32,758 (main) DEBUG [DataNucleus.MetaData] - Registrando la clase "bspq18_e4.GestionHotelera.App" no tener Meta-Data
+13:15:32,759 (main) DEBUG [DataNucleus.MetaData] - La clase "bspq18_e4.GestionHotelera.App" no tiene MetaData o annotaciones.
+13:15:32,760 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.controller.Controller" en /META-INF/package.jdo
+13:15:32,761 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.controller.Controller" en /WEB-INF/package.jdo
+13:15:32,761 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.controller.Controller" en /package.jdo
+13:15:32,761 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.controller.Controller" en /bspq18_e4/package.jdo
+13:15:32,761 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.controller.Controller" en /bspq18_e4/GestionHotelera/package.jdo
+13:15:32,762 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.controller.Controller" en /bspq18_e4/GestionHotelera/client/package.jdo
+13:15:32,762 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.controller.Controller" en /bspq18_e4/GestionHotelera/client/controller/package.jdo
+13:15:32,762 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.controller.Controller" en /bspq18_e4/GestionHotelera/client/controller/Controller.jdo
+13:15:32,762 (main) DEBUG [DataNucleus.MetaData] - No hemos encontrado el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.controller.Controller"
+13:15:32,762 (main) DEBUG [DataNucleus.MetaData] - Registrando la clase "bspq18_e4.GestionHotelera.client.controller.Controller" no tener Meta-Data
+13:15:32,763 (main) DEBUG [DataNucleus.MetaData] - La clase "bspq18_e4.GestionHotelera.client.controller.Controller" no tiene MetaData o annotaciones.
+13:15:32,768 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.gui.Home" en /META-INF/package.jdo
+13:15:32,769 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.gui.Home" en /WEB-INF/package.jdo
+13:15:32,769 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.gui.Home" en /package.jdo
+13:15:32,769 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.gui.Home" en /bspq18_e4/package.jdo
+13:15:32,770 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.gui.Home" en /bspq18_e4/GestionHotelera/package.jdo
+13:15:32,770 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.gui.Home" en /bspq18_e4/GestionHotelera/client/package.jdo
+13:15:32,770 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.gui.Home" en /bspq18_e4/GestionHotelera/client/gui/package.jdo
+13:15:32,771 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.gui.Home" en /bspq18_e4/GestionHotelera/client/gui/Home.jdo
+13:15:32,771 (main) DEBUG [DataNucleus.MetaData] - No hemos encontrado el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.gui.Home"
+13:15:32,771 (main) DEBUG [DataNucleus.MetaData] - Registrando la clase "bspq18_e4.GestionHotelera.client.gui.Home" no tener Meta-Data
+13:15:32,771 (main) DEBUG [DataNucleus.MetaData] - La clase "bspq18_e4.GestionHotelera.client.gui.Home" no tiene MetaData o annotaciones.
+13:15:32,772 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.gui.Login$1" en /META-INF/package.jdo
+13:15:32,773 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.gui.Login$1" en /WEB-INF/package.jdo
+13:15:32,773 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.gui.Login$1" en /package.jdo
+13:15:32,773 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.gui.Login$1" en /bspq18_e4/package.jdo
+13:15:32,773 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.gui.Login$1" en /bspq18_e4/GestionHotelera/package.jdo
+13:15:32,774 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.gui.Login$1" en /bspq18_e4/GestionHotelera/client/package.jdo
+13:15:32,774 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.gui.Login$1" en /bspq18_e4/GestionHotelera/client/gui/package.jdo
+13:15:32,774 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.gui.Login$1" en /bspq18_e4/GestionHotelera/client/gui/Login$1.jdo
+13:15:32,775 (main) DEBUG [DataNucleus.MetaData] - No hemos encontrado el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.gui.Login$1"
+13:15:32,775 (main) DEBUG [DataNucleus.MetaData] - Registrando la clase "bspq18_e4.GestionHotelera.client.gui.Login$1" no tener Meta-Data
+13:15:32,775 (main) DEBUG [DataNucleus.MetaData] - La clase "bspq18_e4.GestionHotelera.client.gui.Login$1" no tiene MetaData o annotaciones.
+13:15:32,776 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.gui.Login$2" en /META-INF/package.jdo
+13:15:32,777 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.gui.Login$2" en /WEB-INF/package.jdo
+13:15:32,777 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.gui.Login$2" en /package.jdo
+13:15:32,777 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.gui.Login$2" en /bspq18_e4/package.jdo
+13:15:32,778 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.gui.Login$2" en /bspq18_e4/GestionHotelera/package.jdo
+13:15:32,778 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.gui.Login$2" en /bspq18_e4/GestionHotelera/client/package.jdo
+13:15:32,778 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.gui.Login$2" en /bspq18_e4/GestionHotelera/client/gui/package.jdo
+13:15:32,778 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.gui.Login$2" en /bspq18_e4/GestionHotelera/client/gui/Login$2.jdo
+13:15:32,778 (main) DEBUG [DataNucleus.MetaData] - No hemos encontrado el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.gui.Login$2"
+13:15:32,779 (main) DEBUG [DataNucleus.MetaData] - Registrando la clase "bspq18_e4.GestionHotelera.client.gui.Login$2" no tener Meta-Data
+13:15:32,779 (main) DEBUG [DataNucleus.MetaData] - La clase "bspq18_e4.GestionHotelera.client.gui.Login$2" no tiene MetaData o annotaciones.
+13:15:32,780 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.gui.Login$3" en /META-INF/package.jdo
+13:15:32,780 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.gui.Login$3" en /WEB-INF/package.jdo
+13:15:32,781 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.gui.Login$3" en /package.jdo
+13:15:32,781 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.gui.Login$3" en /bspq18_e4/package.jdo
+13:15:32,781 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.gui.Login$3" en /bspq18_e4/GestionHotelera/package.jdo
+13:15:32,781 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.gui.Login$3" en /bspq18_e4/GestionHotelera/client/package.jdo
+13:15:32,782 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.gui.Login$3" en /bspq18_e4/GestionHotelera/client/gui/package.jdo
+13:15:32,782 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.gui.Login$3" en /bspq18_e4/GestionHotelera/client/gui/Login$3.jdo
+13:15:32,782 (main) DEBUG [DataNucleus.MetaData] - No hemos encontrado el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.gui.Login$3"
+13:15:32,782 (main) DEBUG [DataNucleus.MetaData] - Registrando la clase "bspq18_e4.GestionHotelera.client.gui.Login$3" no tener Meta-Data
+13:15:32,782 (main) DEBUG [DataNucleus.MetaData] - La clase "bspq18_e4.GestionHotelera.client.gui.Login$3" no tiene MetaData o annotaciones.
+13:15:32,784 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.gui.Login" en /META-INF/package.jdo
+13:15:32,785 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.gui.Login" en /WEB-INF/package.jdo
+13:15:32,786 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.gui.Login" en /package.jdo
+13:15:32,786 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.gui.Login" en /bspq18_e4/package.jdo
+13:15:32,787 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.gui.Login" en /bspq18_e4/GestionHotelera/package.jdo
+13:15:32,787 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.gui.Login" en /bspq18_e4/GestionHotelera/client/package.jdo
+13:15:32,788 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.gui.Login" en /bspq18_e4/GestionHotelera/client/gui/package.jdo
+13:15:32,788 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.gui.Login" en /bspq18_e4/GestionHotelera/client/gui/Login.jdo
+13:15:32,788 (main) DEBUG [DataNucleus.MetaData] - No hemos encontrado el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.gui.Login"
+13:15:32,788 (main) DEBUG [DataNucleus.MetaData] - Registrando la clase "bspq18_e4.GestionHotelera.client.gui.Login" no tener Meta-Data
+13:15:32,788 (main) DEBUG [DataNucleus.MetaData] - La clase "bspq18_e4.GestionHotelera.client.gui.Login" no tiene MetaData o annotaciones.
+13:15:32,790 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.gui.Signup$1" en /META-INF/package.jdo
+13:15:32,790 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.gui.Signup$1" en /WEB-INF/package.jdo
+13:15:32,791 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.gui.Signup$1" en /package.jdo
+13:15:32,791 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.gui.Signup$1" en /bspq18_e4/package.jdo
+13:15:32,791 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.gui.Signup$1" en /bspq18_e4/GestionHotelera/package.jdo
+13:15:32,792 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.gui.Signup$1" en /bspq18_e4/GestionHotelera/client/package.jdo
+13:15:32,792 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.gui.Signup$1" en /bspq18_e4/GestionHotelera/client/gui/package.jdo
+13:15:32,792 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.gui.Signup$1" en /bspq18_e4/GestionHotelera/client/gui/Signup$1.jdo
+13:15:32,792 (main) DEBUG [DataNucleus.MetaData] - No hemos encontrado el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.gui.Signup$1"
+13:15:32,792 (main) DEBUG [DataNucleus.MetaData] - Registrando la clase "bspq18_e4.GestionHotelera.client.gui.Signup$1" no tener Meta-Data
+13:15:32,792 (main) DEBUG [DataNucleus.MetaData] - La clase "bspq18_e4.GestionHotelera.client.gui.Signup$1" no tiene MetaData o annotaciones.
+13:15:32,794 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.gui.Signup" en /META-INF/package.jdo
+13:15:32,795 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.gui.Signup" en /WEB-INF/package.jdo
+13:15:32,795 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.gui.Signup" en /package.jdo
+13:15:32,795 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.gui.Signup" en /bspq18_e4/package.jdo
+13:15:32,796 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.gui.Signup" en /bspq18_e4/GestionHotelera/package.jdo
+13:15:32,796 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.gui.Signup" en /bspq18_e4/GestionHotelera/client/package.jdo
+13:15:32,796 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.gui.Signup" en /bspq18_e4/GestionHotelera/client/gui/package.jdo
+13:15:32,797 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.gui.Signup" en /bspq18_e4/GestionHotelera/client/gui/Signup.jdo
+13:15:32,797 (main) DEBUG [DataNucleus.MetaData] - No hemos encontrado el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.gui.Signup"
+13:15:32,797 (main) DEBUG [DataNucleus.MetaData] - Registrando la clase "bspq18_e4.GestionHotelera.client.gui.Signup" no tener Meta-Data
+13:15:32,797 (main) DEBUG [DataNucleus.MetaData] - La clase "bspq18_e4.GestionHotelera.client.gui.Signup" no tiene MetaData o annotaciones.
+13:15:32,798 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.remote.ServiceLocator" en /META-INF/package.jdo
+13:15:32,799 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.remote.ServiceLocator" en /WEB-INF/package.jdo
+13:15:32,799 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.remote.ServiceLocator" en /package.jdo
+13:15:32,799 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.remote.ServiceLocator" en /bspq18_e4/package.jdo
+13:15:32,800 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.remote.ServiceLocator" en /bspq18_e4/GestionHotelera/package.jdo
+13:15:32,800 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.remote.ServiceLocator" en /bspq18_e4/GestionHotelera/client/package.jdo
+13:15:32,800 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.remote.ServiceLocator" en /bspq18_e4/GestionHotelera/client/remote/package.jdo
+13:15:32,802 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.remote.ServiceLocator" en /bspq18_e4/GestionHotelera/client/remote/ServiceLocator.jdo
+13:15:32,802 (main) DEBUG [DataNucleus.MetaData] - No hemos encontrado el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.client.remote.ServiceLocator"
+13:15:32,802 (main) DEBUG [DataNucleus.MetaData] - Registrando la clase "bspq18_e4.GestionHotelera.client.remote.ServiceLocator" no tener Meta-Data
+13:15:32,802 (main) DEBUG [DataNucleus.MetaData] - La clase "bspq18_e4.GestionHotelera.client.remote.ServiceLocator" no tiene MetaData o annotaciones.
+13:15:32,804 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.assembler.Assemble" en /META-INF/package.jdo
+13:15:32,804 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.assembler.Assemble" en /WEB-INF/package.jdo
+13:15:32,804 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.assembler.Assemble" en /package.jdo
+13:15:32,805 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.assembler.Assemble" en /bspq18_e4/package.jdo
+13:15:32,805 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.assembler.Assemble" en /bspq18_e4/GestionHotelera/package.jdo
+13:15:32,805 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.assembler.Assemble" en /bspq18_e4/GestionHotelera/server/package.jdo
+13:15:32,806 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.assembler.Assemble" en /bspq18_e4/GestionHotelera/server/assembler/package.jdo
+13:15:32,806 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.assembler.Assemble" en /bspq18_e4/GestionHotelera/server/assembler/Assemble.jdo
+13:15:32,806 (main) DEBUG [DataNucleus.MetaData] - No hemos encontrado el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.assembler.Assemble"
+13:15:32,806 (main) DEBUG [DataNucleus.MetaData] - Registrando la clase "bspq18_e4.GestionHotelera.server.assembler.Assemble" no tener Meta-Data
+13:15:32,858 (main) DEBUG [DataNucleus.MetaData] - La clase "bspq18_e4.GestionHotelera.server.assembler.Assemble" no tiene MetaData o annotaciones.
+13:15:32,861 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.dao.DB" en /META-INF/package.jdo
+13:15:32,861 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.dao.DB" en /WEB-INF/package.jdo
+13:15:32,861 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.dao.DB" en /package.jdo
+13:15:32,861 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.dao.DB" en /bspq18_e4/package.jdo
+13:15:32,862 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.dao.DB" en /bspq18_e4/GestionHotelera/package.jdo
+13:15:32,862 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.dao.DB" en /bspq18_e4/GestionHotelera/server/package.jdo
+13:15:32,862 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.dao.DB" en /bspq18_e4/GestionHotelera/server/dao/package.jdo
+13:15:32,862 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.dao.DB" en /bspq18_e4/GestionHotelera/server/dao/DB.jdo
+13:15:32,862 (main) DEBUG [DataNucleus.MetaData] - No hemos encontrado el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.dao.DB"
+13:15:32,862 (main) DEBUG [DataNucleus.MetaData] - Registrando la clase "bspq18_e4.GestionHotelera.server.dao.DB" no tener Meta-Data
+13:15:32,862 (main) DEBUG [DataNucleus.MetaData] - La clase "bspq18_e4.GestionHotelera.server.dao.DB" no tiene MetaData o annotaciones.
+13:15:32,864 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.dao.HotelDAO" en /META-INF/package.jdo
+13:15:32,864 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.dao.HotelDAO" en /WEB-INF/package.jdo
+13:15:32,865 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.dao.HotelDAO" en /package.jdo
+13:15:32,865 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.dao.HotelDAO" en /bspq18_e4/package.jdo
+13:15:32,865 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.dao.HotelDAO" en /bspq18_e4/GestionHotelera/package.jdo
+13:15:32,865 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.dao.HotelDAO" en /bspq18_e4/GestionHotelera/server/package.jdo
+13:15:32,866 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.dao.HotelDAO" en /bspq18_e4/GestionHotelera/server/dao/package.jdo
+13:15:32,866 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.dao.HotelDAO" en /bspq18_e4/GestionHotelera/server/dao/HotelDAO.jdo
+13:15:32,866 (main) DEBUG [DataNucleus.MetaData] - No hemos encontrado el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.dao.HotelDAO"
+13:15:32,866 (main) DEBUG [DataNucleus.MetaData] - Registrando la clase "bspq18_e4.GestionHotelera.server.dao.HotelDAO" no tener Meta-Data
+13:15:32,866 (main) DEBUG [DataNucleus.MetaData] - La clase "bspq18_e4.GestionHotelera.server.dao.HotelDAO" no tiene MetaData o annotaciones.
+13:15:32,867 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.dao.IHotelDAO" en /META-INF/package.jdo
+13:15:32,867 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.dao.IHotelDAO" en /WEB-INF/package.jdo
+13:15:32,867 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.dao.IHotelDAO" en /package.jdo
+13:15:32,867 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.dao.IHotelDAO" en /bspq18_e4/package.jdo
+13:15:32,868 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.dao.IHotelDAO" en /bspq18_e4/GestionHotelera/package.jdo
+13:15:32,868 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.dao.IHotelDAO" en /bspq18_e4/GestionHotelera/server/package.jdo
+13:15:32,868 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.dao.IHotelDAO" en /bspq18_e4/GestionHotelera/server/dao/package.jdo
+13:15:32,868 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.dao.IHotelDAO" en /bspq18_e4/GestionHotelera/server/dao/IHotelDAO.jdo
+13:15:32,869 (main) DEBUG [DataNucleus.MetaData] - No hemos encontrado el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.dao.IHotelDAO"
+13:15:32,869 (main) DEBUG [DataNucleus.MetaData] - Registrando la clase "bspq18_e4.GestionHotelera.server.dao.IHotelDAO" no tener Meta-Data
+13:15:32,869 (main) DEBUG [DataNucleus.MetaData] - La clase "bspq18_e4.GestionHotelera.server.dao.IHotelDAO" no tiene MetaData o annotaciones.
+13:15:32,927 (main) DEBUG [DataNucleus.MetaData] - Clase "bspq18_e4.GestionHotelera.server.data.Hotel" tiene anotaciones de JDO y vamos a usarlas.
+13:15:32,945 (main) DEBUG [DataNucleus.MetaData] - Clase "bspq18_e4.GestionHotelera.server.data.Reservation" tiene anotaciones de JDO y vamos a usarlas.
+13:15:32,948 (main) DEBUG [DataNucleus.MetaData] - Clase "bspq18_e4.GestionHotelera.server.data.Room" tiene anotaciones de JDO y vamos a usarlas.
+13:15:32,948 (main) DEBUG [DataNucleus.MetaData] - Clase "bspq18_e4.GestionHotelera.server.data.User" tiene anotaciones de JDO y vamos a usarlas.
+13:15:32,950 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.dto.HotelDTO" en /META-INF/package.jdo
+13:15:32,950 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.dto.HotelDTO" en /WEB-INF/package.jdo
+13:15:32,950 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.dto.HotelDTO" en /package.jdo
+13:15:32,951 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.dto.HotelDTO" en /bspq18_e4/package.jdo
+13:15:32,951 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.dto.HotelDTO" en /bspq18_e4/GestionHotelera/package.jdo
+13:15:32,951 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.dto.HotelDTO" en /bspq18_e4/GestionHotelera/server/package.jdo
+13:15:32,951 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.dto.HotelDTO" en /bspq18_e4/GestionHotelera/server/dto/package.jdo
+13:15:32,952 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.dto.HotelDTO" en /bspq18_e4/GestionHotelera/server/dto/HotelDTO.jdo
+13:15:32,952 (main) DEBUG [DataNucleus.MetaData] - No hemos encontrado el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.dto.HotelDTO"
+13:15:32,952 (main) DEBUG [DataNucleus.MetaData] - Registrando la clase "bspq18_e4.GestionHotelera.server.dto.HotelDTO" no tener Meta-Data
+13:15:32,952 (main) DEBUG [DataNucleus.MetaData] - La clase "bspq18_e4.GestionHotelera.server.dto.HotelDTO" no tiene MetaData o annotaciones.
+13:15:32,953 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.dto.ReservationDTO" en /META-INF/package.jdo
+13:15:32,953 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.dto.ReservationDTO" en /WEB-INF/package.jdo
+13:15:32,954 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.dto.ReservationDTO" en /package.jdo
+13:15:32,954 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.dto.ReservationDTO" en /bspq18_e4/package.jdo
+13:15:32,955 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.dto.ReservationDTO" en /bspq18_e4/GestionHotelera/package.jdo
+13:15:32,955 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.dto.ReservationDTO" en /bspq18_e4/GestionHotelera/server/package.jdo
+13:15:32,955 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.dto.ReservationDTO" en /bspq18_e4/GestionHotelera/server/dto/package.jdo
+13:15:32,956 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.dto.ReservationDTO" en /bspq18_e4/GestionHotelera/server/dto/ReservationDTO.jdo
+13:15:32,956 (main) DEBUG [DataNucleus.MetaData] - No hemos encontrado el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.dto.ReservationDTO"
+13:15:32,956 (main) DEBUG [DataNucleus.MetaData] - Registrando la clase "bspq18_e4.GestionHotelera.server.dto.ReservationDTO" no tener Meta-Data
+13:15:32,956 (main) DEBUG [DataNucleus.MetaData] - La clase "bspq18_e4.GestionHotelera.server.dto.ReservationDTO" no tiene MetaData o annotaciones.
+13:15:32,958 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.dto.RoomDTO" en /META-INF/package.jdo
+13:15:32,958 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.dto.RoomDTO" en /WEB-INF/package.jdo
+13:15:32,958 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.dto.RoomDTO" en /package.jdo
+13:15:32,960 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.dto.RoomDTO" en /bspq18_e4/package.jdo
+13:15:32,960 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.dto.RoomDTO" en /bspq18_e4/GestionHotelera/package.jdo
+13:15:32,961 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.dto.RoomDTO" en /bspq18_e4/GestionHotelera/server/package.jdo
+13:15:32,962 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.dto.RoomDTO" en /bspq18_e4/GestionHotelera/server/dto/package.jdo
+13:15:32,962 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.dto.RoomDTO" en /bspq18_e4/GestionHotelera/server/dto/RoomDTO.jdo
+13:15:32,962 (main) DEBUG [DataNucleus.MetaData] - No hemos encontrado el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.dto.RoomDTO"
+13:15:32,962 (main) DEBUG [DataNucleus.MetaData] - Registrando la clase "bspq18_e4.GestionHotelera.server.dto.RoomDTO" no tener Meta-Data
+13:15:32,962 (main) DEBUG [DataNucleus.MetaData] - La clase "bspq18_e4.GestionHotelera.server.dto.RoomDTO" no tiene MetaData o annotaciones.
+13:15:32,964 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.dto.UserDTO" en /META-INF/package.jdo
+13:15:32,964 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.dto.UserDTO" en /WEB-INF/package.jdo
+13:15:32,964 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.dto.UserDTO" en /package.jdo
+13:15:32,965 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.dto.UserDTO" en /bspq18_e4/package.jdo
+13:15:32,965 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.dto.UserDTO" en /bspq18_e4/GestionHotelera/package.jdo
+13:15:32,965 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.dto.UserDTO" en /bspq18_e4/GestionHotelera/server/package.jdo
+13:15:32,965 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.dto.UserDTO" en /bspq18_e4/GestionHotelera/server/dto/package.jdo
+13:15:32,965 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.dto.UserDTO" en /bspq18_e4/GestionHotelera/server/dto/UserDTO.jdo
+13:15:32,966 (main) DEBUG [DataNucleus.MetaData] - No hemos encontrado el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.dto.UserDTO"
+13:15:32,966 (main) DEBUG [DataNucleus.MetaData] - Registrando la clase "bspq18_e4.GestionHotelera.server.dto.UserDTO" no tener Meta-Data
+13:15:32,966 (main) DEBUG [DataNucleus.MetaData] - La clase "bspq18_e4.GestionHotelera.server.dto.UserDTO" no tiene MetaData o annotaciones.
+13:15:32,967 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.HotelServer" en /META-INF/package.jdo
+13:15:32,968 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.HotelServer" en /WEB-INF/package.jdo
+13:15:32,969 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.HotelServer" en /package.jdo
+13:15:32,969 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.HotelServer" en /bspq18_e4/package.jdo
+13:15:32,970 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.HotelServer" en /bspq18_e4/GestionHotelera/package.jdo
+13:15:32,970 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.HotelServer" en /bspq18_e4/GestionHotelera/server/package.jdo
+13:15:32,970 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.HotelServer" en /bspq18_e4/GestionHotelera/server/HotelServer.jdo
+13:15:32,971 (main) DEBUG [DataNucleus.MetaData] - No hemos encontrado el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.HotelServer"
+13:15:32,971 (main) DEBUG [DataNucleus.MetaData] - Registrando la clase "bspq18_e4.GestionHotelera.server.HotelServer" no tener Meta-Data
+13:15:32,971 (main) DEBUG [DataNucleus.MetaData] - La clase "bspq18_e4.GestionHotelera.server.HotelServer" no tiene MetaData o annotaciones.
+13:15:32,973 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.remote.IService" en /META-INF/package.jdo
+13:15:32,973 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.remote.IService" en /WEB-INF/package.jdo
+13:15:32,973 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.remote.IService" en /package.jdo
+13:15:32,974 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.remote.IService" en /bspq18_e4/package.jdo
+13:15:32,974 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.remote.IService" en /bspq18_e4/GestionHotelera/package.jdo
+13:15:32,975 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.remote.IService" en /bspq18_e4/GestionHotelera/server/package.jdo
+13:15:32,976 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.remote.IService" en /bspq18_e4/GestionHotelera/server/remote/package.jdo
+13:15:32,976 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.remote.IService" en /bspq18_e4/GestionHotelera/server/remote/IService.jdo
+13:15:32,976 (main) DEBUG [DataNucleus.MetaData] - No hemos encontrado el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.remote.IService"
+13:15:32,976 (main) DEBUG [DataNucleus.MetaData] - Registrando la clase "bspq18_e4.GestionHotelera.server.remote.IService" no tener Meta-Data
+13:15:32,976 (main) DEBUG [DataNucleus.MetaData] - La clase "bspq18_e4.GestionHotelera.server.remote.IService" no tiene MetaData o annotaciones.
+13:15:32,978 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.remote.Service" en /META-INF/package.jdo
+13:15:32,979 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.remote.Service" en /WEB-INF/package.jdo
+13:15:32,979 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.remote.Service" en /package.jdo
+13:15:32,980 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.remote.Service" en /bspq18_e4/package.jdo
+13:15:32,980 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.remote.Service" en /bspq18_e4/GestionHotelera/package.jdo
+13:15:32,981 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.remote.Service" en /bspq18_e4/GestionHotelera/server/package.jdo
+13:15:32,981 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.remote.Service" en /bspq18_e4/GestionHotelera/server/remote/package.jdo
+13:15:32,981 (main) DEBUG [DataNucleus.MetaData] - No encontramos el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.remote.Service" en /bspq18_e4/GestionHotelera/server/remote/Service.jdo
+13:15:32,982 (main) DEBUG [DataNucleus.MetaData] - No hemos encontrado el MetaData del tipo "jdo" por la clase "bspq18_e4.GestionHotelera.server.remote.Service"
+13:15:32,982 (main) DEBUG [DataNucleus.MetaData] - Registrando la clase "bspq18_e4.GestionHotelera.server.remote.Service" no tener Meta-Data
+13:15:32,982 (main) DEBUG [DataNucleus.MetaData] - La clase "bspq18_e4.GestionHotelera.server.remote.Service" no tiene MetaData o annotaciones.
+13:15:32,983 (main) DEBUG [DataNucleus.MetaData] - Populación del MetaData ...
+13:15:32,984 (main) DEBUG [DataNucleus.MetaData] - Clase "bspq18_e4.GestionHotelera.server.data.Hotel" : Populando Meta-Data
+13:15:32,985 (main) DEBUG [DataNucleus.MetaData] - Clase "bspq18_e4.GestionHotelera.server.data.Hotel" campo "name" : añadiendo el Meta-Data por el campo como no estaba en la definición de Meta-Data.
+13:15:32,985 (main) DEBUG [DataNucleus.MetaData] - Clase "bspq18_e4.GestionHotelera.server.data.Hotel" campo "city" : añadiendo el Meta-Data por el campo como no estaba en la definición de Meta-Data.
+13:15:32,985 (main) DEBUG [DataNucleus.MetaData] - Clase "bspq18_e4.GestionHotelera.server.data.Hotel" campo "dir" : añadiendo el Meta-Data por el campo como no estaba en la definición de Meta-Data.
+13:15:32,985 (main) DEBUG [DataNucleus.MetaData] - Clase "bspq18_e4.GestionHotelera.server.data.Hotel" campo "stars" : añadiendo el Meta-Data por el campo como no estaba en la definición de Meta-Data.
+13:15:32,989 (main) DEBUG [DataNucleus.MetaData] - Clase "bspq18_e4.GestionHotelera.server.data.Reservation" : Populando Meta-Data
+13:15:32,989 (main) DEBUG [DataNucleus.MetaData] - Clase "bspq18_e4.GestionHotelera.server.data.Reservation" campo "arrival" : añadiendo el Meta-Data por el campo como no estaba en la definición de Meta-Data.
+13:15:32,992 (main) DEBUG [DataNucleus.MetaData] - Clase "bspq18_e4.GestionHotelera.server.data.Reservation" campo "departure" : añadiendo el Meta-Data por el campo como no estaba en la definición de Meta-Data.
+13:15:32,992 (main) DEBUG [DataNucleus.MetaData] - Clase "bspq18_e4.GestionHotelera.server.data.Reservation" campo "user" : añadiendo el Meta-Data por el campo como no estaba en la definición de Meta-Data.
+13:15:32,992 (main) DEBUG [DataNucleus.MetaData] - Clase "bspq18_e4.GestionHotelera.server.data.Reservation" campo "hotel" : añadiendo el Meta-Data por el campo como no estaba en la definición de Meta-Data.
+13:15:32,992 (main) DEBUG [DataNucleus.MetaData] - Clase "bspq18_e4.GestionHotelera.server.data.Reservation" campo "rooms" : añadiendo el Meta-Data por el campo como no estaba en la definición de Meta-Data.
+13:15:32,999 (main) DEBUG [DataNucleus.MetaData] - Clase "bspq18_e4.GestionHotelera.server.data.Room" : Populando Meta-Data
+13:15:32,999 (main) DEBUG [DataNucleus.MetaData] - Clase "bspq18_e4.GestionHotelera.server.data.Room" campo "num" : añadiendo el Meta-Data por el campo como no estaba en la definición de Meta-Data.
+13:15:32,999 (main) DEBUG [DataNucleus.MetaData] - Clase "bspq18_e4.GestionHotelera.server.data.Room" campo "type" : añadiendo el Meta-Data por el campo como no estaba en la definición de Meta-Data.
+13:15:32,999 (main) DEBUG [DataNucleus.MetaData] - Clase "bspq18_e4.GestionHotelera.server.data.Room" campo "capacity" : añadiendo el Meta-Data por el campo como no estaba en la definición de Meta-Data.
+13:15:33,000 (main) DEBUG [DataNucleus.MetaData] - Clase "bspq18_e4.GestionHotelera.server.data.Room" campo "price" : añadiendo el Meta-Data por el campo como no estaba en la definición de Meta-Data.
+13:15:33,000 (main) DEBUG [DataNucleus.MetaData] - Clase "bspq18_e4.GestionHotelera.server.data.Room" campo "hotel" : añadiendo el Meta-Data por el campo como no estaba en la definición de Meta-Data.
+13:15:33,000 (main) DEBUG [DataNucleus.MetaData] - Clase "bspq18_e4.GestionHotelera.server.data.User" : Populando Meta-Data
+13:15:33,001 (main) DEBUG [DataNucleus.MetaData] - Clase "bspq18_e4.GestionHotelera.server.data.User" campo "name" : añadiendo el Meta-Data por el campo como no estaba en la definición de Meta-Data.
+13:15:33,001 (main) DEBUG [DataNucleus.MetaData] - Clase "bspq18_e4.GestionHotelera.server.data.User" campo "pass" : añadiendo el Meta-Data por el campo como no estaba en la definición de Meta-Data.
+13:15:33,001 (main) DEBUG [DataNucleus.MetaData] - Clase "bspq18_e4.GestionHotelera.server.data.User" campo "cc" : añadiendo el Meta-Data por el campo como no estaba en la definición de Meta-Data.
+13:15:33,001 (main) DEBUG [DataNucleus.MetaData] - Clase "bspq18_e4.GestionHotelera.server.data.User" campo "reservations" : añadiendo el Meta-Data por el campo como no estaba en la definición de Meta-Data.
+13:15:33,002 (main) DEBUG [DataNucleus.MetaData] - Inicialisación del MetaData ...
+13:15:33,003 (main) DEBUG [DataNucleus.MetaData] - Clase "bspq18_e4.GestionHotelera.server.data.Hotel" : Inicializando Meta-Data
+13:15:33,007 (main) DEBUG [DataNucleus.MetaData] - Clase "bspq18_e4.GestionHotelera.server.data.Reservation" : Inicializando Meta-Data
+13:15:33,008 (main) DEBUG [DataNucleus.MetaData] - Clase "bspq18_e4.GestionHotelera.server.data.Room" : Inicializando Meta-Data
+13:15:33,008 (main) DEBUG [DataNucleus.MetaData] - Clase "bspq18_e4.GestionHotelera.server.data.User" : Inicializando Meta-Data
+13:15:33,008 (main) DEBUG [DataNucleus.MetaData] - MetaData Management : Carga de Metadata ya ha terminado
+13:15:33,014 (main) DEBUG [DataNucleus.Enhancer] - Enhance de la clase "bspq18_e4.GestionHotelera.server.data.Hotel" empezando ...
+13:15:33,047 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Hotel" no implementa el interfaz "org.datanucleus.enhancement.Persistable"!
+13:15:33,047 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Hotel" no implementa el interfaz "org.datanucleus.enhancement.Detachable"!
+13:15:33,048 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Hotel" no tiene el campo "dnStateManager" pero lo necesita
+13:15:33,048 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Hotel" no tiene el campo "dnDetachedState" pero lo necesita
+13:15:33,048 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Hotel" no tiene el campo "dnInheritedFieldCount" pero lo necesita
+13:15:33,048 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Hotel" no tiene el campo "dnFlags" pero lo necesita
+13:15:33,048 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Hotel" no tiene el campo "dnFieldTypes" pero lo necesita
+13:15:33,048 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Hotel" no tiene el campo "dnFieldNames" pero lo necesita
+13:15:33,048 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Hotel" no tiene el campo "dnFieldFlags" pero lo necesita
+13:15:33,048 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Hotel" no tiene el campo "dnPersistableSuperclass" pero lo necesita
+13:15:33,048 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Hotel" no tiene el metodo "dnReplaceField" pero lo necesita
+13:15:33,048 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Hotel" no tiene el metodo "dnGetStateManager" pero lo necesita
+13:15:33,048 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Hotel" no tiene el metodo "dnIsTransactional" pero lo necesita
+13:15:33,048 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Hotel" no tiene el metodo "dnNewInstance" pero lo necesita
+13:15:33,048 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Hotel" no tiene el metodo "dnNewInstance" pero lo necesita
+13:15:33,048 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Hotel" no tiene el metodo "dnSuperClone" pero lo necesita
+13:15:33,048 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Hotel" no tiene el metodo "dnProvideFields" pero lo necesita
+13:15:33,048 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Hotel" no tiene el metodo "___dn$loadClass" pero lo necesita
+13:15:33,048 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Hotel" no tiene el metodo "dnGetManagedFieldCount" pero lo necesita
+13:15:33,048 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Hotel" no tiene el metodo "dnIsDirty" pero lo necesita
+13:15:33,048 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Hotel" no tiene el metodo "dnReplaceStateManager" pero lo necesita
+13:15:33,048 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Hotel" no tiene el metodo "dnReplaceFlags" pero lo necesita
+13:15:33,048 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Hotel" no tiene el metodo "dnIsDetached" pero lo necesita
+13:15:33,048 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Hotel" no tiene el metodo "dnMakeDirty" pero lo necesita
+13:15:33,048 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Hotel" no tiene el metodo "__dnPersistableSuperclassInit" pero lo necesita
+13:15:33,048 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Hotel" no tiene el metodo "dnIsDeleted" pero lo necesita
+13:15:33,048 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Hotel" no tiene el metodo "__dnFieldFlagsInit" pero lo necesita
+13:15:33,048 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Hotel" no tiene el metodo "__dnFieldTypesInit" pero lo necesita
+13:15:33,048 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Hotel" no tiene el metodo "dnProvideField" pero lo necesita
+13:15:33,048 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Hotel" no tiene el metodo "dnPreSerialize" pero lo necesita
+13:15:33,048 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Hotel" no tiene el metodo "dnGetObjectId" pero lo necesita
+13:15:33,048 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Hotel" no tiene el metodo "dnGetVersion" pero lo necesita
+13:15:33,048 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Hotel" no tiene el metodo "dnGetTransactionalObjectId" pero lo necesita
+13:15:33,049 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Hotel" no tiene el metodo "dnIsNew" pero lo necesita
+13:15:33,049 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Hotel" no tiene el metodo "dnCopyKeyFieldsToObjectId" pero lo necesita
+13:15:33,049 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Hotel" no tiene el metodo "dnCopyKeyFieldsToObjectId" pero lo necesita
+13:15:33,049 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Hotel" no tiene el metodo "dnCopyField" pero lo necesita
+13:15:33,049 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Hotel" no tiene el metodo "dnCopyKeyFieldsFromObjectId" pero lo necesita
+13:15:33,049 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Hotel" no tiene el metodo "dnCopyKeyFieldsFromObjectId" pero lo necesita
+13:15:33,049 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Hotel" no tiene el metodo "dnGetExecutionContext" pero lo necesita
+13:15:33,049 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Hotel" no tiene el metodo "dnCopyFields" pero lo necesita
+13:15:33,049 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Hotel" no tiene el metodo "__dnGetInheritedFieldCount" pero lo necesita
+13:15:33,049 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Hotel" no tiene el metodo "dnNewObjectIdInstance" pero lo necesita
+13:15:33,049 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Hotel" no tiene el metodo "dnNewObjectIdInstance" pero lo necesita
+13:15:33,049 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Hotel" no tiene el metodo "dnReplaceDetachedState" pero lo necesita
+13:15:33,049 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Hotel" no tiene el metodo "dnIsPersistent" pero lo necesita
+13:15:33,049 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Hotel" no tiene el metodo "dnReplaceFields" pero lo necesita
+13:15:33,049 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Hotel" no tiene el metodo "__dnFieldNamesInit" pero lo necesita
+13:15:33,064 (main) DEBUG [DataNucleus.Enhancer] - Agregando el interfaz: org.datanucleus.enhancement.Detachable
+13:15:33,065 (main) DEBUG [DataNucleus.Enhancer] - Agregando el interfaz: org.datanucleus.enhancement.Persistable
+13:15:33,072 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.Hotel.<init> : ignorando enhance de set del campo "bspq18_e4.GestionHotelera.server.data.Hotel.id"
+13:15:33,073 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.Hotel.<init> : ignorando enhance de set del campo "bspq18_e4.GestionHotelera.server.data.Hotel.name"
+13:15:33,073 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.Hotel.<init> : ignorando enhance de set del campo "bspq18_e4.GestionHotelera.server.data.Hotel.city"
+13:15:33,073 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.Hotel.<init> : ignorando enhance de set del campo "bspq18_e4.GestionHotelera.server.data.Hotel.dir"
+13:15:33,073 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.Hotel.<init> : ignorando enhance de set del campo "bspq18_e4.GestionHotelera.server.data.Hotel.stars"
+13:15:33,073 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.Hotel.getId, cambiando el uso del campo "bspq18_e4.GestionHotelera.server.data.Hotel.id" para utilisar "dnGetid()"
+13:15:33,073 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.Hotel.setId, cambiando el uso del campo "bspq18_e4.GestionHotelera.server.data.Hotel.id" para utilisar "dnSetid()"
+13:15:33,074 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.Hotel.getName, cambiando el uso del campo "bspq18_e4.GestionHotelera.server.data.Hotel.name" para utilisar "dnGetname()"
+13:15:33,074 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.Hotel.setName, cambiando el uso del campo "bspq18_e4.GestionHotelera.server.data.Hotel.name" para utilisar "dnSetname()"
+13:15:33,074 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.Hotel.getCity, cambiando el uso del campo "bspq18_e4.GestionHotelera.server.data.Hotel.city" para utilisar "dnGetcity()"
+13:15:33,074 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.Hotel.setCity, cambiando el uso del campo "bspq18_e4.GestionHotelera.server.data.Hotel.city" para utilisar "dnSetcity()"
+13:15:33,074 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.Hotel.getDir, cambiando el uso del campo "bspq18_e4.GestionHotelera.server.data.Hotel.dir" para utilisar "dnGetdir()"
+13:15:33,074 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.Hotel.setDir, cambiando el uso del campo "bspq18_e4.GestionHotelera.server.data.Hotel.dir" para utilisar "dnSetdir()"
+13:15:33,074 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.Hotel.getStars, cambiando el uso del campo "bspq18_e4.GestionHotelera.server.data.Hotel.stars" para utilisar "dnGetstars()"
+13:15:33,074 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.Hotel.setStars, cambiando el uso del campo "bspq18_e4.GestionHotelera.server.data.Hotel.stars" para utilisar "dnSetstars()"
+13:15:33,075 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.Hotel.toString, cambiando el uso del campo "bspq18_e4.GestionHotelera.server.data.Hotel.id" para utilisar "dnGetid()"
+13:15:33,075 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.Hotel.toString, cambiando el uso del campo "bspq18_e4.GestionHotelera.server.data.Hotel.name" para utilisar "dnGetname()"
+13:15:33,075 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.Hotel.toString, cambiando el uso del campo "bspq18_e4.GestionHotelera.server.data.Hotel.city" para utilisar "dnGetcity()"
+13:15:33,075 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.Hotel.toString, cambiando el uso del campo "bspq18_e4.GestionHotelera.server.data.Hotel.dir" para utilisar "dnGetdir()"
+13:15:33,075 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.Hotel.toString, cambiando el uso del campo "bspq18_e4.GestionHotelera.server.data.Hotel.stars" para utilisar "dnGetstars()"
+13:15:33,075 (main) DEBUG [DataNucleus.Enhancer] - Agregando el campo "org.datanucleus.enhancement.StateManager dnStateManager"
+13:15:33,075 (main) DEBUG [DataNucleus.Enhancer] - Agregando el campo "byte dnFlags"
+13:15:33,075 (main) DEBUG [DataNucleus.Enhancer] - Agregando el campo "[Ljava.lang.Object; dnDetachedState"
+13:15:33,076 (main) DEBUG [DataNucleus.Enhancer] - Agregando el campo "[B dnFieldFlags"
+13:15:33,076 (main) DEBUG [DataNucleus.Enhancer] - Agregando el campo "java.lang.Class dnPersistableSuperclass"
+13:15:33,076 (main) DEBUG [DataNucleus.Enhancer] - Agregando el campo "[Ljava.lang.Class; dnFieldTypes"
+13:15:33,076 (main) DEBUG [DataNucleus.Enhancer] - Agregando el campo "[Ljava.lang.String; dnFieldNames"
+13:15:33,076 (main) DEBUG [DataNucleus.Enhancer] - Agregando el campo "int dnInheritedFieldCount"
+13:15:33,077 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void <clinit>()"
+13:15:33,078 (main) DEBUG [DataNucleus.Enhancer] - Agregando el constructor "bspq18_e4.GestionHotelera.server.data.Hotel()"
+13:15:33,081 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnCopyKeyFieldsFromObjectId(org.datanucleus.enhancement.Persistable$ObjectIdFieldConsumer fc, java.lang.Object oid)"
+13:15:33,081 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnCopyKeyFieldsFromObjectId(java.lang.Object oid)"
+13:15:33,081 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnCopyKeyFieldsToObjectId(java.lang.Object oid)"
+13:15:33,081 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnCopyKeyFieldsToObjectId(org.datanucleus.enhancement.Persistable$ObjectIdFieldSupplier fs, java.lang.Object oid)"
+13:15:33,082 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "java.lang.Object dnGetObjectId()"
+13:15:33,082 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "java.lang.Object dnGetVersion()"
+13:15:33,082 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnPreSerialize()"
+13:15:33,082 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "org.datanucleus.enhancement.ExecutionContextReference dnGetExecutionContext()"
+13:15:33,083 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "org.datanucleus.enhancement.StateManager dnGetStateManager()"
+13:15:33,083 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "java.lang.Object dnGetTransactionalObjectId()"
+13:15:33,084 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "boolean dnIsDeleted()"
+13:15:33,085 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "boolean dnIsDirty()"
+13:15:33,085 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "boolean dnIsNew()"
+13:15:33,085 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "boolean dnIsPersistent()"
+13:15:33,085 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "boolean dnIsTransactional()"
+13:15:33,086 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnMakeDirty(java.lang.String fieldName)"
+13:15:33,086 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "java.lang.Object dnNewObjectIdInstance()"
+13:15:33,086 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "java.lang.Object dnNewObjectIdInstance(java.lang.Object key)"
+13:15:33,087 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnProvideFields([I indices)"
+13:15:33,087 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnReplaceFields([I indices)"
+13:15:33,087 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnReplaceFlags()"
+13:15:33,088 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnReplaceStateManager(org.datanucleus.enhancement.StateManager sm)"
+13:15:33,088 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnReplaceDetachedState()"
+13:15:33,088 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "boolean dnIsDetached()"
+13:15:33,088 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "org.datanucleus.enhancement.Persistable dnNewInstance(org.datanucleus.enhancement.StateManager sm)"
+13:15:33,088 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "org.datanucleus.enhancement.Persistable dnNewInstance(org.datanucleus.enhancement.StateManager sm, java.lang.Object obj)"
+13:15:33,089 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnReplaceField(int index)"
+13:15:33,090 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnProvideField(int index)"
+13:15:33,090 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnCopyField(bspq18_e4.GestionHotelera.server.data.Hotel obj, int index)"
+13:15:33,090 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnCopyFields(java.lang.Object obj, [I indices)"
+13:15:33,091 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "[Ljava.lang.String; __dnFieldNamesInit()"
+13:15:33,091 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "[Ljava.lang.Class; __dnFieldTypesInit()"
+13:15:33,091 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "[B __dnFieldFlagsInit()"
+13:15:33,091 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "int __dnGetInheritedFieldCount()"
+13:15:33,091 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "int dnGetManagedFieldCount()"
+13:15:33,091 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "java.lang.Class __dnPersistableSuperclassInit()"
+13:15:33,092 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "java.lang.Class ___dn$loadClass(java.lang.String className)"
+13:15:33,092 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "java.lang.Object dnSuperClone()"
+13:15:33,093 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void writeObject(java.io.ObjectOutputStream out)"
+13:15:33,093 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "java.lang.String dnGetcity(bspq18_e4.GestionHotelera.server.data.Hotel objPC)"
+13:15:33,094 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnSetcity(bspq18_e4.GestionHotelera.server.data.Hotel objPC, java.lang.String val)"
+13:15:33,094 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "java.lang.String dnGetdir(bspq18_e4.GestionHotelera.server.data.Hotel objPC)"
+13:15:33,094 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnSetdir(bspq18_e4.GestionHotelera.server.data.Hotel objPC, java.lang.String val)"
+13:15:33,094 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "int dnGetid(bspq18_e4.GestionHotelera.server.data.Hotel objPC)"
+13:15:33,094 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnSetid(bspq18_e4.GestionHotelera.server.data.Hotel objPC, int val)"
+13:15:33,095 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "java.lang.String dnGetname(bspq18_e4.GestionHotelera.server.data.Hotel objPC)"
+13:15:33,095 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnSetname(bspq18_e4.GestionHotelera.server.data.Hotel objPC, java.lang.String val)"
+13:15:33,095 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "int dnGetstars(bspq18_e4.GestionHotelera.server.data.Hotel objPC)"
+13:15:33,095 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnSetstars(bspq18_e4.GestionHotelera.server.data.Hotel objPC, int val)"
+13:15:33,095 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\Users\Alejandro\git\BSPQ18-E4\target\classes\bspq18_e4\GestionHotelera\server\data\Hotel.class" con definicion enhanced
+13:15:33,107 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bspq18_e4.GestionHotelera.server.data.Hotel
+13:15:33,109 (main) DEBUG [DataNucleus.Enhancer] - Enhance de la clase "bspq18_e4.GestionHotelera.server.data.Hotel" ha terminado
+13:15:33,109 (main) DEBUG [DataNucleus.Enhancer] - Enhance de la clase "bspq18_e4.GestionHotelera.server.data.Reservation" empezando ...
+13:15:33,110 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Reservation" no implementa el interfaz "org.datanucleus.enhancement.Persistable"!
+13:15:33,110 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Reservation" no implementa el interfaz "org.datanucleus.enhancement.Detachable"!
+13:15:33,110 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Reservation" no tiene el campo "dnStateManager" pero lo necesita
+13:15:33,110 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Reservation" no tiene el campo "dnDetachedState" pero lo necesita
+13:15:33,110 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Reservation" no tiene el campo "dnInheritedFieldCount" pero lo necesita
+13:15:33,110 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Reservation" no tiene el campo "dnFlags" pero lo necesita
+13:15:33,110 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Reservation" no tiene el campo "dnFieldTypes" pero lo necesita
+13:15:33,110 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Reservation" no tiene el campo "dnFieldNames" pero lo necesita
+13:15:33,110 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Reservation" no tiene el campo "dnFieldFlags" pero lo necesita
+13:15:33,110 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Reservation" no tiene el campo "dnPersistableSuperclass" pero lo necesita
+13:15:33,110 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Reservation" no tiene el metodo "dnReplaceField" pero lo necesita
+13:15:33,110 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Reservation" no tiene el metodo "dnGetStateManager" pero lo necesita
+13:15:33,110 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Reservation" no tiene el metodo "dnIsTransactional" pero lo necesita
+13:15:33,110 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Reservation" no tiene el metodo "dnNewInstance" pero lo necesita
+13:15:33,110 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Reservation" no tiene el metodo "dnNewInstance" pero lo necesita
+13:15:33,111 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Reservation" no tiene el metodo "dnSuperClone" pero lo necesita
+13:15:33,111 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Reservation" no tiene el metodo "dnProvideFields" pero lo necesita
+13:15:33,111 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Reservation" no tiene el metodo "___dn$loadClass" pero lo necesita
+13:15:33,111 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Reservation" no tiene el metodo "dnGetManagedFieldCount" pero lo necesita
+13:15:33,111 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Reservation" no tiene el metodo "dnIsDirty" pero lo necesita
+13:15:33,111 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Reservation" no tiene el metodo "dnReplaceStateManager" pero lo necesita
+13:15:33,111 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Reservation" no tiene el metodo "dnReplaceFlags" pero lo necesita
+13:15:33,111 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Reservation" no tiene el metodo "dnIsDetached" pero lo necesita
+13:15:33,111 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Reservation" no tiene el metodo "dnMakeDirty" pero lo necesita
+13:15:33,111 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Reservation" no tiene el metodo "__dnPersistableSuperclassInit" pero lo necesita
+13:15:33,111 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Reservation" no tiene el metodo "dnIsDeleted" pero lo necesita
+13:15:33,111 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Reservation" no tiene el metodo "__dnFieldFlagsInit" pero lo necesita
+13:15:33,111 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Reservation" no tiene el metodo "__dnFieldTypesInit" pero lo necesita
+13:15:33,111 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Reservation" no tiene el metodo "dnProvideField" pero lo necesita
+13:15:33,111 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Reservation" no tiene el metodo "dnPreSerialize" pero lo necesita
+13:15:33,111 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Reservation" no tiene el metodo "dnGetObjectId" pero lo necesita
+13:15:33,111 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Reservation" no tiene el metodo "dnGetVersion" pero lo necesita
+13:15:33,111 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Reservation" no tiene el metodo "dnGetTransactionalObjectId" pero lo necesita
+13:15:33,111 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Reservation" no tiene el metodo "dnIsNew" pero lo necesita
+13:15:33,111 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Reservation" no tiene el metodo "dnCopyKeyFieldsToObjectId" pero lo necesita
+13:15:33,111 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Reservation" no tiene el metodo "dnCopyKeyFieldsToObjectId" pero lo necesita
+13:15:33,111 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Reservation" no tiene el metodo "dnCopyField" pero lo necesita
+13:15:33,111 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Reservation" no tiene el metodo "dnCopyKeyFieldsFromObjectId" pero lo necesita
+13:15:33,111 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Reservation" no tiene el metodo "dnCopyKeyFieldsFromObjectId" pero lo necesita
+13:15:33,111 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Reservation" no tiene el metodo "dnGetExecutionContext" pero lo necesita
+13:15:33,111 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Reservation" no tiene el metodo "dnCopyFields" pero lo necesita
+13:15:33,111 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Reservation" no tiene el metodo "__dnGetInheritedFieldCount" pero lo necesita
+13:15:33,111 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Reservation" no tiene el metodo "dnNewObjectIdInstance" pero lo necesita
+13:15:33,111 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Reservation" no tiene el metodo "dnNewObjectIdInstance" pero lo necesita
+13:15:33,111 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Reservation" no tiene el metodo "dnReplaceDetachedState" pero lo necesita
+13:15:33,111 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Reservation" no tiene el metodo "dnIsPersistent" pero lo necesita
+13:15:33,111 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Reservation" no tiene el metodo "dnReplaceFields" pero lo necesita
+13:15:33,111 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Reservation" no tiene el metodo "__dnFieldNamesInit" pero lo necesita
+13:15:33,112 (main) DEBUG [DataNucleus.Enhancer] - Agregando el interfaz: org.datanucleus.enhancement.Detachable
+13:15:33,112 (main) DEBUG [DataNucleus.Enhancer] - Agregando el interfaz: org.datanucleus.enhancement.Persistable
+13:15:33,112 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.Reservation.<init> : ignorando enhance de set del campo "bspq18_e4.GestionHotelera.server.data.Reservation.id"
+13:15:33,113 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.Reservation.<init> : ignorando enhance de set del campo "bspq18_e4.GestionHotelera.server.data.Reservation.arrival"
+13:15:33,113 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.Reservation.<init> : ignorando enhance de set del campo "bspq18_e4.GestionHotelera.server.data.Reservation.departure"
+13:15:33,113 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.Reservation.<init> : ignorando enhance de set del campo "bspq18_e4.GestionHotelera.server.data.Reservation.user"
+13:15:33,113 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.Reservation.<init> : ignorando enhance de set del campo "bspq18_e4.GestionHotelera.server.data.Reservation.hotel"
+13:15:33,113 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.Reservation.<init> : ignorando enhance de set del campo "bspq18_e4.GestionHotelera.server.data.Reservation.rooms"
+13:15:33,113 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.Reservation.getId, cambiando el uso del campo "bspq18_e4.GestionHotelera.server.data.Reservation.id" para utilisar "dnGetid()"
+13:15:33,113 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.Reservation.setId, cambiando el uso del campo "bspq18_e4.GestionHotelera.server.data.Reservation.id" para utilisar "dnSetid()"
+13:15:33,113 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.Reservation.getUser, cambiando el uso del campo "bspq18_e4.GestionHotelera.server.data.Reservation.user" para utilisar "dnGetuser()"
+13:15:33,113 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.Reservation.setUser, cambiando el uso del campo "bspq18_e4.GestionHotelera.server.data.Reservation.user" para utilisar "dnSetuser()"
+13:15:33,114 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.Reservation.getHotel, cambiando el uso del campo "bspq18_e4.GestionHotelera.server.data.Reservation.hotel" para utilisar "dnGethotel()"
+13:15:33,114 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.Reservation.setHotel, cambiando el uso del campo "bspq18_e4.GestionHotelera.server.data.Reservation.hotel" para utilisar "dnSethotel()"
+13:15:33,114 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.Reservation.getRooms, cambiando el uso del campo "bspq18_e4.GestionHotelera.server.data.Reservation.rooms" para utilisar "dnGetrooms()"
+13:15:33,114 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.Reservation.setRooms, cambiando el uso del campo "bspq18_e4.GestionHotelera.server.data.Reservation.rooms" para utilisar "dnSetrooms()"
+13:15:33,114 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.Reservation.getArrival, cambiando el uso del campo "bspq18_e4.GestionHotelera.server.data.Reservation.arrival" para utilisar "dnGetarrival()"
+13:15:33,114 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.Reservation.setArrival, cambiando el uso del campo "bspq18_e4.GestionHotelera.server.data.Reservation.arrival" para utilisar "dnSetarrival()"
+13:15:33,114 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.Reservation.getDeparture, cambiando el uso del campo "bspq18_e4.GestionHotelera.server.data.Reservation.departure" para utilisar "dnGetdeparture()"
+13:15:33,114 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.Reservation.setDeparture, cambiando el uso del campo "bspq18_e4.GestionHotelera.server.data.Reservation.departure" para utilisar "dnSetdeparture()"
+13:15:33,115 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.Reservation.toString, cambiando el uso del campo "bspq18_e4.GestionHotelera.server.data.Reservation.id" para utilisar "dnGetid()"
+13:15:33,115 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.Reservation.toString, cambiando el uso del campo "bspq18_e4.GestionHotelera.server.data.Reservation.arrival" para utilisar "dnGetarrival()"
+13:15:33,115 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.Reservation.toString, cambiando el uso del campo "bspq18_e4.GestionHotelera.server.data.Reservation.departure" para utilisar "dnGetdeparture()"
+13:15:33,115 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.Reservation.toString, cambiando el uso del campo "bspq18_e4.GestionHotelera.server.data.Reservation.user" para utilisar "dnGetuser()"
+13:15:33,115 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.Reservation.toString, cambiando el uso del campo "bspq18_e4.GestionHotelera.server.data.Reservation.hotel" para utilisar "dnGethotel()"
+13:15:33,115 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.Reservation.toString, cambiando el uso del campo "bspq18_e4.GestionHotelera.server.data.Reservation.rooms" para utilisar "dnGetrooms()"
+13:15:33,115 (main) DEBUG [DataNucleus.Enhancer] - Agregando el campo "org.datanucleus.enhancement.StateManager dnStateManager"
+13:15:33,115 (main) DEBUG [DataNucleus.Enhancer] - Agregando el campo "byte dnFlags"
+13:15:33,115 (main) DEBUG [DataNucleus.Enhancer] - Agregando el campo "[Ljava.lang.Object; dnDetachedState"
+13:15:33,115 (main) DEBUG [DataNucleus.Enhancer] - Agregando el campo "[B dnFieldFlags"
+13:15:33,115 (main) DEBUG [DataNucleus.Enhancer] - Agregando el campo "java.lang.Class dnPersistableSuperclass"
+13:15:33,115 (main) DEBUG [DataNucleus.Enhancer] - Agregando el campo "[Ljava.lang.Class; dnFieldTypes"
+13:15:33,115 (main) DEBUG [DataNucleus.Enhancer] - Agregando el campo "[Ljava.lang.String; dnFieldNames"
+13:15:33,115 (main) DEBUG [DataNucleus.Enhancer] - Agregando el campo "int dnInheritedFieldCount"
+13:15:33,116 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void <clinit>()"
+13:15:33,116 (main) DEBUG [DataNucleus.Enhancer] - Agregando el constructor "bspq18_e4.GestionHotelera.server.data.Reservation()"
+13:15:33,116 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnCopyKeyFieldsFromObjectId(org.datanucleus.enhancement.Persistable$ObjectIdFieldConsumer fc, java.lang.Object oid)"
+13:15:33,116 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnCopyKeyFieldsFromObjectId(java.lang.Object oid)"
+13:15:33,116 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnCopyKeyFieldsToObjectId(java.lang.Object oid)"
+13:15:33,116 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnCopyKeyFieldsToObjectId(org.datanucleus.enhancement.Persistable$ObjectIdFieldSupplier fs, java.lang.Object oid)"
+13:15:33,116 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "java.lang.Object dnGetObjectId()"
+13:15:33,117 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "java.lang.Object dnGetVersion()"
+13:15:33,117 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnPreSerialize()"
+13:15:33,117 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "org.datanucleus.enhancement.ExecutionContextReference dnGetExecutionContext()"
+13:15:33,117 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "org.datanucleus.enhancement.StateManager dnGetStateManager()"
+13:15:33,118 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "java.lang.Object dnGetTransactionalObjectId()"
+13:15:33,118 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "boolean dnIsDeleted()"
+13:15:33,119 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "boolean dnIsDirty()"
+13:15:33,119 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "boolean dnIsNew()"
+13:15:33,119 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "boolean dnIsPersistent()"
+13:15:33,120 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "boolean dnIsTransactional()"
+13:15:33,120 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnMakeDirty(java.lang.String fieldName)"
+13:15:33,120 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "java.lang.Object dnNewObjectIdInstance()"
+13:15:33,120 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "java.lang.Object dnNewObjectIdInstance(java.lang.Object key)"
+13:15:33,120 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnProvideFields([I indices)"
+13:15:33,120 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnReplaceFields([I indices)"
+13:15:33,120 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnReplaceFlags()"
+13:15:33,120 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnReplaceStateManager(org.datanucleus.enhancement.StateManager sm)"
+13:15:33,120 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnReplaceDetachedState()"
+13:15:33,120 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "boolean dnIsDetached()"
+13:15:33,121 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "org.datanucleus.enhancement.Persistable dnNewInstance(org.datanucleus.enhancement.StateManager sm)"
+13:15:33,121 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "org.datanucleus.enhancement.Persistable dnNewInstance(org.datanucleus.enhancement.StateManager sm, java.lang.Object obj)"
+13:15:33,121 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnReplaceField(int index)"
+13:15:33,121 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnProvideField(int index)"
+13:15:33,122 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnCopyField(bspq18_e4.GestionHotelera.server.data.Reservation obj, int index)"
+13:15:33,122 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnCopyFields(java.lang.Object obj, [I indices)"
+13:15:33,122 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "[Ljava.lang.String; __dnFieldNamesInit()"
+13:15:33,122 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "[Ljava.lang.Class; __dnFieldTypesInit()"
+13:15:33,122 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "[B __dnFieldFlagsInit()"
+13:15:33,122 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "int __dnGetInheritedFieldCount()"
+13:15:33,122 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "int dnGetManagedFieldCount()"
+13:15:33,122 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "java.lang.Class __dnPersistableSuperclassInit()"
+13:15:33,122 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "java.lang.Class ___dn$loadClass(java.lang.String className)"
+13:15:33,122 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "java.lang.Object dnSuperClone()"
+13:15:33,122 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void writeObject(java.io.ObjectOutputStream out)"
+13:15:33,122 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "java.util.Date dnGetarrival(bspq18_e4.GestionHotelera.server.data.Reservation objPC)"
+13:15:33,122 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnSetarrival(bspq18_e4.GestionHotelera.server.data.Reservation objPC, java.util.Date val)"
+13:15:33,122 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "java.util.Date dnGetdeparture(bspq18_e4.GestionHotelera.server.data.Reservation objPC)"
+13:15:33,123 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnSetdeparture(bspq18_e4.GestionHotelera.server.data.Reservation objPC, java.util.Date val)"
+13:15:33,123 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "bspq18_e4.GestionHotelera.server.data.Hotel dnGethotel(bspq18_e4.GestionHotelera.server.data.Reservation objPC)"
+13:15:33,123 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnSethotel(bspq18_e4.GestionHotelera.server.data.Reservation objPC, bspq18_e4.GestionHotelera.server.data.Hotel val)"
+13:15:33,123 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "int dnGetid(bspq18_e4.GestionHotelera.server.data.Reservation objPC)"
+13:15:33,123 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnSetid(bspq18_e4.GestionHotelera.server.data.Reservation objPC, int val)"
+13:15:33,123 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "java.util.ArrayList dnGetrooms(bspq18_e4.GestionHotelera.server.data.Reservation objPC)"
+13:15:33,124 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnSetrooms(bspq18_e4.GestionHotelera.server.data.Reservation objPC, java.util.ArrayList val)"
+13:15:33,124 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "bspq18_e4.GestionHotelera.server.data.User dnGetuser(bspq18_e4.GestionHotelera.server.data.Reservation objPC)"
+13:15:33,124 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnSetuser(bspq18_e4.GestionHotelera.server.data.Reservation objPC, bspq18_e4.GestionHotelera.server.data.User val)"
+13:15:33,124 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\Users\Alejandro\git\BSPQ18-E4\target\classes\bspq18_e4\GestionHotelera\server\data\Reservation.class" con definicion enhanced
+13:15:33,141 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bspq18_e4.GestionHotelera.server.data.Reservation
+13:15:33,144 (main) DEBUG [DataNucleus.Enhancer] - Enhance de la clase "bspq18_e4.GestionHotelera.server.data.Reservation" ha terminado
+13:15:33,144 (main) DEBUG [DataNucleus.Enhancer] - Enhance de la clase "bspq18_e4.GestionHotelera.server.data.Room" empezando ...
+13:15:33,145 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Room" no implementa el interfaz "org.datanucleus.enhancement.Persistable"!
+13:15:33,145 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Room" no implementa el interfaz "org.datanucleus.enhancement.Detachable"!
+13:15:33,145 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Room" no tiene el campo "dnStateManager" pero lo necesita
+13:15:33,145 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Room" no tiene el campo "dnDetachedState" pero lo necesita
+13:15:33,145 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Room" no tiene el campo "dnInheritedFieldCount" pero lo necesita
+13:15:33,145 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Room" no tiene el campo "dnFlags" pero lo necesita
+13:15:33,145 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Room" no tiene el campo "dnFieldTypes" pero lo necesita
+13:15:33,145 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Room" no tiene el campo "dnFieldNames" pero lo necesita
+13:15:33,145 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Room" no tiene el campo "dnFieldFlags" pero lo necesita
+13:15:33,145 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Room" no tiene el campo "dnPersistableSuperclass" pero lo necesita
+13:15:33,145 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Room" no tiene el metodo "dnReplaceField" pero lo necesita
+13:15:33,145 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Room" no tiene el metodo "dnGetStateManager" pero lo necesita
+13:15:33,145 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Room" no tiene el metodo "dnIsTransactional" pero lo necesita
+13:15:33,145 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Room" no tiene el metodo "dnNewInstance" pero lo necesita
+13:15:33,145 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Room" no tiene el metodo "dnNewInstance" pero lo necesita
+13:15:33,145 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Room" no tiene el metodo "dnSuperClone" pero lo necesita
+13:15:33,145 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Room" no tiene el metodo "dnProvideFields" pero lo necesita
+13:15:33,145 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Room" no tiene el metodo "___dn$loadClass" pero lo necesita
+13:15:33,145 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Room" no tiene el metodo "dnGetManagedFieldCount" pero lo necesita
+13:15:33,145 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Room" no tiene el metodo "dnIsDirty" pero lo necesita
+13:15:33,145 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Room" no tiene el metodo "dnReplaceStateManager" pero lo necesita
+13:15:33,145 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Room" no tiene el metodo "dnReplaceFlags" pero lo necesita
+13:15:33,145 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Room" no tiene el metodo "dnIsDetached" pero lo necesita
+13:15:33,145 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Room" no tiene el metodo "dnMakeDirty" pero lo necesita
+13:15:33,145 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Room" no tiene el metodo "__dnPersistableSuperclassInit" pero lo necesita
+13:15:33,145 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Room" no tiene el metodo "dnIsDeleted" pero lo necesita
+13:15:33,145 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Room" no tiene el metodo "__dnFieldFlagsInit" pero lo necesita
+13:15:33,145 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Room" no tiene el metodo "__dnFieldTypesInit" pero lo necesita
+13:15:33,145 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Room" no tiene el metodo "dnProvideField" pero lo necesita
+13:15:33,145 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Room" no tiene el metodo "dnPreSerialize" pero lo necesita
+13:15:33,145 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Room" no tiene el metodo "dnGetObjectId" pero lo necesita
+13:15:33,145 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Room" no tiene el metodo "dnGetVersion" pero lo necesita
+13:15:33,145 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Room" no tiene el metodo "dnGetTransactionalObjectId" pero lo necesita
+13:15:33,145 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Room" no tiene el metodo "dnIsNew" pero lo necesita
+13:15:33,146 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Room" no tiene el metodo "dnCopyKeyFieldsToObjectId" pero lo necesita
+13:15:33,146 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Room" no tiene el metodo "dnCopyKeyFieldsToObjectId" pero lo necesita
+13:15:33,146 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Room" no tiene el metodo "dnCopyField" pero lo necesita
+13:15:33,146 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Room" no tiene el metodo "dnCopyKeyFieldsFromObjectId" pero lo necesita
+13:15:33,146 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Room" no tiene el metodo "dnCopyKeyFieldsFromObjectId" pero lo necesita
+13:15:33,146 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Room" no tiene el metodo "dnGetExecutionContext" pero lo necesita
+13:15:33,146 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Room" no tiene el metodo "dnCopyFields" pero lo necesita
+13:15:33,146 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Room" no tiene el metodo "__dnGetInheritedFieldCount" pero lo necesita
+13:15:33,146 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Room" no tiene el metodo "dnNewObjectIdInstance" pero lo necesita
+13:15:33,146 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Room" no tiene el metodo "dnNewObjectIdInstance" pero lo necesita
+13:15:33,146 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Room" no tiene el metodo "dnReplaceDetachedState" pero lo necesita
+13:15:33,146 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Room" no tiene el metodo "dnIsPersistent" pero lo necesita
+13:15:33,146 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Room" no tiene el metodo "dnReplaceFields" pero lo necesita
+13:15:33,146 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.Room" no tiene el metodo "__dnFieldNamesInit" pero lo necesita
+13:15:33,146 (main) DEBUG [DataNucleus.Enhancer] - Agregando el interfaz: org.datanucleus.enhancement.Detachable
+13:15:33,146 (main) DEBUG [DataNucleus.Enhancer] - Agregando el interfaz: org.datanucleus.enhancement.Persistable
+13:15:33,146 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.Room.<init> : ignorando enhance de set del campo "bspq18_e4.GestionHotelera.server.data.Room.num"
+13:15:33,146 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.Room.<init> : ignorando enhance de set del campo "bspq18_e4.GestionHotelera.server.data.Room.type"
+13:15:33,146 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.Room.<init> : ignorando enhance de set del campo "bspq18_e4.GestionHotelera.server.data.Room.capacity"
+13:15:33,146 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.Room.<init> : ignorando enhance de set del campo "bspq18_e4.GestionHotelera.server.data.Room.price"
+13:15:33,146 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.Room.<init> : ignorando enhance de set del campo "bspq18_e4.GestionHotelera.server.data.Room.hotel"
+13:15:33,147 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.Room.getNum, cambiando el uso del campo "bspq18_e4.GestionHotelera.server.data.Room.num" para utilisar "dnGetnum()"
+13:15:33,147 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.Room.setNum, cambiando el uso del campo "bspq18_e4.GestionHotelera.server.data.Room.num" para utilisar "dnSetnum()"
+13:15:33,147 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.Room.getType, cambiando el uso del campo "bspq18_e4.GestionHotelera.server.data.Room.type" para utilisar "dnGettype()"
+13:15:33,147 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.Room.setType, cambiando el uso del campo "bspq18_e4.GestionHotelera.server.data.Room.type" para utilisar "dnSettype()"
+13:15:33,147 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.Room.getCapacity, cambiando el uso del campo "bspq18_e4.GestionHotelera.server.data.Room.capacity" para utilisar "dnGetcapacity()"
+13:15:33,147 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.Room.setCapacity, cambiando el uso del campo "bspq18_e4.GestionHotelera.server.data.Room.capacity" para utilisar "dnSetcapacity()"
+13:15:33,147 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.Room.getPrice, cambiando el uso del campo "bspq18_e4.GestionHotelera.server.data.Room.price" para utilisar "dnGetprice()"
+13:15:33,147 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.Room.setPrice, cambiando el uso del campo "bspq18_e4.GestionHotelera.server.data.Room.price" para utilisar "dnSetprice()"
+13:15:33,147 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.Room.getHotel, cambiando el uso del campo "bspq18_e4.GestionHotelera.server.data.Room.hotel" para utilisar "dnGethotel()"
+13:15:33,147 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.Room.setHotel, cambiando el uso del campo "bspq18_e4.GestionHotelera.server.data.Room.hotel" para utilisar "dnSethotel()"
+13:15:33,147 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.Room.toString, cambiando el uso del campo "bspq18_e4.GestionHotelera.server.data.Room.num" para utilisar "dnGetnum()"
+13:15:33,147 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.Room.toString, cambiando el uso del campo "bspq18_e4.GestionHotelera.server.data.Room.type" para utilisar "dnGettype()"
+13:15:33,147 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.Room.toString, cambiando el uso del campo "bspq18_e4.GestionHotelera.server.data.Room.capacity" para utilisar "dnGetcapacity()"
+13:15:33,148 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.Room.toString, cambiando el uso del campo "bspq18_e4.GestionHotelera.server.data.Room.price" para utilisar "dnGetprice()"
+13:15:33,148 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.Room.toString, cambiando el uso del campo "bspq18_e4.GestionHotelera.server.data.Room.hotel" para utilisar "dnGethotel()"
+13:15:33,148 (main) DEBUG [DataNucleus.Enhancer] - Agregando el campo "org.datanucleus.enhancement.StateManager dnStateManager"
+13:15:33,148 (main) DEBUG [DataNucleus.Enhancer] - Agregando el campo "byte dnFlags"
+13:15:33,148 (main) DEBUG [DataNucleus.Enhancer] - Agregando el campo "[Ljava.lang.Object; dnDetachedState"
+13:15:33,148 (main) DEBUG [DataNucleus.Enhancer] - Agregando el campo "[B dnFieldFlags"
+13:15:33,148 (main) DEBUG [DataNucleus.Enhancer] - Agregando el campo "java.lang.Class dnPersistableSuperclass"
+13:15:33,148 (main) DEBUG [DataNucleus.Enhancer] - Agregando el campo "[Ljava.lang.Class; dnFieldTypes"
+13:15:33,148 (main) DEBUG [DataNucleus.Enhancer] - Agregando el campo "[Ljava.lang.String; dnFieldNames"
+13:15:33,148 (main) DEBUG [DataNucleus.Enhancer] - Agregando el campo "int dnInheritedFieldCount"
+13:15:33,148 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void <clinit>()"
+13:15:33,148 (main) DEBUG [DataNucleus.Enhancer] - Agregando el constructor "bspq18_e4.GestionHotelera.server.data.Room()"
+13:15:33,148 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnCopyKeyFieldsFromObjectId(org.datanucleus.enhancement.Persistable$ObjectIdFieldConsumer fc, java.lang.Object oid)"
+13:15:33,148 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnCopyKeyFieldsFromObjectId(java.lang.Object oid)"
+13:15:33,148 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnCopyKeyFieldsToObjectId(java.lang.Object oid)"
+13:15:33,148 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnCopyKeyFieldsToObjectId(org.datanucleus.enhancement.Persistable$ObjectIdFieldSupplier fs, java.lang.Object oid)"
+13:15:33,148 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "java.lang.Object dnGetObjectId()"
+13:15:33,148 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "java.lang.Object dnGetVersion()"
+13:15:33,148 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnPreSerialize()"
+13:15:33,149 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "org.datanucleus.enhancement.ExecutionContextReference dnGetExecutionContext()"
+13:15:33,149 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "org.datanucleus.enhancement.StateManager dnGetStateManager()"
+13:15:33,149 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "java.lang.Object dnGetTransactionalObjectId()"
+13:15:33,149 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "boolean dnIsDeleted()"
+13:15:33,149 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "boolean dnIsDirty()"
+13:15:33,149 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "boolean dnIsNew()"
+13:15:33,149 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "boolean dnIsPersistent()"
+13:15:33,149 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "boolean dnIsTransactional()"
+13:15:33,149 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnMakeDirty(java.lang.String fieldName)"
+13:15:33,149 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "java.lang.Object dnNewObjectIdInstance()"
+13:15:33,149 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "java.lang.Object dnNewObjectIdInstance(java.lang.Object key)"
+13:15:33,149 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnProvideFields([I indices)"
+13:15:33,149 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnReplaceFields([I indices)"
+13:15:33,149 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnReplaceFlags()"
+13:15:33,149 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnReplaceStateManager(org.datanucleus.enhancement.StateManager sm)"
+13:15:33,149 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnReplaceDetachedState()"
+13:15:33,150 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "boolean dnIsDetached()"
+13:15:33,150 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "org.datanucleus.enhancement.Persistable dnNewInstance(org.datanucleus.enhancement.StateManager sm)"
+13:15:33,150 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "org.datanucleus.enhancement.Persistable dnNewInstance(org.datanucleus.enhancement.StateManager sm, java.lang.Object obj)"
+13:15:33,152 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnReplaceField(int index)"
+13:15:33,153 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnProvideField(int index)"
+13:15:33,153 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnCopyField(bspq18_e4.GestionHotelera.server.data.Room obj, int index)"
+13:15:33,153 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnCopyFields(java.lang.Object obj, [I indices)"
+13:15:33,153 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "[Ljava.lang.String; __dnFieldNamesInit()"
+13:15:33,154 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "[Ljava.lang.Class; __dnFieldTypesInit()"
+13:15:33,154 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "[B __dnFieldFlagsInit()"
+13:15:33,154 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "int __dnGetInheritedFieldCount()"
+13:15:33,154 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "int dnGetManagedFieldCount()"
+13:15:33,154 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "java.lang.Class __dnPersistableSuperclassInit()"
+13:15:33,154 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "java.lang.Class ___dn$loadClass(java.lang.String className)"
+13:15:33,154 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "java.lang.Object dnSuperClone()"
+13:15:33,154 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void writeObject(java.io.ObjectOutputStream out)"
+13:15:33,154 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "int dnGetcapacity(bspq18_e4.GestionHotelera.server.data.Room objPC)"
+13:15:33,155 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnSetcapacity(bspq18_e4.GestionHotelera.server.data.Room objPC, int val)"
+13:15:33,155 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "bspq18_e4.GestionHotelera.server.data.Hotel dnGethotel(bspq18_e4.GestionHotelera.server.data.Room objPC)"
+13:15:33,155 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnSethotel(bspq18_e4.GestionHotelera.server.data.Room objPC, bspq18_e4.GestionHotelera.server.data.Hotel val)"
+13:15:33,155 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "int dnGetnum(bspq18_e4.GestionHotelera.server.data.Room objPC)"
+13:15:33,155 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnSetnum(bspq18_e4.GestionHotelera.server.data.Room objPC, int val)"
+13:15:33,156 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "double dnGetprice(bspq18_e4.GestionHotelera.server.data.Room objPC)"
+13:15:33,156 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnSetprice(bspq18_e4.GestionHotelera.server.data.Room objPC, double val)"
+13:15:33,157 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "java.lang.String dnGettype(bspq18_e4.GestionHotelera.server.data.Room objPC)"
+13:15:33,157 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnSettype(bspq18_e4.GestionHotelera.server.data.Room objPC, java.lang.String val)"
+13:15:33,158 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\Users\Alejandro\git\BSPQ18-E4\target\classes\bspq18_e4\GestionHotelera\server\data\Room.class" con definicion enhanced
+13:15:33,173 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bspq18_e4.GestionHotelera.server.data.Room
+13:15:33,175 (main) DEBUG [DataNucleus.Enhancer] - Enhance de la clase "bspq18_e4.GestionHotelera.server.data.Room" ha terminado
+13:15:33,175 (main) DEBUG [DataNucleus.Enhancer] - Enhance de la clase "bspq18_e4.GestionHotelera.server.data.User" empezando ...
+13:15:33,176 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.User" no implementa el interfaz "org.datanucleus.enhancement.Persistable"!
+13:15:33,176 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.User" no implementa el interfaz "org.datanucleus.enhancement.Detachable"!
+13:15:33,176 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.User" no tiene el campo "dnStateManager" pero lo necesita
+13:15:33,176 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.User" no tiene el campo "dnDetachedState" pero lo necesita
+13:15:33,176 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.User" no tiene el campo "dnInheritedFieldCount" pero lo necesita
+13:15:33,176 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.User" no tiene el campo "dnFlags" pero lo necesita
+13:15:33,176 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.User" no tiene el campo "dnFieldTypes" pero lo necesita
+13:15:33,176 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.User" no tiene el campo "dnFieldNames" pero lo necesita
+13:15:33,177 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.User" no tiene el campo "dnFieldFlags" pero lo necesita
+13:15:33,177 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.User" no tiene el campo "dnPersistableSuperclass" pero lo necesita
+13:15:33,177 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.User" no tiene el metodo "dnReplaceField" pero lo necesita
+13:15:33,177 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.User" no tiene el metodo "dnGetStateManager" pero lo necesita
+13:15:33,177 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.User" no tiene el metodo "dnIsTransactional" pero lo necesita
+13:15:33,177 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.User" no tiene el metodo "dnNewInstance" pero lo necesita
+13:15:33,177 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.User" no tiene el metodo "dnNewInstance" pero lo necesita
+13:15:33,177 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.User" no tiene el metodo "dnSuperClone" pero lo necesita
+13:15:33,177 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.User" no tiene el metodo "dnProvideFields" pero lo necesita
+13:15:33,177 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.User" no tiene el metodo "___dn$loadClass" pero lo necesita
+13:15:33,177 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.User" no tiene el metodo "dnGetManagedFieldCount" pero lo necesita
+13:15:33,177 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.User" no tiene el metodo "dnIsDirty" pero lo necesita
+13:15:33,177 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.User" no tiene el metodo "dnReplaceStateManager" pero lo necesita
+13:15:33,177 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.User" no tiene el metodo "dnReplaceFlags" pero lo necesita
+13:15:33,177 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.User" no tiene el metodo "dnIsDetached" pero lo necesita
+13:15:33,177 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.User" no tiene el metodo "dnMakeDirty" pero lo necesita
+13:15:33,177 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.User" no tiene el metodo "__dnPersistableSuperclassInit" pero lo necesita
+13:15:33,177 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.User" no tiene el metodo "dnIsDeleted" pero lo necesita
+13:15:33,177 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.User" no tiene el metodo "__dnFieldFlagsInit" pero lo necesita
+13:15:33,177 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.User" no tiene el metodo "__dnFieldTypesInit" pero lo necesita
+13:15:33,177 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.User" no tiene el metodo "dnProvideField" pero lo necesita
+13:15:33,177 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.User" no tiene el metodo "dnPreSerialize" pero lo necesita
+13:15:33,177 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.User" no tiene el metodo "dnGetObjectId" pero lo necesita
+13:15:33,177 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.User" no tiene el metodo "dnGetVersion" pero lo necesita
+13:15:33,177 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.User" no tiene el metodo "dnGetTransactionalObjectId" pero lo necesita
+13:15:33,177 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.User" no tiene el metodo "dnIsNew" pero lo necesita
+13:15:33,177 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.User" no tiene el metodo "dnCopyKeyFieldsToObjectId" pero lo necesita
+13:15:33,177 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.User" no tiene el metodo "dnCopyKeyFieldsToObjectId" pero lo necesita
+13:15:33,177 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.User" no tiene el metodo "dnCopyField" pero lo necesita
+13:15:33,177 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.User" no tiene el metodo "dnCopyKeyFieldsFromObjectId" pero lo necesita
+13:15:33,177 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.User" no tiene el metodo "dnCopyKeyFieldsFromObjectId" pero lo necesita
+13:15:33,177 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.User" no tiene el metodo "dnGetExecutionContext" pero lo necesita
+13:15:33,177 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.User" no tiene el metodo "dnCopyFields" pero lo necesita
+13:15:33,177 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.User" no tiene el metodo "__dnGetInheritedFieldCount" pero lo necesita
+13:15:33,177 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.User" no tiene el metodo "dnNewObjectIdInstance" pero lo necesita
+13:15:33,177 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.User" no tiene el metodo "dnNewObjectIdInstance" pero lo necesita
+13:15:33,177 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.User" no tiene el metodo "dnReplaceDetachedState" pero lo necesita
+13:15:33,177 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.User" no tiene el metodo "dnIsPersistent" pero lo necesita
+13:15:33,178 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.User" no tiene el metodo "dnReplaceFields" pero lo necesita
+13:15:33,178 (main) DEBUG [DataNucleus.Enhancer] - La clase "bspq18_e4.GestionHotelera.server.data.User" no tiene el metodo "__dnFieldNamesInit" pero lo necesita
+13:15:33,178 (main) DEBUG [DataNucleus.Enhancer] - Agregando el interfaz: org.datanucleus.enhancement.Detachable
+13:15:33,178 (main) DEBUG [DataNucleus.Enhancer] - Agregando el interfaz: org.datanucleus.enhancement.Persistable
+13:15:33,178 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.User.<init> : ignorando enhance de set del campo "bspq18_e4.GestionHotelera.server.data.User.email"
+13:15:33,179 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.User.<init> : ignorando enhance de set del campo "bspq18_e4.GestionHotelera.server.data.User.name"
+13:15:33,179 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.User.<init> : ignorando enhance de set del campo "bspq18_e4.GestionHotelera.server.data.User.pass"
+13:15:33,179 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.User.<init> : ignorando enhance de set del campo "bspq18_e4.GestionHotelera.server.data.User.cc"
+13:15:33,179 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.User.<init> : ignorando enhance de set del campo "bspq18_e4.GestionHotelera.server.data.User.reservations"
+13:15:33,179 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.User.getEmail, cambiando el uso del campo "bspq18_e4.GestionHotelera.server.data.User.email" para utilisar "dnGetemail()"
+13:15:33,179 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.User.setEmail, cambiando el uso del campo "bspq18_e4.GestionHotelera.server.data.User.email" para utilisar "dnSetemail()"
+13:15:33,179 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.User.getName, cambiando el uso del campo "bspq18_e4.GestionHotelera.server.data.User.name" para utilisar "dnGetname()"
+13:15:33,179 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.User.setName, cambiando el uso del campo "bspq18_e4.GestionHotelera.server.data.User.name" para utilisar "dnSetname()"
+13:15:33,179 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.User.getPass, cambiando el uso del campo "bspq18_e4.GestionHotelera.server.data.User.pass" para utilisar "dnGetpass()"
+13:15:33,179 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.User.setPass, cambiando el uso del campo "bspq18_e4.GestionHotelera.server.data.User.pass" para utilisar "dnSetpass()"
+13:15:33,179 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.User.getCc, cambiando el uso del campo "bspq18_e4.GestionHotelera.server.data.User.cc" para utilisar "dnGetcc()"
+13:15:33,179 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.User.setCc, cambiando el uso del campo "bspq18_e4.GestionHotelera.server.data.User.cc" para utilisar "dnSetcc()"
+13:15:33,180 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.User.getReservations, cambiando el uso del campo "bspq18_e4.GestionHotelera.server.data.User.reservations" para utilisar "dnGetreservations()"
+13:15:33,180 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.User.setReservations, cambiando el uso del campo "bspq18_e4.GestionHotelera.server.data.User.reservations" para utilisar "dnSetreservations()"
+13:15:33,180 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.User.addReservation, cambiando el uso del campo "bspq18_e4.GestionHotelera.server.data.User.reservations" para utilisar "dnGetreservations()"
+13:15:33,180 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.User.removeReserva, cambiando el uso del campo "bspq18_e4.GestionHotelera.server.data.User.reservations" para utilisar "dnGetreservations()"
+13:15:33,180 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.User.toString, cambiando el uso del campo "bspq18_e4.GestionHotelera.server.data.User.email" para utilisar "dnGetemail()"
+13:15:33,180 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.User.toString, cambiando el uso del campo "bspq18_e4.GestionHotelera.server.data.User.name" para utilisar "dnGetname()"
+13:15:33,180 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.User.toString, cambiando el uso del campo "bspq18_e4.GestionHotelera.server.data.User.pass" para utilisar "dnGetpass()"
+13:15:33,180 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.User.toString, cambiando el uso del campo "bspq18_e4.GestionHotelera.server.data.User.cc" para utilisar "dnGetcc()"
+13:15:33,181 (main) DEBUG [DataNucleus.Enhancer] - Enhancing metodo original bspq18_e4.GestionHotelera.server.data.User.toString, cambiando el uso del campo "bspq18_e4.GestionHotelera.server.data.User.reservations" para utilisar "dnGetreservations()"
+13:15:33,181 (main) DEBUG [DataNucleus.Enhancer] - Agregando el campo "org.datanucleus.enhancement.StateManager dnStateManager"
+13:15:33,181 (main) DEBUG [DataNucleus.Enhancer] - Agregando el campo "byte dnFlags"
+13:15:33,181 (main) DEBUG [DataNucleus.Enhancer] - Agregando el campo "[Ljava.lang.Object; dnDetachedState"
+13:15:33,181 (main) DEBUG [DataNucleus.Enhancer] - Agregando el campo "[B dnFieldFlags"
+13:15:33,181 (main) DEBUG [DataNucleus.Enhancer] - Agregando el campo "java.lang.Class dnPersistableSuperclass"
+13:15:33,181 (main) DEBUG [DataNucleus.Enhancer] - Agregando el campo "[Ljava.lang.Class; dnFieldTypes"
+13:15:33,181 (main) DEBUG [DataNucleus.Enhancer] - Agregando el campo "[Ljava.lang.String; dnFieldNames"
+13:15:33,181 (main) DEBUG [DataNucleus.Enhancer] - Agregando el campo "int dnInheritedFieldCount"
+13:15:33,181 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void <clinit>()"
+13:15:33,181 (main) DEBUG [DataNucleus.Enhancer] - Agregando el constructor "bspq18_e4.GestionHotelera.server.data.User()"
+13:15:33,181 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnCopyKeyFieldsFromObjectId(org.datanucleus.enhancement.Persistable$ObjectIdFieldConsumer fc, java.lang.Object oid)"
+13:15:33,181 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnCopyKeyFieldsFromObjectId(java.lang.Object oid)"
+13:15:33,181 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnCopyKeyFieldsToObjectId(java.lang.Object oid)"
+13:15:33,181 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnCopyKeyFieldsToObjectId(org.datanucleus.enhancement.Persistable$ObjectIdFieldSupplier fs, java.lang.Object oid)"
+13:15:33,183 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "java.lang.Object dnGetObjectId()"
+13:15:33,183 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "java.lang.Object dnGetVersion()"
+13:15:33,183 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnPreSerialize()"
+13:15:33,183 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "org.datanucleus.enhancement.ExecutionContextReference dnGetExecutionContext()"
+13:15:33,183 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "org.datanucleus.enhancement.StateManager dnGetStateManager()"
+13:15:33,183 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "java.lang.Object dnGetTransactionalObjectId()"
+13:15:33,183 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "boolean dnIsDeleted()"
+13:15:33,183 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "boolean dnIsDirty()"
+13:15:33,183 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "boolean dnIsNew()"
+13:15:33,183 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "boolean dnIsPersistent()"
+13:15:33,183 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "boolean dnIsTransactional()"
+13:15:33,186 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnMakeDirty(java.lang.String fieldName)"
+13:15:33,186 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "java.lang.Object dnNewObjectIdInstance()"
+13:15:33,187 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "java.lang.Object dnNewObjectIdInstance(java.lang.Object key)"
+13:15:33,187 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnProvideFields([I indices)"
+13:15:33,187 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnReplaceFields([I indices)"
+13:15:33,187 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnReplaceFlags()"
+13:15:33,187 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnReplaceStateManager(org.datanucleus.enhancement.StateManager sm)"
+13:15:33,187 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnReplaceDetachedState()"
+13:15:33,187 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "boolean dnIsDetached()"
+13:15:33,187 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "org.datanucleus.enhancement.Persistable dnNewInstance(org.datanucleus.enhancement.StateManager sm)"
+13:15:33,187 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "org.datanucleus.enhancement.Persistable dnNewInstance(org.datanucleus.enhancement.StateManager sm, java.lang.Object obj)"
+13:15:33,187 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnReplaceField(int index)"
+13:15:33,187 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnProvideField(int index)"
+13:15:33,188 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnCopyField(bspq18_e4.GestionHotelera.server.data.User obj, int index)"
+13:15:33,188 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnCopyFields(java.lang.Object obj, [I indices)"
+13:15:33,188 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "[Ljava.lang.String; __dnFieldNamesInit()"
+13:15:33,188 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "[Ljava.lang.Class; __dnFieldTypesInit()"
+13:15:33,188 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "[B __dnFieldFlagsInit()"
+13:15:33,188 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "int __dnGetInheritedFieldCount()"
+13:15:33,188 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "int dnGetManagedFieldCount()"
+13:15:33,188 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "java.lang.Class __dnPersistableSuperclassInit()"
+13:15:33,188 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "java.lang.Class ___dn$loadClass(java.lang.String className)"
+13:15:33,188 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "java.lang.Object dnSuperClone()"
+13:15:33,188 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void writeObject(java.io.ObjectOutputStream out)"
+13:15:33,188 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "java.lang.String dnGetcc(bspq18_e4.GestionHotelera.server.data.User objPC)"
+13:15:33,188 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnSetcc(bspq18_e4.GestionHotelera.server.data.User objPC, java.lang.String val)"
+13:15:33,189 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "java.lang.String dnGetemail(bspq18_e4.GestionHotelera.server.data.User objPC)"
+13:15:33,189 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnSetemail(bspq18_e4.GestionHotelera.server.data.User objPC, java.lang.String val)"
+13:15:33,189 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "java.lang.String dnGetname(bspq18_e4.GestionHotelera.server.data.User objPC)"
+13:15:33,189 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnSetname(bspq18_e4.GestionHotelera.server.data.User objPC, java.lang.String val)"
+13:15:33,189 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "java.lang.String dnGetpass(bspq18_e4.GestionHotelera.server.data.User objPC)"
+13:15:33,189 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnSetpass(bspq18_e4.GestionHotelera.server.data.User objPC, java.lang.String val)"
+13:15:33,189 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "java.util.ArrayList dnGetreservations(bspq18_e4.GestionHotelera.server.data.User objPC)"
+13:15:33,189 (main) DEBUG [DataNucleus.Enhancer] - Agregando el metodo "void dnSetreservations(bspq18_e4.GestionHotelera.server.data.User objPC, java.util.ArrayList val)"
+13:15:33,190 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\Users\Alejandro\git\BSPQ18-E4\target\classes\bspq18_e4\GestionHotelera\server\data\User.class" con definicion enhanced
+13:15:33,210 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (Persistable) : bspq18_e4.GestionHotelera.server.data.User
+13:15:33,212 (main) DEBUG [DataNucleus.Enhancer] - Enhance de la clase "bspq18_e4.GestionHotelera.server.data.User" ha terminado
+13:15:33,213 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=283 ms, enhance=204 ms, total=487 ms. Compruebe el LOG para los detalles
+13:15:37,538 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.General] - Using PluginRegistry org.datanucleus.plugin.NonManagedPluginRegistry
+13:15:37,587 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.General] - Registering bundle org.datanucleus version 5.1.8 at URL file:/C:/Users/Alejandro/.m2/repository/org/datanucleus/datanucleus-core/5.1.8/datanucleus-core-5.1.8.jar.
+13:15:37,608 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.General] - Loading extension points from plug-in file jar:file:/C:/Users/Alejandro/.m2/repository/org/datanucleus/datanucleus-core/5.1.8/datanucleus-core-5.1.8.jar!/plugin.xml.
+13:15:37,643 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.General] - Loading extensions from plug-in file jar:file:/C:/Users/Alejandro/.m2/repository/org/datanucleus/datanucleus-core/5.1.8/datanucleus-core-5.1.8.jar!/plugin.xml.
+13:15:37,646 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.General] - Registering bundle org.datanucleus.api.jdo version 5.1.5 at URL file:/C:/Users/Alejandro/.m2/repository/org/datanucleus/datanucleus-api-jdo/5.1.5/datanucleus-api-jdo-5.1.5.jar.
+13:15:37,658 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.General] - Loading extension points from plug-in file jar:file:/C:/Users/Alejandro/.m2/repository/org/datanucleus/datanucleus-api-jdo/5.1.5/datanucleus-api-jdo-5.1.5.jar!/plugin.xml.
+13:15:37,661 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.General] - Loading extensions from plug-in file jar:file:/C:/Users/Alejandro/.m2/repository/org/datanucleus/datanucleus-api-jdo/5.1.5/datanucleus-api-jdo-5.1.5.jar!/plugin.xml.
+13:15:37,665 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.General] - Registering bundle org.datanucleus.store.rdbms version 5.1.8 at URL file:/C:/Users/Alejandro/.m2/repository/org/datanucleus/datanucleus-rdbms/5.1.8/datanucleus-rdbms-5.1.8.jar.
+13:15:37,672 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.General] - Loading extension points from plug-in file jar:file:/C:/Users/Alejandro/.m2/repository/org/datanucleus/datanucleus-rdbms/5.1.8/datanucleus-rdbms-5.1.8.jar!/plugin.xml.
+13:15:37,684 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.General] - Loading extensions from plug-in file jar:file:/C:/Users/Alejandro/.m2/repository/org/datanucleus/datanucleus-rdbms/5.1.8/datanucleus-rdbms-5.1.8.jar!/plugin.xml.
+13:15:37,724 (bspq18_e4.GestionHotelera.server.HotelServer.main()) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+13:15:37,724 (bspq18_e4.GestionHotelera.server.HotelServer.main()) INFO  [DataNucleus.Persistence] - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+13:15:37,752 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Persistence] - Tipos de Java inicializando ...
+13:15:37,887 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Persistence] - Soporte para tipos de Java listo : tipos soportados = [B, [C, [D, [F, [I, [J, [Ljava.lang.Boolean;, [Ljava.lang.Byte;, [Ljava.lang.Character;, [Ljava.lang.Double;, [Ljava.lang.Enum;, [Ljava.lang.Float;, [Ljava.lang.Integer;, [Ljava.lang.Long;, [Ljava.lang.Number;, [Ljava.lang.Object;, [Ljava.lang.Short;, [Ljava.lang.String;, [Ljava.math.BigDecimal;, [Ljava.math.BigInteger;, [Ljava.util.Date;, [Ljava.util.Locale;, [S, [Z, boolean, byte, char, double, float, int, java.awt.Color, java.awt.image.BufferedImage, java.lang.Boolean, java.lang.Byte, java.lang.Character, java.lang.Class, java.lang.Double, java.lang.Enum, java.lang.Float, java.lang.Integer, java.lang.Long, java.lang.Number, java.lang.Short, java.lang.String, java.lang.StringBuffer, java.lang.StringBuilder, java.math.BigDecimal, java.math.BigInteger, java.net.URI, java.net.URL, java.sql.Date, java.sql.Time, java.sql.Timestamp, java.time.Duration, java.time.Instant, java.time.LocalDate, java.time.LocalDateTime, java.time.LocalTime, java.time.MonthDay, java.time.OffsetDateTime, java.time.OffsetTime, java.time.Period, java.time.Year, java.time.YearMonth, java.time.ZonedDateTime, java.time.ZoneId, java.time.ZoneOffset, java.util.ArrayList, java.util.Arrays$ArrayList, java.util.BitSet, java.util.Calendar, java.util.Collection, java.util.Currency, java.util.Date, java.util.GregorianCalendar, java.util.HashMap, java.util.HashSet, java.util.Hashtable, java.util.LinkedHashMap, java.util.LinkedHashSet, java.util.LinkedList, java.util.List, java.util.Locale, java.util.Map, java.util.Optional, java.util.PriorityQueue, java.util.Properties, java.util.Queue, java.util.Set, java.util.SortedMap, java.util.SortedSet, java.util.Stack, java.util.TimeZone, java.util.TreeMap, java.util.TreeSet, java.util.UUID, java.util.Vector, long, short
+13:15:37,887 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Persistence] - Inicializando TypeConverters ...
+13:15:37,995 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Persistence] - TypeConverters listo
+13:15:37,995 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for byte[] to : java.nio.ByteBuffer
+13:15:37,996 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for char[] to : java.nio.ByteBuffer
+13:15:37,996 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for double[] to : java.nio.ByteBuffer
+13:15:37,996 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for float[] to : java.nio.ByteBuffer
+13:15:37,996 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for int[] to : java.nio.ByteBuffer
+13:15:37,996 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for long[] to : java.nio.ByteBuffer
+13:15:37,996 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for [Ljava.math.BigDecimal; to : java.nio.ByteBuffer
+13:15:37,996 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for [Ljava.math.BigInteger; to : java.nio.ByteBuffer
+13:15:37,996 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for short[] to : java.nio.ByteBuffer
+13:15:37,996 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for boolean[] to : java.nio.ByteBuffer
+13:15:37,996 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.awt.Color to : int[],java.lang.String
+13:15:37,996 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.awt.image.BufferedImage to : java.nio.ByteBuffer,byte[]
+13:15:37,996 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.io.Serializable to : java.lang.String,java.nio.ByteBuffer,byte[]
+13:15:37,996 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.lang.Boolean to : java.lang.Character,java.lang.Integer
+13:15:37,997 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.lang.Character to : java.lang.String
+13:15:37,997 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.lang.Class to : java.lang.String
+13:15:37,997 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.lang.Integer to : java.lang.String
+13:15:37,997 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.lang.Long to : java.lang.String
+13:15:37,997 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.lang.StringBuffer to : java.lang.String
+13:15:37,997 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.lang.StringBuilder to : java.lang.String
+13:15:37,997 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.math.BigDecimal to : java.lang.String,java.lang.Double
+13:15:37,997 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.math.BigInteger to : java.lang.String,java.lang.Long
+13:15:37,997 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.net.URI to : java.lang.String
+13:15:37,997 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.net.URL to : java.lang.String
+13:15:37,997 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.sql.Date to : java.lang.String,java.util.Date,java.lang.Long
+13:15:37,997 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.sql.Time to : java.lang.String,java.util.Date,java.lang.Long
+13:15:37,997 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.sql.Timestamp to : java.lang.String,java.util.Date,java.lang.Long
+13:15:37,997 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.time.Duration to : java.lang.String,java.lang.Double,java.lang.Long
+13:15:37,997 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.time.Instant to : java.sql.Timestamp,java.lang.String,java.util.Date,java.lang.Long
+13:15:37,997 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.time.LocalDate to : java.lang.String,java.sql.Date,java.util.Date
+13:15:37,997 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.time.LocalDateTime to : java.sql.Timestamp,java.lang.String,java.util.Date
+13:15:37,998 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.time.LocalTime to : java.lang.String,java.sql.Time,java.util.Date,java.lang.Long
+13:15:37,998 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.time.MonthDay to : int[],java.lang.String,java.sql.Date,java.util.Date
+13:15:37,998 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.time.OffsetDateTime to : java.sql.Timestamp,java.lang.String,java.util.Date
+13:15:37,998 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.time.OffsetTime to : java.lang.String,java.sql.Time,java.lang.Long
+13:15:37,998 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.time.Period to : int[],java.lang.String
+13:15:37,998 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.time.Year to : java.lang.String,java.lang.Integer
+13:15:37,998 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.time.YearMonth to : int[],java.lang.String,java.sql.Date,java.util.Date
+13:15:37,998 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.time.ZonedDateTime to : java.sql.Timestamp,java.lang.String
+13:15:37,998 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.time.ZoneId to : java.lang.String
+13:15:37,998 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.time.ZoneOffset to : java.lang.String
+13:15:37,998 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.util.BitSet to : java.lang.String
+13:15:37,998 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.util.Calendar to : java.sql.Timestamp,[Ljava.lang.Object;,java.lang.String,java.util.Date
+13:15:37,998 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.util.Currency to : java.lang.String
+13:15:37,998 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.util.Date to : java.lang.String,java.lang.Long
+13:15:37,998 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.util.Locale to : java.lang.String
+13:15:37,998 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.util.TimeZone to : java.lang.String
+13:15:37,998 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.util.UUID to : java.lang.String
+13:15:37,999 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.MetaData] - MetaDataManager : Input=(XML,Annotations), XML-Validation=false, XML-Suffices=(persistence=*.jdo, orm=orm, query=*.jdoquery) mapping-name=mysql, JDO-listener=true
+13:15:37,999 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.MetaData] - Registering listener for metadata initialisation
+13:15:38,009 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Datastore] - Creating StoreManager for datastore
+13:15:38,259 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Connection] - Creado ConnectionPool "tx" con data source de tipo dbcp2-builtin
+13:15:38,259 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Connection] - Registrado la factoria de connecciones transaccionales bajo el nombre "rdbms/tx"
+13:15:38,259 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Connection] - Registrado la factoria de connecciones nontransaccionales bajo el nombre "rdbms/nontx"
+13:15:38,285 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Connection] - Creado ConnectionPool "nontx" con data source de tipo dbcp2-builtin
+13:15:38,673 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Connection] - ManagedConnection ABIERTO : "org.datanucleus.store.rdbms.ConnectionFactoryImpl$ManagedConnectionImpl@3f4d06a9 [conn=null, commitOnRelease=true, closeOnRelease=true, closeOnTxnEnd=true]" en resource "nontx"
+13:15:38,734 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Datastore] - No Soportando el tipo RDBMS de Java java.lang.Float, jdbc-type=REAL
+13:15:38,735 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Datastore] - No Soportando el tipo RDBMS de Java java.lang.String, jdbc-type=NVARCHAR
+13:15:38,735 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Datastore] - No Soportando el tipo RDBMS de Java java.lang.String, jdbc-type=NCHAR
+13:15:38,735 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Datastore] - No Soportando el tipo RDBMS de Java java.lang.Boolean, jdbc-type=BOOLEAN
+13:15:38,735 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Datastore] - Soporte de RDBMS configurado para el tipo "[B" con jdbc-types=[BLOB, BINARY, VARBINARY, LONGVARBINARY], sql-types=[BLOB, BINARY, VARBINARY, LONGVARBINARY] y defecto (jdbc-type=LONGVARBINARY, sql-type=LONGVARBINARY)
+13:15:38,735 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Datastore] - Soporte de RDBMS configurado para el tipo "java.io.File" con jdbc-types=[LONGVARBINARY], sql-types=[LONGVARBINARY] y defecto (jdbc-type=LONGVARBINARY, sql-type=LONGVARBINARY)
+13:15:38,735 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Datastore] - Soporte de RDBMS configurado para el tipo "java.io.Serializable" con jdbc-types=[BLOB, BINARY, VARBINARY, LONGVARBINARY], sql-types=[BLOB, BINARY, VARBINARY, LONGVARBINARY] y defecto (jdbc-type=LONGVARBINARY, sql-type=LONGVARBINARY)
+13:15:38,735 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Datastore] - Soporte de RDBMS configurado para el tipo "java.lang.Boolean" con jdbc-types=[SMALLINT, CHAR, BIT, TINYINT], sql-types=[SMALLINT, CHAR, BIT, TINYINT] y defecto (jdbc-type=BIT, sql-type=BIT)
+13:15:38,735 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Datastore] - Soporte de RDBMS configurado para el tipo "java.lang.Byte" con jdbc-types=[SMALLINT, TINYINT], sql-types=[SMALLINT, TINYINT] y defecto (jdbc-type=TINYINT, sql-type=TINYINT)
+13:15:38,735 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Datastore] - Soporte de RDBMS configurado para el tipo "java.lang.Character" con jdbc-types=[CHAR, INTEGER], sql-types=[CHAR, INTEGER] y defecto (jdbc-type=CHAR, sql-type=CHAR)
+13:15:38,735 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Datastore] - Soporte de RDBMS configurado para el tipo "java.lang.Double" con jdbc-types=[DECIMAL, DOUBLE], sql-types=[DECIMAL, DOUBLE] y defecto (jdbc-type=DOUBLE, sql-type=DOUBLE)
+13:15:38,735 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Datastore] - Soporte de RDBMS configurado para el tipo "java.lang.Float" con jdbc-types=[FLOAT, DECIMAL, DOUBLE], sql-types=[FLOAT, DECIMAL, DOUBLE] y defecto (jdbc-type=FLOAT, sql-type=FLOAT)
+13:15:38,735 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Datastore] - Soporte de RDBMS configurado para el tipo "java.lang.Integer" con jdbc-types=[NUMERIC, SMALLINT, BIGINT, TINYINT, INTEGER], sql-types=[NUMERIC, SMALLINT, BIGINT, TINYINT, INTEGER] y defecto (jdbc-type=INTEGER, sql-type=INTEGER)
+13:15:38,735 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Datastore] - Soporte de RDBMS configurado para el tipo "java.lang.Long" con jdbc-types=[NUMERIC, SMALLINT, BIGINT, TINYINT, INTEGER], sql-types=[NUMERIC, SMALLINT, BIGINT, INT, TINYINT] y defecto (jdbc-type=BIGINT, sql-type=BIGINT)
+13:15:38,735 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Datastore] - Soporte de RDBMS configurado para el tipo "java.lang.Short" con jdbc-types=[SMALLINT, TINYINT, INTEGER], sql-types=[SMALLINT, TINYINT, INTEGER] y defecto (jdbc-type=SMALLINT, sql-type=SMALLINT)
+13:15:38,735 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Datastore] - Soporte de RDBMS configurado para el tipo "java.lang.String" con jdbc-types=[BLOB, LONGVARCHAR, CLOB, VARCHAR, CHAR, BIGINT], sql-types=[BLOB, LONGVARCHAR, CLOB, LONGTEXT, CHAR, BIGINT, TEXT, MEDIUMTEXT, MEDIUMBLOB, VARCHAR, LONGBLOB] y defecto (jdbc-type=VARCHAR, sql-type=VARCHAR)
+13:15:38,735 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Datastore] - Soporte de RDBMS configurado para el tipo "java.math.BigDecimal" con jdbc-types=[NUMERIC, DECIMAL], sql-types=[NUMERIC, DECIMAL] y defecto (jdbc-type=DECIMAL, sql-type=DECIMAL)
+13:15:38,736 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Datastore] - Soporte de RDBMS configurado para el tipo "java.math.BigInteger" con jdbc-types=[NUMERIC], sql-types=[NUMERIC] y defecto (jdbc-type=NUMERIC, sql-type=NUMERIC)
+13:15:38,736 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Datastore] - Soporte de RDBMS configurado para el tipo "java.sql.Date" con jdbc-types=[DATE, TIMESTAMP, VARCHAR, CHAR, BIGINT], sql-types=[DATE, TIMESTAMP, VARCHAR, CHAR, BIGINT] y defecto (jdbc-type=DATE, sql-type=DATE)
+13:15:38,736 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Datastore] - Soporte de RDBMS configurado para el tipo "java.sql.Time" con jdbc-types=[TIMESTAMP, VARCHAR, CHAR, TIME, BIGINT], sql-types=[TIMESTAMP, VARCHAR, CHAR, TIME, BIGINT] y defecto (jdbc-type=TIME, sql-type=TIME)
+13:15:38,736 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Datastore] - Soporte de RDBMS configurado para el tipo "java.sql.Timestamp" con jdbc-types=[DATE, TIMESTAMP, VARCHAR, CHAR, TIME], sql-types=[DATE, TIMESTAMP, VARCHAR, CHAR, TIME] y defecto (jdbc-type=TIMESTAMP, sql-type=TIMESTAMP)
+13:15:38,736 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Datastore] - Soporte de RDBMS configurado para el tipo "java.util.Date" con jdbc-types=[DATE, TIMESTAMP, VARCHAR, CHAR, TIME, BIGINT], sql-types=[DATE, TIMESTAMP, VARCHAR, CHAR, TIME, BIGINT] y defecto (jdbc-type=TIMESTAMP, sql-type=TIMESTAMP)
+13:15:38,736 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Datastore] - Soporte de RDBMS configurado para el tipo "org.datanucleus.identity.DatastoreId" con jdbc-types=[NUMERIC, VARCHAR, CHAR, BIGINT, INTEGER], sql-types=[NUMERIC, VARCHAR, CHAR, BIGINT, INTEGER] y defecto (jdbc-type=BIGINT, sql-type=BIGINT)
+13:15:38,799 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Datastore.Schema] - La columna "`DELETEME1523963738762`.`UNUSED`" añadió a la representación de la table.
+13:15:38,805 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Datastore.Schema] - CREATE TABLE `DELETEME1523963738762`
+(
+    `UNUSED` INTEGER NOT NULL
+) ENGINE=INNODB
+13:15:38,999 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Datastore.Schema] - SQL Tiempo de cumplir = 194 ms
+13:15:39,020 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Datastore.Schema] - No era posible determinar el nombre del esquema por este DataStore
+13:15:39,021 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Datastore.Schema] - DROP TABLE `DELETEME1523963738762` CASCADE
+13:15:39,176 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Datastore.Schema] - SQL Tiempo de cumplir = 155 ms
+13:15:39,177 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Datastore] - ======================= Datastore =========================
+13:15:39,177 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Datastore] - StoreManager : "rdbms" (org.datanucleus.store.rdbms.RDBMSStoreManager)
+13:15:39,177 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Datastore] - Datastore : read-write
+13:15:39,177 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Datastore] - Schema Control : AutoCreate(Tables,Columns,Constraints), Validate(None)
+13:15:39,177 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Datastore] - Schema : NamingFactory=datanucleus2 identifierCase=null
+13:15:39,177 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Datastore] - Query Languages : JDOQL, JPQL, STOREDPROC, SQL
+13:15:39,177 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Datastore] - Queries : Timeout=0
+13:15:39,177 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Datastore] - ===========================================================
+13:15:39,177 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Datastore] - Datastore Adapter : org.datanucleus.store.rdbms.adapter.MySQLAdapter
+13:15:39,177 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Datastore] - Datastore : name="MySQL" version="5.5.5-10.1.26-MariaDB"
+13:15:39,177 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Datastore] - Datastore Driver : name="MySQL Connector Java" version="mysql-connector-java-5.1.45 ( Revision: 9131eefa398531c7dc98776e8a3fe839e544c5b2 )"
+13:15:39,177 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Datastore] - Primary Connection Factory : URL[jdbc:mysql://localhost/messagesDB?verifyServerCertificate=false&useSSL=true]
+13:15:39,177 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Datastore] - Secondary Connection Factory : URL[jdbc:mysql://localhost/messagesDB?verifyServerCertificate=false&useSSL=true]
+13:15:39,178 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Datastore] - Datastore Identifiers : factory="datanucleus2" case="UPPERCASE" catalog=messagesDB
+13:15:39,178 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Datastore] - Supported Identifier Cases : lowercase "lowercase" "UPPERCASE" 
+13:15:39,178 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Datastore] - Supported Identifier Lengths (max) : Table=64 Column=64 Constraint=64 Index=64 Delimiter=`
+13:15:39,178 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Datastore] - Support for Identifiers in DDL : catalog=true schema=false
+13:15:39,178 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Datastore] - Datastore : checkTableViewExistence, rdbmsConstraintCreateMode=DataNucleus, initialiseColumnInfo=ALL
+13:15:39,178 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Datastore] - Support Statement Batching : yes (max-batch-size=50)
+13:15:39,178 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Datastore] - Queries : Results direction=forward, type=forward-only, concurrency=read-only
+13:15:39,178 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Datastore] - Java-Types : string-default-length=255
+13:15:39,178 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Datastore] - JDBC-Types : VARCHAR, LONGVARCHAR, BINARY, VARBINARY, LONGVARBINARY, BIGINT, TINYINT, BIT, CHAR, NUMERIC, DECIMAL, INTEGER, CLOB, SMALLINT, BLOB, FLOAT, DOUBLE, DATE, TIME, TIMESTAMP
+13:15:39,178 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Datastore] - ===========================================================
+13:15:39,179 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Connection] - ManagedConnection CERRADO : "org.datanucleus.store.rdbms.ConnectionFactoryImpl$ManagedConnectionImpl@3f4d06a9 [conn=org.datanucleus.store.rdbms.datasource.dbcp2.PoolingDataSource$PoolGuardConnectionWrapper@fd7081b, commitOnRelease=true, closeOnRelease=true, closeOnTxnEnd=true]" 
+13:15:39,180 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Datastore] - StoreManager now created
+13:15:39,186 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Persistence] - Started pool of ExecutionContext (maxPool=20, reaperThread=false)
+13:15:39,196 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Persistence] - ================= NucleusContext ===============
+13:15:39,197 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Persistence] - DataNucleus Context : Versión: "5.1.8" con JRE "1.8.0_161" en "Windows 10"
+13:15:39,197 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Persistence] - Persistence API : JDO
+13:15:39,197 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Persistence] - Plugin Registry : org.datanucleus.plugin.NonManagedPluginRegistry
+13:15:39,197 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Persistence] - ClassLoading : default
+13:15:39,197 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Persistence] - Persistence : pm-singlethreaded, nontransactional-read, nontransactional-write, reachability-at-commit, detach-all-on-commit, copy-on-attach, managed-relations(checked), deletion-policy=JDO2, serverTimeZone=Europe/Paris
+13:15:39,197 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Persistence] - Transactions : type=RESOURCE_LOCAL, mode=datastore, isolation=read-committed
+13:15:39,197 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Persistence] - ValueGeneration : txn-isolation=read-committed connection=New
+13:15:39,197 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Persistence] - Cache : Level1 (soft), Level2 (soft, mode=UNSPECIFIED), QueryResults (soft), Collections/Maps 
+13:15:39,197 (bspq18_e4.GestionHotelera.server.HotelServer.main()) DEBUG [DataNucleus.Persistence] - ================================================

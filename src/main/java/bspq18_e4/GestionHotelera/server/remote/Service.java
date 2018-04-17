@@ -31,8 +31,19 @@ public class Service extends UnicastRemoteObject implements IService {
 		}
 	}
 	
-	public void register(UserDTO userDTO) throws RemoteException {
-		dao.register(ass.userDTO(userDTO));
+	public void register(String email, String name, String pass, String cc) throws RemoteException {
+		User user = null;
+		try {
+			user = dao.getUser(email, pass);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		if (user!=null) {
+			System.out.println("User exists!!");
+		} else {
+			user = new User(email, name, pass, cc);
+		}
 	}
 	
 	
