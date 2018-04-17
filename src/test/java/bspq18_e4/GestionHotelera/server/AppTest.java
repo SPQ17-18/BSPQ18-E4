@@ -1,4 +1,4 @@
-package test.java.bspq18_e4.GestionHotelera;
+package bspq18_e4.GestionHotelera.server;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

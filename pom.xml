@@ -83,6 +83,7 @@
                 <version>5.0.2</version>
                 <configuration>
                     <verbose>true</verbose>
+                    <fork>false</fork>
                     <props>datanucleus.properties</props>
                 </configuration>
                 <executions>
