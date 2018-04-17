@@ -20,8 +20,8 @@ public class HotelServer {
 		String name = "//" + args[0] + ":" + args[1] + "/" + args[2];
 
 		try {
-			IService deustoBox = new Service();
-			Naming.rebind(name, deustoBox);
+			IService sedf = new Service();
+			Naming.rebind(name, sedf);
 
 			System.out.println("alelya");
 
@@ -30,7 +30,7 @@ public class HotelServer {
 			String line = stdin.readLine();
 			
 		} catch (Exception e) {
-			System.err.println("$ DeustoBox exception: " + e.getMessage());
+			System.err.println("$ sedf exception: " + e.getMessage());
 			e.printStackTrace();
 		}
 	}
