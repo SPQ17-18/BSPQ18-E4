@@ -17,6 +17,7 @@ import java.awt.event.ActionEvent;
 
 public class Signup extends JFrame {
 
+	private static final long serialVersionUID = 1L;
 	private JFrame frmSignUp;
 	private JTextField tmail;
 	private JTextField tuser;
@@ -101,9 +102,8 @@ public class Signup extends JFrame {
 		JButton bcancel = new JButton("Cancel");
 		bcancel.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Login login = new Login(ctrl);
-				login.setVisible(true);
-				dispose();
+				frmSignUp.dispose();
+				new Login(ctrl);
 			}
 		});
 		bcancel.setBounds(169, 216, 89, 23);

@@ -16,6 +16,7 @@ public class Controller {
 	public Controller(String[] args) throws RemoteException {
 		sl = new ServiceLocator();
 		sl.setService("127.0.0.1", "1099", "Service");
+		new Login(this);
 	}
 	
 	public UserDTO signIn(String email, String pass) throws RemoteException {
@@ -28,24 +29,27 @@ public class Controller {
 
 	
 	
-	public static void main(String[] args)  throws RemoteException {
-		Controller ctrl = new Controller(args);
-
-		try {
-			for (LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
-				if ("Nimbus".equals(info.getName())) {
-					UIManager.setLookAndFeel(info.getClassName());
-					break;
-				}
-			}
-		} catch (Exception e) {
-		}
-		
-		try {
-			Login login = new Login(ctrl);
-			login.setVisible(true);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+//	public static void main(String[] args)  throws RemoteException {
+//		Controller ctrl = new Controller(args);
+//
+//		try {
+//			for (LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
+//				if ("Nimbus".equals(info.getName())) {
+//					UIManager.setLookAndFeel(info.getClassName());
+//					break;
+//				}
+//			}
+//		} catch (Exception e) {
+//		}
+//		
+//		try {
+//			Login login = new Login(ctrl);
+//			login.setVisible(true);
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}
+//	}
+	public static void main(String[] args) throws RemoteException {
+		new Controller(args);
 	}
 }
