@@ -27,28 +27,6 @@ public class Controller {
 		sl.getService().register(email, name, pass, cc);
 	}
 
-	
-	
-//	public static void main(String[] args)  throws RemoteException {
-//		Controller ctrl = new Controller(args);
-//
-//		try {
-//			for (LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
-//				if ("Nimbus".equals(info.getName())) {
-//					UIManager.setLookAndFeel(info.getClassName());
-//					break;
-//				}
-//			}
-//		} catch (Exception e) {
-//		}
-//		
-//		try {
-//			Login login = new Login(ctrl);
-//			login.setVisible(true);
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		}
-//	}
 	public static void main(String[] args) throws RemoteException {
 		new Controller(args);
 	}

@@ -52,10 +52,10 @@ public class HotelDAO implements IHotelDAO {
 		try {
 			tx.begin();
 			Extent<User> ext = pm.getExtent(User.class, true);
-			//userSel = pm.getObjectById(User.class, email);
 			for(User user : ext){
 				if(user.getEmail().equals(email)&& user.getPass().equals(pass)) {
-					userSel = new User(user.getEmail(), user.getName(), user.getPass(), user.getCc());
+					userSel = user;
+					break;
 				}
 			}
 			tx.commit();
@@ -100,4 +100,14 @@ public class HotelDAO implements IHotelDAO {
 		return hotels;
 	}
 
+	public static void main(String[] args) {
+		IHotelDAO dao = new HotelDAO();
+		User user1 = new User("aa", "bb", "1234", "123456789");
+		User user2 = new User("cc", "dd", "1234", "987654321");
+
+		dao.register(user1);
+		dao.register(user2);
+		System.out.println("Ya");
+	}
+	
 }

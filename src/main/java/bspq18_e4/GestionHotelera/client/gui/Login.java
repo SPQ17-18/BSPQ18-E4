@@ -14,6 +14,7 @@ import javax.swing.JOptionPane;
 import javax.swing.SwingConstants;
 
 import bspq18_e4.GestionHotelera.client.controller.Controller;
+import bspq18_e4.GestionHotelera.server.data.User;
 import bspq18_e4.GestionHotelera.server.dto.UserDTO;
 
 import javax.swing.JSplitPane;
@@ -92,9 +93,10 @@ public class Login extends JFrame{
 				if(!tmail.getText().trim().equals("") && !String.valueOf(pass).trim().equals("")) {
 					try {
 						try {
-							UserDTO userDTO = ctrl.signIn(tmail.getText(), String.valueOf(pass));
-							if (userDTO!=null) {
-								Home home = new Home(ctrl, userDTO);
+							 UserDTO user = ctrl.signIn(tmail.getText(), String.valueOf(pass));
+							if (user!=null) {
+								JOptionPane.showMessageDialog(null, "Welcome "+user.getName()+"!");
+								Home home = new Home(ctrl, user);
 								home.setVisible(true);
 								dispose();
 							} else {
@@ -109,7 +111,6 @@ public class Login extends JFrame{
 				} else {
 					JOptionPane.showMessageDialog(null, "Write something!", "Error 507", JOptionPane.ERROR_MESSAGE);
 				}
-				JOptionPane.showMessageDialog(null, "Welcome!");
 			}
 		});
 		login.setBounds(75, 163, 89, 23);
