@@ -30,6 +30,10 @@ public class Reservation implements Serializable {
 		this.hotel = hotel;
 		rooms = new ArrayList<Room>();
 	}
+	
+	public Reservation() {
+		
+	}
 
 	public int getId() {
 		return id;

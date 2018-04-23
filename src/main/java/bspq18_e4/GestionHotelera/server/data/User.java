@@ -3,7 +3,9 @@ package bspq18_e4.GestionHotelera.server.data;
 import java.io.Serializable;
 import java.util.ArrayList;
 
+import javax.jdo.annotations.Join;
 import javax.jdo.annotations.PersistenceCapable;
+import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
 
 @PersistenceCapable(detachable = "true")
@@ -15,6 +17,9 @@ public class User implements Serializable {
 	private String name;
 	private String pass;
 	private String cc;
+	
+	@Persistent(defaultFetchGroup="true", mappedBy="user", dependentElement = "true")
+	@Join
 	private ArrayList<Reservation> reservations;
 	
 	public User(String email, String name, String pass, String cc) {
@@ -66,12 +71,13 @@ public class User implements Serializable {
 	}
 
 	public void addReservation(Reservation reservation) {
-		Reservation newReserv = new Reservation(0, null, null, null, null);
+		Reservation newReserv = new Reservation();
 		newReserv.setId(reservation.getId());
 		newReserv.setArrival(reservation.getArrival());
 		newReserv.setDeparture(reservation.getDeparture());
 		newReserv.setUser(this);
 		newReserv.setHotel(reservation.getHotel());		
+		newReserv.setUser(this);
 		reservations.add(newReserv);
 	}
 	public void removeReserva(Reservation reservation) {
