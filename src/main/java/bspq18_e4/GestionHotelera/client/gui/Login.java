@@ -96,9 +96,9 @@ public class Login extends JFrame{
 							 UserDTO user = ctrl.signIn(tmail.getText(), String.valueOf(pass));
 							if (user!=null) {
 								JOptionPane.showMessageDialog(null, "Welcome "+user.getName()+"!");
+								frmSignIn.dispose();
 								Home home = new Home(ctrl, user);
 								home.setVisible(true);
-								dispose();
 							} else {
 								JOptionPane.showMessageDialog(null, "Incorrect credentials!", "Error 509", JOptionPane.ERROR_MESSAGE);
 							}

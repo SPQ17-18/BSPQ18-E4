@@ -7,6 +7,9 @@ import javax.swing.UIManager.LookAndFeelInfo;
 
 import bspq18_e4.GestionHotelera.client.gui.Login;
 import bspq18_e4.GestionHotelera.client.remote.ServiceLocator;
+import bspq18_e4.GestionHotelera.server.dao.HotelDAO;
+import bspq18_e4.GestionHotelera.server.dao.IHotelDAO;
+import bspq18_e4.GestionHotelera.server.data.User;
 import bspq18_e4.GestionHotelera.server.dto.UserDTO;
 
 public class Controller {
@@ -16,6 +19,11 @@ public class Controller {
 	public Controller(String[] args) throws RemoteException {
 		sl = new ServiceLocator();
 		sl.setService("127.0.0.1", "1099", "OrderService");
+		IHotelDAO dao = new HotelDAO();
+		User user1 = new User("aa", "bb", "1234", "123456789");
+		User user2 = new User("cc", "dd", "1234", "987654321");
+		dao.register(user1);
+		dao.register(user2);
 		new Login(this);
 	}
 	

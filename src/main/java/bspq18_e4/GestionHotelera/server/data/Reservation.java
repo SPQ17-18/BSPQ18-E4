@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.Date;
 
 import javax.jdo.annotations.IdGeneratorStrategy;
+import javax.jdo.annotations.Join;
 import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
@@ -20,6 +21,9 @@ public class Reservation implements Serializable {
 	private Date departure;
 	private User user;
 	private Hotel hotel;
+	
+	@Persistent(defaultFetchGroup="true", mappedBy="reservation", dependentElement = "true")
+	@Join
 	private ArrayList<Room> rooms;
 
 	public Reservation(int id, Date arrival, Date departure, User user, Hotel hotel) {
@@ -83,6 +87,19 @@ public class Reservation implements Serializable {
 		this.departure = departure;
 	}
 
+	public void addRoom(Room room) {
+		Room newRoom = new Room();
+		newRoom.setNum(room.getNum());
+		newRoom.setType(room.getType());
+		newRoom.setCapacity(room.getCapacity());
+		newRoom.setPrice(room.getPrice());
+		newRoom.setHotel(room.getHotel());
+		rooms.add(newRoom);
+	}
+	public void removeRoom(Room room) {
+		rooms.remove(room);
+	}
+	
 	@Override
 	public String toString() {
 		return "Reservation [id=" + id + ", arrival=" + arrival + ", departure=" + departure + ", user=" + user

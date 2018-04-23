@@ -13,8 +13,13 @@ import javax.swing.JLabel;
 import javax.swing.JToolBar;
 import javax.swing.JComboBox;
 import java.awt.Font;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class Home extends JFrame{
+
+	private static final long serialVersionUID = 1L;
+
 
 	private JFrame frame;
 
@@ -64,6 +69,12 @@ public class Home extends JFrame{
 		frame.getContentPane().add(lblListOfHotels);
 		
 		JButton btnExit = new JButton("Exit");
+		btnExit.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				frame.dispose();
+				new Login(ctrl);
+			}
+		});
 		btnExit.setBounds(420, 314, 89, 23);
 		frame.getContentPane().add(btnExit);
 		

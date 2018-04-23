@@ -10,13 +10,15 @@ public class RoomDTO implements Serializable {
 	private int capacity;
 	private double price;
 	private HotelDTO hotel;
-
-	public RoomDTO(int num, String type, int capacity, double price, HotelDTO hotel) {
+	private ReservationDTO reservation;
+	
+	public RoomDTO(int num, String type, int capacity, double price, HotelDTO hotel, ReservationDTO reservation) {
 		this.num = num;
 		this.type = type;
 		this.capacity = capacity;
 		this.price = price;
 		this.hotel = hotel;
+		this.reservation = reservation;
 	}
 
 	public int getNum() {
@@ -59,4 +61,12 @@ public class RoomDTO implements Serializable {
 		this.hotel = hotel;
 	}
 
+	public ReservationDTO getReservation() {
+		return reservation;
+	}
+
+	public void setReservation(ReservationDTO reservation) {
+		this.reservation = reservation;
+	}
+	
 }

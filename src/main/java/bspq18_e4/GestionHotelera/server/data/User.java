@@ -77,7 +77,6 @@ public class User implements Serializable {
 		newReserv.setDeparture(reservation.getDeparture());
 		newReserv.setUser(this);
 		newReserv.setHotel(reservation.getHotel());		
-		newReserv.setUser(this);
 		reservations.add(newReserv);
 	}
 	public void removeReserva(Reservation reservation) {
