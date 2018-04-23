@@ -15,7 +15,7 @@ public class Controller {
 	
 	public Controller(String[] args) throws RemoteException {
 		sl = new ServiceLocator();
-		sl.setService("127.0.0.1", "1099", "Service");
+		sl.setService("127.0.0.1", "1099", "OrderService");
 		new Login(this);
 	}
 	

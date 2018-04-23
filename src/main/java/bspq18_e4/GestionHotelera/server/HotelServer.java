@@ -30,7 +30,7 @@ public class HotelServer {
 			String line = stdin.readLine();
 			
 		} catch (Exception e) {
-			System.err.println("$ DeustoBox exception: " + e.getMessage());
+			System.err.println("$ Hotel exception: " + e.getMessage());
 			e.printStackTrace();
 		}
 	}
