@@ -8,6 +8,7 @@ import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 
 import bspq18_e4.GestionHotelera.client.controller.Controller;
+import bspq18_e4.GestionHotelera.server.dto.UserDTO;
 
 import javax.swing.JTextField;
 import javax.swing.JPasswordField;
@@ -96,6 +97,21 @@ public class Signup extends JFrame {
 		frmSignUp.getContentPane().add(tpass);
 		
 		JButton bsignup = new JButton("Sign up");
+		bsignup.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				char[] pass = tpass.getPassword();
+				UserDTO user = new UserDTO(tmail.getText(), tuser.getText(), String.valueOf(pass), tcc.getText());
+				try {
+					ctrl.register(user);
+					System.out.println(user.toString());
+				} catch (Exception e2) {
+					e2.printStackTrace();
+					System.out.println("Error: "+e2);
+				}
+				frmSignUp.dispose();
+				new Login(ctrl);
+			}
+		});
 		bsignup.setBounds(71, 216, 89, 23);
 		frmSignUp.getContentPane().add(bsignup);
 		

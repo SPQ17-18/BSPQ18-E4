@@ -31,8 +31,8 @@ public class Controller {
 		return sl.getService().signIn(email, pass);
 	}
 	
-	public void register(String email, String name, String pass, String cc) throws RemoteException {
-		sl.getService().register(email, name, pass, cc);
+	public void register(UserDTO userDto) throws RemoteException {
+		sl.getService().register(userDto);
 	}
 
 	public static void main(String[] args) throws RemoteException {
