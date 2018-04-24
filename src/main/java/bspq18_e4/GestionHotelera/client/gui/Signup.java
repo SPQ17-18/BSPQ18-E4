@@ -103,25 +103,25 @@ public class Signup extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				char[] pass = tpass.getPassword();
 				if(!tmail.getText().trim().equals("") && !String.valueOf(pass).trim().equals("") && !tuser.getText().trim().equals("")&&!tcc.getText().trim().equals("")) {
-				UserDTO user = new UserDTO(tmail.getText(), tuser.getText(), String.valueOf(pass), tcc.getText());
-				try {
-				registered = ctrl.isRegistered(user);
-if(!registered) {
-				try {
-					ctrl.register(user);
-					JOptionPane.showMessageDialog(null, "User "+tuser.getText()+" correctly registered!", "Signed up", JOptionPane.INFORMATION_MESSAGE);
-				} catch (Exception e2) {
-					e2.printStackTrace();
-					JOptionPane.showMessageDialog(null, "Error registering!", "Error 1245", JOptionPane.ERROR_MESSAGE);
-				}}  else {
-					JOptionPane.showMessageDialog(null, "User alredy registered!", "Error 709", JOptionPane.ERROR_MESSAGE);
-				}
-				} catch (Exception e3) {
-					e3.printStackTrace();
-				}
-				frmSignUp.dispose();
-				new Login(ctrl);
-				
+					UserDTO user = new UserDTO(tmail.getText(), tuser.getText(), String.valueOf(pass), tcc.getText());
+					try {
+						registered = ctrl.isRegistered(user);
+						if(!registered) {
+							try {
+								ctrl.register(user);
+								JOptionPane.showMessageDialog(null, "User "+tuser.getText()+" correctly registered!", "Signed up", JOptionPane.INFORMATION_MESSAGE);
+							} catch (Exception e2) {
+								e2.printStackTrace();
+								JOptionPane.showMessageDialog(null, "Error registering!", "Error 1245", JOptionPane.ERROR_MESSAGE);
+							}
+						} else {
+							JOptionPane.showMessageDialog(null, "User alredy registered!", "Error 709", JOptionPane.ERROR_MESSAGE);
+						}
+					} catch (Exception e3) {
+						e3.printStackTrace();
+					}
+					frmSignUp.dispose();
+					new Login(ctrl);
 				} else {
 					JOptionPane.showMessageDialog(null, "Write all the parameters", "Error 709", JOptionPane.ERROR_MESSAGE);
 				}

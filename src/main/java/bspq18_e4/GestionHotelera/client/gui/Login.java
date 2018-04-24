@@ -32,33 +32,11 @@ public class Login extends JFrame{
 	private JLabel lblName;
 	private static Controller ctrl;
 
-	/**
-	 * Launch the application.
-	 */
-//	public static void main(String[] args) {
-//		EventQueue.invokeLater(new Runnable() {
-//			public void run() {
-//				try {
-//					Login window = new Login(ctrl);
-//					window.frmSignIn.setVisible(true);
-//				} catch (Exception e) {
-//					e.printStackTrace();
-//				}
-//			}
-//		});
-//	}
-
-	/**
-	 * Create the application.
-	 */
 	public Login(Controller ctrl) {
 		this.ctrl = ctrl;
 		initialize();
 	}
 
-	/**
-	 * Initialize the contents of the frame.
-	 */
 	private void initialize() {
 		frmSignIn = new JFrame();
 		frmSignIn.setTitle("Sign in");

@@ -5,54 +5,38 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 
 import bspq18_e4.GestionHotelera.client.controller.Controller;
+import bspq18_e4.GestionHotelera.server.dao.HotelDAO;
+import bspq18_e4.GestionHotelera.server.data.Hotel;
 import bspq18_e4.GestionHotelera.server.dto.UserDTO;
 
 import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.JLabel;
 import javax.swing.JToolBar;
+import javax.swing.table.DefaultTableModel;
 import javax.swing.JComboBox;
 import java.awt.Font;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import java.awt.event.ActionEvent;
+import javax.swing.JTable;
 
 public class Home extends JFrame{
 
 	private static final long serialVersionUID = 1L;
 
-
 	private JFrame frame;
-
-	
 	private Controller ctrl;
-	private UserDTO userDTO;
-	
+	private UserDTO userDTO;	
+	private JTable table;
+	private HotelDAO dao;
 
-//	public static void main(String[] args) {
-//		EventQueue.invokeLater(new Runnable() {
-//			public void run() {
-//				try {
-//					Home window = new Home();
-//					window.frame.setVisible(true);
-//				} catch (Exception e) {
-//					e.printStackTrace();
-//				}
-//			}
-//		});
-//	}	
-
-	/**
-	 * Create the application.
-	 */
 	public Home(Controller ctrl, UserDTO userDTO) {
 		this.ctrl = ctrl;
 		this.userDTO=userDTO;
 		initialize();
 	}
 
-	/**
-	 * Initialize the contents of the frame.
-	 */
 	private void initialize() {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 535, 387);
@@ -60,31 +44,49 @@ public class Home extends JFrame{
 		frame.getContentPane().setLayout(null);
 		
 		JButton logOut = new JButton("Log out");
-		logOut.setBounds(420, 11, 89, 23);
-		frame.getContentPane().add(logOut);
-		
-		JLabel lblListOfHotels = new JLabel("List of hotels");
-		lblListOfHotels.setFont(new Font("Tahoma", Font.BOLD, 16));
-		lblListOfHotels.setBounds(326, 73, 130, 14);
-		frame.getContentPane().add(lblListOfHotels);
-		
-		JButton btnExit = new JButton("Exit");
-		btnExit.addActionListener(new ActionListener() {
+		logOut.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				frame.dispose();
 				new Login(ctrl);
 			}
 		});
-		btnExit.setBounds(420, 314, 89, 23);
-		frame.getContentPane().add(btnExit);
+		logOut.setBounds(420, 11, 89, 23);
+		frame.getContentPane().add(logOut);
 		
+		JLabel lblListOfHotels = new JLabel("List of hotels");
+		lblListOfHotels.setFont(new Font("Tahoma", Font.BOLD, 16));
+		lblListOfHotels.setBounds(210, 41, 130, 14);
+		frame.getContentPane().add(lblListOfHotels);
+
 		JComboBox comboBox = new JComboBox();
 		comboBox.setBounds(22, 91, 113, 20);
 		frame.getContentPane().add(comboBox);
 		
 		JPanel panel = new JPanel();
-		panel.setBounds(326, 100, 130, 108);
+		panel.setBounds(162, 72, 327, 245);
 		frame.getContentPane().add(panel);
+		
+		
+		String titles[] = {"Name", "City", "Address", "Stars"};
+		String info[][] = getMatrix();
+		table = new JTable(info, titles);
+		panel.add(table);
+		table.setEnabled(false);
+		table.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
+		
+//		DefaultTableModel model;
+//		model = new DefaultTableModel();// definimos el objeto tableModel
+//		table = new JTable();// creamos la instancia de la tabla
+//		table.setModel(model);
+//		model.addColumn("Name");
+//		model.addColumn("City");
+//		model.addColumn("Address");
+//		model.addColumn("Stars");
+//		table.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
+//		table.getTableHeader().setReorderingAllowed(false);
+//		
+//		HotelDAO dao = new HotelDAO();
+//		dao.getHotels();
 		
 		JLabel lblCity = new JLabel("City");
 		lblCity.setFont(new Font("Tahoma", Font.BOLD, 16));
@@ -110,4 +112,24 @@ public class Home extends JFrame{
 		frame.getContentPane().add(comboBox_2);
 		frame.setVisible(true);
 	}
+	
+	private String[][] getMatrix(){
+		
+		HotelDAO dao = new HotelDAO();
+		
+		ArrayList<Hotel> hotels = dao.getHotels();
+		
+		
+		String info[][] = new String[hotels.size()][4];
+		
+		for (int i = 0; i < info.length; i++) {
+			info[i][0] = hotels.get(i).getName();
+			info[i][1] = hotels.get(i).getCity();
+			info[i][2] = hotels.get(i).getDir();
+			info[i][3] = String.valueOf(hotels.get(i).getStars());
+		}
+		
+		return info;
+	}
+	
 }
