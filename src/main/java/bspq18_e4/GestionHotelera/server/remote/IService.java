@@ -9,5 +9,5 @@ public interface IService extends Remote {
 
 	public UserDTO signIn(String email, String pass) throws RemoteException;
 	public void register(UserDTO userDto) throws RemoteException;
-	
+	public boolean isRegistered(UserDTO userDto) throws RemoteException;
 }

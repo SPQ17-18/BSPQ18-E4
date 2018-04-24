@@ -5,6 +5,7 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JRadioButton;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.SwingConstants;
 
 import bspq18_e4.GestionHotelera.client.controller.Controller;
@@ -25,6 +26,7 @@ public class Signup extends JFrame {
 	private JTextField tcc;
 	private JPasswordField tpass;
 	private Controller ctrl;
+	private boolean registered;
 
 //	public static void main(String[] args) {
 //		EventQueue.invokeLater(new Runnable() {
@@ -100,16 +102,29 @@ public class Signup extends JFrame {
 		bsignup.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				char[] pass = tpass.getPassword();
+				if(!tmail.getText().trim().equals("") && !String.valueOf(pass).trim().equals("") && !tuser.getText().trim().equals("")&&!tcc.getText().trim().equals("")) {
 				UserDTO user = new UserDTO(tmail.getText(), tuser.getText(), String.valueOf(pass), tcc.getText());
 				try {
+				registered = ctrl.isRegistered(user);
+if(!registered) {
+				try {
 					ctrl.register(user);
-					System.out.println(user.toString());
+					JOptionPane.showMessageDialog(null, "User "+tuser.getText()+" correctly registered!", "Signed up", JOptionPane.INFORMATION_MESSAGE);
 				} catch (Exception e2) {
 					e2.printStackTrace();
-					System.out.println("Error: "+e2);
+					JOptionPane.showMessageDialog(null, "Error registering!", "Error 1245", JOptionPane.ERROR_MESSAGE);
+				}}  else {
+					JOptionPane.showMessageDialog(null, "User alredy registered!", "Error 709", JOptionPane.ERROR_MESSAGE);
+				}
+				} catch (Exception e3) {
+					e3.printStackTrace();
 				}
 				frmSignUp.dispose();
 				new Login(ctrl);
+				
+				} else {
+					JOptionPane.showMessageDialog(null, "Write all the parameters", "Error 709", JOptionPane.ERROR_MESSAGE);
+				}
 			}
 		});
 		bsignup.setBounds(71, 216, 89, 23);

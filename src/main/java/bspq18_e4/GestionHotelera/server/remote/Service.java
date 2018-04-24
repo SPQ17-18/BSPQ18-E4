@@ -34,7 +34,7 @@ public class Service extends UnicastRemoteObject implements IService {
 	public void register(UserDTO userDto) throws RemoteException {
 //		User user = null;
 //		try {
-//			user = dao.getUser(email, pass);
+//			user = dao.getUser(userDto.getEmail(), userDto.getPass());
 //		} catch (Exception e) {
 //			e.printStackTrace();
 //		}
@@ -42,10 +42,25 @@ public class Service extends UnicastRemoteObject implements IService {
 //		if (user!=null) {
 //			System.out.println("User exists!!");
 //		} else {
-//			user = new User(email, name, pass, cc);
+//			user = new User(userDto.getEmail(), userDto.getName(), userDto.getPass(), userDto.getCc());
 //		}
 		dao.register(ass.userDTO(userDto));
 	}
 	
+	public boolean isRegistered(UserDTO userDto) throws RemoteException {
+		User user = null;
+		try {
+			user = dao.getUser(userDto.getEmail(), userDto.getPass());
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		if (user!=null) {
+			return true;
+		} else {
+			user = new User(userDto.getEmail(), userDto.getName(), userDto.getPass(), userDto.getCc());
+			return false;
+		}
+	}
 	
 }

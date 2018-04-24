@@ -34,6 +34,10 @@ public class Controller {
 	public void register(UserDTO userDto) throws RemoteException {
 		sl.getService().register(userDto);
 	}
+	
+	public boolean isRegistered(UserDTO userDto) throws RemoteException{
+		return sl.getService().isRegistered(userDto);
+	}
 
 	public static void main(String[] args) throws RemoteException {
 		new Controller(args);
