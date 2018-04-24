@@ -75,8 +75,8 @@ public class Home extends JFrame{
 		table.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
 		
 //		DefaultTableModel model;
-//		model = new DefaultTableModel();// definimos el objeto tableModel
-//		table = new JTable();// creamos la instancia de la tabla
+//		model = new DefaultTableModel();
+//		table = new JTable();
 //		table.setModel(model);
 //		model.addColumn("Name");
 //		model.addColumn("City");

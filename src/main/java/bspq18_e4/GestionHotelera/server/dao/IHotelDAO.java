@@ -13,4 +13,5 @@ public interface IHotelDAO {
 	public User getUser(String email, String pass);
 	public void book(Reservation reservation);
 	public ArrayList<Hotel> getHotels();
+	public ArrayList<String> getCities();
 }
