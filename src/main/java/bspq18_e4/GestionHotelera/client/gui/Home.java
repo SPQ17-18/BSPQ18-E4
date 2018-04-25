@@ -29,8 +29,9 @@ public class Home extends JFrame{
 	private JFrame frame;
 	private Controller ctrl;
 	private UserDTO userDTO;	
-	private JTable table;
 	private HotelDAO dao;
+	private JTable table;
+	private JTable retable;
 
 	public Home(Controller ctrl, UserDTO userDTO) {
 		this.ctrl = ctrl;
@@ -69,7 +70,7 @@ public class Home extends JFrame{
 			citybox.addItem(cities.get(i));
 		}
 		
-		JPanel panel = new JPanel();
+		final JPanel panel = new JPanel();
 		panel.setBounds(162, 72, 327, 245);
 		frame.getContentPane().add(panel);
 		
@@ -80,8 +81,6 @@ public class Home extends JFrame{
 		panel.add(table);
 		table.setEnabled(false);
 		table.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
-
-		frame.getContentPane().add(new JScrollPane(table));
 		
 //		DefaultTableModel model;
 //		model = new DefaultTableModel();
@@ -123,8 +122,14 @@ public class Home extends JFrame{
 		JButton bsearch = new JButton("Search");
 		bsearch.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String city = String.valueOf(citybox.getSelectedItem());
-				
+				String city = String.valueOf(citybox.getSelectedItem());System.out.println(city);
+				String x[][] = getMatrixByCity(city); 
+				String titles[] = {"Name", "City", "Address", "Stars"};
+				retable = new JTable(x, titles);
+				panel.add(retable);
+				retable.setEnabled(false);
+				retable.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
+
 			}
 		});
 		bsearch.setBounds(34, 294, 89, 23);
