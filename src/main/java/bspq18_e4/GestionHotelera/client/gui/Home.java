@@ -11,6 +11,7 @@ import bspq18_e4.GestionHotelera.server.dto.UserDTO;
 
 import javax.swing.JButton;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.JLabel;
 import javax.swing.JToolBar;
 import javax.swing.table.DefaultTableModel;
@@ -58,9 +59,15 @@ public class Home extends JFrame{
 		lblListOfHotels.setBounds(210, 41, 130, 14);
 		frame.getContentPane().add(lblListOfHotels);
 
-		JComboBox comboBox = new JComboBox();
-		comboBox.setBounds(22, 91, 113, 20);
-		frame.getContentPane().add(comboBox);
+		final JComboBox<String> citybox = new JComboBox<String>();
+		citybox.setBounds(22, 91, 113, 20);
+		frame.getContentPane().add(citybox);
+		
+		HotelDAO dao = new HotelDAO();
+		ArrayList<String> cities = dao.getCities();
+		for (int i = 0; i < cities.size(); i++) {
+			citybox.addItem(cities.get(i));
+		}
 		
 		JPanel panel = new JPanel();
 		panel.setBounds(162, 72, 327, 245);
@@ -73,6 +80,8 @@ public class Home extends JFrame{
 		panel.add(table);
 		table.setEnabled(false);
 		table.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
+
+		frame.getContentPane().add(new JScrollPane(table));
 		
 //		DefaultTableModel model;
 //		model = new DefaultTableModel();
@@ -103,13 +112,23 @@ public class Home extends JFrame{
 		lblNewLabel.setBounds(22, 189, 130, 27);
 		frame.getContentPane().add(lblNewLabel);
 		
-		JComboBox comboBox_1 = new JComboBox();
-		comboBox_1.setBounds(22, 158, 113, 20);
-		frame.getContentPane().add(comboBox_1);
+		JComboBox arrivalbox = new JComboBox();
+		arrivalbox.setBounds(22, 158, 113, 20);
+		frame.getContentPane().add(arrivalbox);
 		
-		JComboBox comboBox_2 = new JComboBox();
-		comboBox_2.setBounds(22, 227, 113, 20);
-		frame.getContentPane().add(comboBox_2);
+		JComboBox departurebox = new JComboBox();
+		departurebox.setBounds(22, 227, 113, 20);
+		frame.getContentPane().add(departurebox);
+		
+		JButton bsearch = new JButton("Search");
+		bsearch.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String city = String.valueOf(citybox.getSelectedItem());
+				
+			}
+		});
+		bsearch.setBounds(34, 294, 89, 23);
+		frame.getContentPane().add(bsearch);
 		frame.setVisible(true);
 	}
 	
@@ -132,4 +151,22 @@ public class Home extends JFrame{
 		return info;
 	}
 	
+private String[][] getMatrixByCity(String city){
+		
+		HotelDAO dao = new HotelDAO();
+		
+		ArrayList<Hotel> hotels = dao.getHotelsByCity(city);
+		
+		
+		String info[][] = new String[hotels.size()][4];
+		
+		for (int i = 0; i < info.length; i++) {
+			info[i][0] = hotels.get(i).getName();
+			info[i][1] = hotels.get(i).getCity();
+			info[i][2] = hotels.get(i).getDir();
+			info[i][3] = String.valueOf(hotels.get(i).getStars());
+		}
+		
+		return info;
+	}
 }
