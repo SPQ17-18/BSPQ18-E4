@@ -18,9 +18,12 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.JComboBox;
 import java.awt.Font;
 import java.awt.event.ActionListener;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.awt.event.ActionEvent;
 import javax.swing.JTable;
+import javax.swing.JTextField;
 
 public class Home extends JFrame{
 
@@ -32,6 +35,8 @@ public class Home extends JFrame{
 	private HotelDAO dao;
 	private JTable table;
 	private JTable retable;
+	private JTextField tarrival;
+	private JTextField tdeparture;
 
 	public Home(Controller ctrl, UserDTO userDTO) {
 		this.ctrl = ctrl;
@@ -66,6 +71,7 @@ public class Home extends JFrame{
 		
 		HotelDAO dao = new HotelDAO();
 		ArrayList<String> cities = dao.getCities();
+		citybox.addItem("All");
 		for (int i = 0; i < cities.size(); i++) {
 			citybox.addItem(cities.get(i));
 		}
@@ -111,14 +117,6 @@ public class Home extends JFrame{
 		lblNewLabel.setBounds(22, 189, 130, 27);
 		frame.getContentPane().add(lblNewLabel);
 		
-		JComboBox arrivalbox = new JComboBox();
-		arrivalbox.setBounds(22, 158, 113, 20);
-		frame.getContentPane().add(arrivalbox);
-		
-		JComboBox departurebox = new JComboBox();
-		departurebox.setBounds(22, 227, 113, 20);
-		frame.getContentPane().add(departurebox);
-		
 		JButton bsearch = new JButton("Search");
 		bsearch.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -134,7 +132,23 @@ public class Home extends JFrame{
 		});
 		bsearch.setBounds(34, 294, 89, 23);
 		frame.getContentPane().add(bsearch);
+		
+		tarrival = new JTextField();
+		tarrival.setBounds(22, 156, 113, 20);
+		frame.getContentPane().add(tarrival);
+		tarrival.setColumns(10);
+				
+		tdeparture = new JTextField();
+		tdeparture.setColumns(10);
+		tdeparture.setBounds(22, 227, 113, 20);
+		frame.getContentPane().add(tdeparture);
 		frame.setVisible(true);
+		
+		String arrival = tarrival.getText();
+		String departure = tdeparture.getText();
+		DateFormat format = new SimpleDateFormat("MM dd yyyy");
+		
+		
 	}
 	
 	private String[][] getMatrix(){

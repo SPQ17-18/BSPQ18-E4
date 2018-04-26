@@ -109,9 +109,16 @@ public class HotelDAO implements IHotelDAO {
 		try {
 			tx.begin();
 			Extent<Hotel> ext = pm.getExtent(Hotel.class, true);
-			for(Hotel hotel : ext){
-				if(hotel.getCity().equals(city)) {
+			if(city.equals("All")) {
+				for(Hotel hotel : ext){
 					hotels.add(hotel);
+				}
+			}
+			else {
+				for(Hotel hotel : ext){
+					if(hotel.getCity().equals(city)) {
+						hotels.add(hotel);
+					}
 				}
 			}
 			tx.commit();
