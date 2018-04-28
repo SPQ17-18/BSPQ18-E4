@@ -24,6 +24,7 @@ import java.util.ArrayList;
 import java.awt.event.ActionEvent;
 import javax.swing.JTable;
 import javax.swing.JTextField;
+import com.toedter.calendar.JDateChooser;
 
 public class Home extends JFrame{
 
@@ -35,8 +36,6 @@ public class Home extends JFrame{
 	private HotelDAO dao;
 	private JTable table;
 	private JTable retable;
-	private JTextField tarrival;
-	private JTextField tdeparture;
 
 	public Home(Controller ctrl, UserDTO userDTO) {
 		this.ctrl = ctrl;
@@ -66,7 +65,7 @@ public class Home extends JFrame{
 		frame.getContentPane().add(lblListOfHotels);
 
 		final JComboBox<String> citybox = new JComboBox<String>();
-		citybox.setBounds(22, 91, 113, 20);
+		citybox.setBounds(22, 77, 113, 20);
 		frame.getContentPane().add(citybox);
 		
 		HotelDAO dao = new HotelDAO();
@@ -87,6 +86,9 @@ public class Home extends JFrame{
 		panel.add(table);
 		table.setEnabled(false);
 		table.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
+		table.setRowSelectionAllowed(true);
+		table.setColumnSelectionAllowed(false);
+		System.out.println(table.getSelectedRow());
 		
 //		DefaultTableModel model;
 //		model = new DefaultTableModel();
@@ -104,17 +106,17 @@ public class Home extends JFrame{
 		
 		JLabel lblCity = new JLabel("City");
 		lblCity.setFont(new Font("Tahoma", Font.BOLD, 16));
-		lblCity.setBounds(22, 60, 95, 23);
+		lblCity.setBounds(22, 46, 95, 23);
 		frame.getContentPane().add(lblCity);
 		
 		JLabel lblFirstDay = new JLabel("Arrival Day");
 		lblFirstDay.setFont(new Font("Tahoma", Font.BOLD, 16));
-		lblFirstDay.setBounds(22, 122, 113, 23);
+		lblFirstDay.setBounds(22, 118, 113, 23);
 		frame.getContentPane().add(lblFirstDay);
 		
 		JLabel lblNewLabel = new JLabel("Departure Day");
 		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 16));
-		lblNewLabel.setBounds(22, 189, 130, 27);
+		lblNewLabel.setBounds(22, 191, 130, 27);
 		frame.getContentPane().add(lblNewLabel);
 		
 		JButton bsearch = new JButton("Search");
@@ -130,24 +132,22 @@ public class Home extends JFrame{
 
 			}
 		});
-		bsearch.setBounds(34, 294, 89, 23);
+		bsearch.setBounds(34, 280, 89, 23);
 		frame.getContentPane().add(bsearch);
 		
-		tarrival = new JTextField();
-		tarrival.setBounds(22, 156, 113, 20);
-		frame.getContentPane().add(tarrival);
-		tarrival.setColumns(10);
-				
-		tdeparture = new JTextField();
-		tdeparture.setColumns(10);
-		tdeparture.setBounds(22, 227, 113, 20);
-		frame.getContentPane().add(tdeparture);
+		JDateChooser arrivalChooser = new JDateChooser();
+		arrivalChooser.setBounds(22, 152, 113, 20);
+		frame.getContentPane().add(arrivalChooser);
+		
+		JDateChooser departureChooser = new JDateChooser();
+		departureChooser.setBounds(22, 229, 113, 20);
+		frame.getContentPane().add(departureChooser);
+		
+		JButton bBook = new JButton("Book");
+		bBook.setBounds(34, 314, 89, 23);
+		frame.getContentPane().add(bBook);
 		frame.setVisible(true);
-		
-		String arrival = tarrival.getText();
-		String departure = tdeparture.getText();
 		DateFormat format = new SimpleDateFormat("MM dd yyyy");
-		
 		
 	}
 	
