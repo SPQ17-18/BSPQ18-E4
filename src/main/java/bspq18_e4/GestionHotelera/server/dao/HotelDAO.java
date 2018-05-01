@@ -168,7 +168,6 @@ public class HotelDAO implements IHotelDAO {
 
 		dao.register(user1);
 		dao.register(user2);
-		System.out.println("Ya");
 	}
 	
 }
