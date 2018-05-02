@@ -10,6 +10,7 @@ import bspq18_e4.GestionHotelera.client.controller.Controller;
 import bspq18_e4.GestionHotelera.server.dao.HotelDAO;
 import bspq18_e4.GestionHotelera.server.data.Hotel;
 import bspq18_e4.GestionHotelera.server.data.Room;
+import bspq18_e4.GestionHotelera.server.dto.HotelDTO;
 import bspq18_e4.GestionHotelera.server.dto.UserDTO;
 
 import javax.swing.JButton;
@@ -28,14 +29,14 @@ public class Rooms extends JFrame implements Serializable{
 	private JTable table;
 	private Controller ctrl;
 	private UserDTO userDTO;
-	private int hotelId;
+	private Hotel hotel;
 	private JScrollPane scrollPane;
 	private DefaultTableModel model;
 
-	public Rooms(Controller ctrl, UserDTO userDTO, int hotelId) {
+	public Rooms(Controller ctrl, UserDTO userDTO, Hotel hotel) {
 		this.ctrl = ctrl;
 		this.userDTO = userDTO;
-		this.hotelId = hotelId;
+		this.hotel = hotel;
 		initialize();
 	}
 
@@ -66,11 +67,10 @@ public class Rooms extends JFrame implements Serializable{
 		bcancel.setBounds(243, 228, 89, 23);
 		frame.getContentPane().add(bcancel);
 		frame.setVisible(true);
-		addData(hotelId);
-		System.out.println("asdfas"+hotelId);
+		addData(hotel);
 	}
 	
-private void addData(int id) {
+private void addData(Hotel hotel) {
 		
 		model = new DefaultTableModel();
 
@@ -82,7 +82,7 @@ private void addData(int id) {
 		HotelDAO dao = new HotelDAO();
 
 		List<Room> rooms = new ArrayList<Room>();
-		rooms = dao.getRooms(id);
+		rooms = dao.getRooms(hotel);
 
 		for (Room room : rooms) {
 

@@ -12,6 +12,7 @@ import bspq18_e4.GestionHotelera.server.data.Hotel;
 import bspq18_e4.GestionHotelera.server.data.Reservation;
 import bspq18_e4.GestionHotelera.server.data.Room;
 import bspq18_e4.GestionHotelera.server.data.User;
+import bspq18_e4.GestionHotelera.server.dto.HotelDTO;
 
 public class HotelDAO implements IHotelDAO {
 
@@ -70,6 +71,33 @@ public class HotelDAO implements IHotelDAO {
 		}
 		
 		return userSel;
+	}
+	
+	public Hotel geHotelById(int id) {
+		PersistenceManager pm = pmf.getPersistenceManager();
+		pm.getFetchPlan().setMaxFetchDepth(3);
+		Transaction tx = pm.currentTransaction();
+		Hotel hotelSel=null;
+		
+		try {
+			tx.begin();
+			Extent<Hotel> ext = pm.getExtent(Hotel.class, true);
+			for(Hotel hotel : ext){
+					if (hotel.getId()==id) {
+						hotelSel = hotel;
+					}
+			}
+			tx.commit();
+		} catch (Exception ex) {
+			System.out.println("# Error getting user: " + ex.getMessage());
+		} finally {
+			if (tx != null && tx.isActive()) {
+				tx.rollback();
+			}
+			pm.close();
+		}
+		
+		return hotelSel;
 	}
 	
 	public void book(Reservation reservation) {
@@ -162,7 +190,7 @@ public class HotelDAO implements IHotelDAO {
 		return cities;
 	}
 	
-	public ArrayList<Room> getRooms(int id) {
+	public ArrayList<Room> getRooms(Hotel hotel) {
 		ArrayList<Room> rooms = new ArrayList<>();
 		PersistenceManager pm = pmf.getPersistenceManager();
 		pm.getFetchPlan().setMaxFetchDepth(3);
@@ -170,15 +198,9 @@ public class HotelDAO implements IHotelDAO {
 
 		try {
 			tx.begin();
-			Extent<Hotel> ext = pm.getExtent(Hotel.class, true);
-			Extent<Room> ext2 = pm.getExtent(Room.class, true);
-			for(Hotel hotel : ext){		
-				for (Room room : ext2) {
-					if (hotel.getId()==id) {
-						rooms.add(room);
-						System.out.println(room.getPrice());
-					}
-				}
+			Extent<Room> ext = pm.getExtent(Room.class, true);
+			for(Room room : ext){
+				rooms.add(room);
 			}
 			tx.commit();
 		} catch (Exception ex) {
@@ -192,6 +214,80 @@ public class HotelDAO implements IHotelDAO {
 		
 		return rooms;
 	}
+	
+//	public ArrayList<Room> getRoomss(int id) {
+//		ArrayList<Room> rooms = new ArrayList<>();
+//		PersistenceManager pm = pmf.getPersistenceManager();
+//		pm.getFetchPlan().setMaxFetchDepth(3);
+//		Transaction tx = pm.currentTransaction();
+//
+//		try {
+//			tx.begin();
+//			Extent<Hotel> ext = pm.getExtent(Hotel.class, true);
+//			Extent<Room> ext2 = pm.getExtent(Room.class, true);
+//			System.out.println("idddddd "+id);
+//				for (Room room : ext2) {
+//					for(Hotel hotel : ext){		
+//					if (hotel.getId()==id) {
+//						rooms.add(room);
+//						System.out.println(room.getPrice());
+//					}
+//					}
+//				}
+//			
+//			tx.commit();
+//		} catch (Exception ex) {
+//			System.out.println("# Error storing: " + ex.getMessage());
+//		} finally {
+//			if (tx != null && tx.isActive()) {
+//				tx.rollback();
+//			}
+//			pm.close();
+//		}
+//		
+//		return rooms;
+//	}
+	
+//	public ArrayList<Room> getRooms(int id) {
+//		ArrayList<Hotel> hotels = new ArrayList<>();
+//		ArrayList<Room> rooms = new ArrayList<>();
+//		int selId=0;
+//		PersistenceManager pm = pmf.getPersistenceManager();
+//		pm.getFetchPlan().setMaxFetchDepth(3);
+//		Transaction tx = pm.currentTransaction();
+//
+//		try {
+//			tx.begin();
+//			Extent<Hotel> ext = pm.getExtent(Hotel.class, true);
+//			for(Hotel hotel : ext){
+//				if (hotel.getId()==id) {
+//					hotels.add(hotel);
+//				}
+//				for (int i = 0; i < hotels.size(); i++) {
+//					if (hotels.get(i).getId()==id) {
+//						selId = hotels.get(i).getId();
+//					}
+//				}
+//			}			
+//			try {
+//				
+//			} catch (Exception e) {
+//				e.printStackTrace();
+//			}
+//			
+//			tx.commit();
+//		} catch (Exception ex) {
+//			System.out.println("# Error storing: " + ex.getMessage());
+//		} finally {
+//			if (tx != null && tx.isActive()) {
+//				tx.rollback();
+//			}
+//			pm.close();
+//		}
+//		
+//		return rooms;
+//	}
+	
 	public static void main(String[] args) {
 		IHotelDAO dao = new HotelDAO();
 		User user1 = new User("aa", "bb", "1234", "123456789");

@@ -9,6 +9,7 @@ import javax.swing.JFrame;
 import bspq18_e4.GestionHotelera.client.controller.Controller;
 import bspq18_e4.GestionHotelera.server.dao.HotelDAO;
 import bspq18_e4.GestionHotelera.server.data.Hotel;
+import bspq18_e4.GestionHotelera.server.dto.HotelDTO;
 import bspq18_e4.GestionHotelera.server.dto.UserDTO;
 
 import javax.swing.JButton;
@@ -131,6 +132,7 @@ public class Home extends JFrame {
 			@Override
 			public void mousePressed(MouseEvent e) {
 				ArrayList<Hotel> hotels = new ArrayList<>();
+				Hotel hotelSel = null;
 				HotelDAO dao = new HotelDAO();
 				hotels = dao.getHotels();
 				if (e.getClickCount() == 2) {
@@ -142,7 +144,8 @@ public class Home extends JFrame {
 					for (Hotel hotel : hotels) {
 						if (hotel.getName().equals(name)&&hotel.getCity().equals(city)&&hotel.getDir().equals(address)&&hotel.getStars()==stars) {
 							int id =hotel.getId();
-							Rooms rooms = new Rooms(ctrl, userDTO, id);
+							hotelSel = dao.geHotelById(id);
+							Rooms rooms = new Rooms(ctrl, userDTO, hotelSel);
 							rooms.setVisible(true);
 						}
 					}
