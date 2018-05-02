@@ -129,8 +129,22 @@ public class Home extends JFrame {
 		table.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mousePressed(MouseEvent e) {
+				ArrayList<Hotel> hotels = new ArrayList<>();
+				HotelDAO dao = new HotelDAO();
+				hotels = dao.getHotels();
 				if (e.getClickCount() == 2) {
-					String valorSeleccionado = (String) table.getValueAt(table.getSelectedRow(), table.getSelectedColumn());
+					//String valorSeleccionado = (String) table.getValueAt(table.getSelectedRow(), table.getSelectedColumn());
+					int rowSelected = table.getSelectedRow();
+					System.out.println(rowSelected);
+//					String name = (String) table.getValueAt(rowSelected, 1);
+//					String city = (String) table.getValueAt(rowSelected, 2);
+//					String address = (String) table.getValueAt(rowSelected, 3);
+//					int stars = (int) table.getValueAt(rowSelected, 4);
+//					for (Hotel hotel : hotels) {
+//						if (hotel.getName().equals(name)&&hotel.getCity().equals(city)&&hotel.getDir().equals(address)&&hotel.getStars()==stars) {
+//							System.out.println(hotel.getId());
+//						}
+//					}
 				}
 			}
 		});
@@ -165,10 +179,9 @@ public class Home extends JFrame {
 	}
 
 	private void addDataByCity(String city) {
-		// model = new DefaultTableModel(info, titles);
+
 		model = new DefaultTableModel();
 
-		// Creamos nombres de las columnas de la tabla:
 		model.addColumn("Name");
 		model.addColumn("City");
 		model.addColumn("Address");
@@ -181,7 +194,6 @@ public class Home extends JFrame {
 
 		for (Hotel hotel : hotels) {
 
-			// Ahora añadimos los valores al modelo:
 			model.addRow(new Object[] { hotel.getName(), hotel.getCity(), hotel.getDir(), hotel.getStars() });
 		}
 
