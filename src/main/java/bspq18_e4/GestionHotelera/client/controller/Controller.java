@@ -22,8 +22,8 @@ public class Controller {
 		IHotelDAO dao = new HotelDAO();
 		User user1 = new User("aa", "bb", "1234", "123456789");
 		User user2 = new User("cc", "dd", "1234", "987654321");
-		dao.register(user1);
-		dao.register(user2);
+//		dao.register(user1);
+//		dao.register(user2);
 		new Login(this);
 	}
 	

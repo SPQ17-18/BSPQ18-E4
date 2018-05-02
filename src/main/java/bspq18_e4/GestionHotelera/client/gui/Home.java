@@ -102,7 +102,7 @@ public class Home extends JFrame {
 		JButton bsearch = new JButton("Search");
 		bsearch.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				agregarDatosPorCiudad(String.valueOf(citybox.getSelectedItem()));
+				addDataByCity(String.valueOf(citybox.getSelectedItem()));
 			}
 		});
 		bsearch.setBounds(34, 280, 89, 23);
@@ -125,28 +125,26 @@ public class Home extends JFrame {
 		frame.getContentPane().add(scrollPane);
 
 		table = new JTable();
+		table.setDefaultEditor(Object.class, null);
 		table.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mousePressed(MouseEvent e) {
 				if (e.getClickCount() == 2) {
-					String valorSeleccionado = (String) table.getValueAt(table.getSelectedRow(),
-							table.getSelectedColumn());
-					System.out.println(valorSeleccionado);
+					String valorSeleccionado = (String) table.getValueAt(table.getSelectedRow(), table.getSelectedColumn());
 				}
 			}
 		});
 		scrollPane.setViewportView(table);
 		frame.setVisible(true);
 
-		agegarDatosAtabla();
+		addData();
 
 	}
 
-	private void agegarDatosAtabla() {
-		// model = new DefaultTableModel(info, titles);
+	private void addData() {
+		
 		model = new DefaultTableModel();
 
-		// Creamos nombres de las columnas de la tabla:
 		model.addColumn("Name");
 		model.addColumn("City");
 		model.addColumn("Address");
@@ -159,7 +157,6 @@ public class Home extends JFrame {
 
 		for (Hotel hotel : hotels) {
 
-			// Ahora añadimos los valores al modelo:
 			model.addRow(new Object[] { hotel.getName(), hotel.getCity(), hotel.getDir(), hotel.getStars() });
 		}
 
@@ -167,7 +164,7 @@ public class Home extends JFrame {
 		scrollPane.setViewportView(table);
 	}
 
-	private void agregarDatosPorCiudad(String city) {
+	private void addDataByCity(String city) {
 		// model = new DefaultTableModel(info, titles);
 		model = new DefaultTableModel();
 
