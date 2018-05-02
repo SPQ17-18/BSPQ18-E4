@@ -142,7 +142,7 @@ public class Home extends JFrame {
 					for (Hotel hotel : hotels) {
 						if (hotel.getName().equals(name)&&hotel.getCity().equals(city)&&hotel.getDir().equals(address)&&hotel.getStars()==stars) {
 							int id =hotel.getId();
-							Rooms rooms = new Rooms(ctrl, userDTO);
+							Rooms rooms = new Rooms(ctrl, userDTO, id);
 							rooms.setVisible(true);
 						}
 					}

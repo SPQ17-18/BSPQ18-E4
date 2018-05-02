@@ -28,12 +28,14 @@ public class Rooms extends JFrame implements Serializable{
 	private JTable table;
 	private Controller ctrl;
 	private UserDTO userDTO;
+	private int hotelId;
 	private JScrollPane scrollPane;
 	private DefaultTableModel model;
 
-	public Rooms(Controller ctrl, UserDTO userDTO) {
+	public Rooms(Controller ctrl, UserDTO userDTO, int hotelId) {
 		this.ctrl = ctrl;
 		this.userDTO = userDTO;
+		this.hotelId = hotelId;
 		initialize();
 	}
 
@@ -64,10 +66,11 @@ public class Rooms extends JFrame implements Serializable{
 		bcancel.setBounds(243, 228, 89, 23);
 		frame.getContentPane().add(bcancel);
 		frame.setVisible(true);
-		addData();
+		addData(hotelId);
+		System.out.println("asdfas"+hotelId);
 	}
 	
-private void addData() {
+private void addData(int id) {
 		
 		model = new DefaultTableModel();
 
@@ -79,7 +82,7 @@ private void addData() {
 		HotelDAO dao = new HotelDAO();
 
 		List<Room> rooms = new ArrayList<Room>();
-		rooms = dao.getRooms();
+		rooms = dao.getRooms(id);
 
 		for (Room room : rooms) {
 

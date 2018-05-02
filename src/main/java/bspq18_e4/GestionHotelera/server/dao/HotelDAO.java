@@ -162,7 +162,7 @@ public class HotelDAO implements IHotelDAO {
 		return cities;
 	}
 	
-	public ArrayList<Room> getRooms() {
+	public ArrayList<Room> getRooms(int id) {
 		ArrayList<Room> rooms = new ArrayList<>();
 		PersistenceManager pm = pmf.getPersistenceManager();
 		pm.getFetchPlan().setMaxFetchDepth(3);
@@ -170,9 +170,15 @@ public class HotelDAO implements IHotelDAO {
 
 		try {
 			tx.begin();
-			Extent<Room> ext = pm.getExtent(Room.class, true);
-			for(Room room : ext){
-				rooms.add(room);
+			Extent<Hotel> ext = pm.getExtent(Hotel.class, true);
+			Extent<Room> ext2 = pm.getExtent(Room.class, true);
+			for(Hotel hotel : ext){		
+				for (Room room : ext2) {
+					if (hotel.getId()==id) {
+						rooms.add(room);
+						System.out.println(room.getPrice());
+					}
+				}
 			}
 			tx.commit();
 		} catch (Exception ex) {
