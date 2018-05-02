@@ -10,6 +10,7 @@ import javax.jdo.Extent;
 
 import bspq18_e4.GestionHotelera.server.data.Hotel;
 import bspq18_e4.GestionHotelera.server.data.Reservation;
+import bspq18_e4.GestionHotelera.server.data.Room;
 import bspq18_e4.GestionHotelera.server.data.User;
 
 public class HotelDAO implements IHotelDAO {
@@ -160,7 +161,31 @@ public class HotelDAO implements IHotelDAO {
 		
 		return cities;
 	}
+	
+	public ArrayList<Room> getRooms() {
+		ArrayList<Room> rooms = new ArrayList<>();
+		PersistenceManager pm = pmf.getPersistenceManager();
+		pm.getFetchPlan().setMaxFetchDepth(3);
+		Transaction tx = pm.currentTransaction();
 
+		try {
+			tx.begin();
+			Extent<Room> ext = pm.getExtent(Room.class, true);
+			for(Room room : ext){
+				rooms.add(room);
+			}
+			tx.commit();
+		} catch (Exception ex) {
+			System.out.println("# Error storing: " + ex.getMessage());
+		} finally {
+			if (tx != null && tx.isActive()) {
+				tx.rollback();
+			}
+			pm.close();
+		}
+		
+		return rooms;
+	}
 	public static void main(String[] args) {
 		IHotelDAO dao = new HotelDAO();
 		User user1 = new User("aa", "bb", "1234", "123456789");

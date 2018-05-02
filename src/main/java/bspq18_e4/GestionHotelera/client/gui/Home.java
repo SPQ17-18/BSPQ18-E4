@@ -133,18 +133,16 @@ public class Home extends JFrame {
 				HotelDAO dao = new HotelDAO();
 				hotels = dao.getHotels();
 				if (e.getClickCount() == 2) {
-					//String valorSeleccionado = (String) table.getValueAt(table.getSelectedRow(), table.getSelectedColumn());
 					int rowSelected = table.getSelectedRow();
-					System.out.println(rowSelected);
-//					String name = (String) table.getValueAt(rowSelected, 1);
-//					String city = (String) table.getValueAt(rowSelected, 2);
-//					String address = (String) table.getValueAt(rowSelected, 3);
-//					int stars = (int) table.getValueAt(rowSelected, 4);
-//					for (Hotel hotel : hotels) {
-//						if (hotel.getName().equals(name)&&hotel.getCity().equals(city)&&hotel.getDir().equals(address)&&hotel.getStars()==stars) {
-//							System.out.println(hotel.getId());
-//						}
-//					}
+					String name = (String) table.getValueAt(rowSelected, 0);
+					String city = (String) table.getValueAt(rowSelected, 1);
+					String address = (String) table.getValueAt(rowSelected, 2);
+					int stars = (int) table.getValueAt(rowSelected, 3);
+					for (Hotel hotel : hotels) {
+						if (hotel.getName().equals(name)&&hotel.getCity().equals(city)&&hotel.getDir().equals(address)&&hotel.getStars()==stars) {
+							int id =hotel.getId();
+						}
+					}
 				}
 			}
 		});
