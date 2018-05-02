@@ -55,6 +55,7 @@ public class Home extends JFrame {
 	private void initialize() {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 535, 387);
+		frame.setTitle("Logged as "+ userDTO.getName());
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 
@@ -141,6 +142,8 @@ public class Home extends JFrame {
 					for (Hotel hotel : hotels) {
 						if (hotel.getName().equals(name)&&hotel.getCity().equals(city)&&hotel.getDir().equals(address)&&hotel.getStars()==stars) {
 							int id =hotel.getId();
+							Rooms rooms = new Rooms(ctrl, userDTO);
+							rooms.setVisible(true);
 						}
 					}
 				}
