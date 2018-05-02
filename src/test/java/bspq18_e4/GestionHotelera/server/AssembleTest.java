@@ -24,6 +24,7 @@ public class AssembleTest {
 	public void setUp() {
 		ass = new Assemble();
 		user = new User("mail@gmail.com", "name", "pass", "1234");
+		hotel = new Hotel(1, "Carton", "Bilbao", "Moyua 33", 5);
 	}
 	
 	@Test
