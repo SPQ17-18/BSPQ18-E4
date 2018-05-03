@@ -200,7 +200,10 @@ public class HotelDAO implements IHotelDAO {
 			tx.begin();
 			Extent<Room> ext = pm.getExtent(Room.class, true);
 			for(Room room : ext){
-				rooms.add(room);
+				if(room.getHotel().getId() == hotel.getId()) {
+					System.out.println(room);
+					rooms.add(room);
+				}
 			}
 			tx.commit();
 		} catch (Exception ex) {
