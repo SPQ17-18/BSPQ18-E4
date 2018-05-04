@@ -35,8 +35,8 @@ public class DAOTest {
 		user = new User("mail@gmail.com", "name", "pass", "1234");
 		hotel = new Hotel(1, "Carton", "Bilbao", "Moyua 33", 5);	
 		room = new Room(201, "Familiar", 5, 80, hotel, reservation);
-		Date arrival = new Date(2018, 9, 15);
-		Date departure = new Date(2018, 9, 18);
+		Date arrival = new Date(1234);
+		Date departure = new Date(4321);
 		reservation = new Reservation(1, arrival, departure, user, hotel);
 	}
 	
