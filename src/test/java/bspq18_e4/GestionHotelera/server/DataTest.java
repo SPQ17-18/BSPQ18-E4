@@ -1,6 +1,7 @@
 package bspq18_e4.GestionHotelera.server;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
 
 import java.util.Date;
 
@@ -31,9 +32,19 @@ public class DataTest {
 	
 	@Test
 	public void hotelTest() {
-		String hotelName = "Bilbao"; 
-		hotel.setName(hotelName);
-		assertEquals(hotelName, hotel.getName());
+		String hotelCity = "Bilbao";
+		int hotelStars = 5;
+		String hotelDir = "Deusto 55";
+		hotel.setCity(hotelCity);
+		assertEquals(hotelCity, hotel.getCity());
+		assertEquals("Melia", hotel.getName());
+		assertEquals(1, hotel.getId());
+		assertEquals("Deusto 33", hotel.getDir());
+		hotel.setDir(hotelDir);
+		assertEquals("Deusto 55", hotel.getDir());
+		assertEquals(4, hotel.getStars());
+		hotel.setStars(hotelStars);
+		assertNotEquals(4, hotel.getStars());
 	}
 	
 }
