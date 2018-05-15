@@ -90,19 +90,19 @@ public class Home extends JFrame{
 		table.setColumnSelectionAllowed(false);
 		System.out.println(table.getSelectedRow());
 		
-//		DefaultTableModel model;
-//		model = new DefaultTableModel();
-//		table = new JTable();
-//		table.setModel(model);
-//		model.addColumn("Name");
-//		model.addColumn("City");
-//		model.addColumn("Address");
-//		model.addColumn("Stars");
-//		table.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
-//		table.getTableHeader().setReorderingAllowed(false);
-//		
-//		HotelDAO dao = new HotelDAO();
-//		dao.getHotels();
+		DefaultTableModel model;
+		model = new DefaultTableModel();
+		table = new JTable();
+		table.setModel(model);
+		model.addColumn("Name");
+		model.addColumn("City");
+		model.addColumn("Address");
+		model.addColumn("Stars");
+		table.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
+		table.getTableHeader().setReorderingAllowed(false);
+		
+		//HotelDAO dao = new HotelDAO();
+		dao.getHotels();
 		
 		JLabel lblCity = new JLabel("City");
 		lblCity.setFont(new Font("Tahoma", Font.BOLD, 16));
