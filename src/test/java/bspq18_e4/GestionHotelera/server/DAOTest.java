@@ -7,8 +7,8 @@ import java.util.Date;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.Mock;
-import org.mockito.junit.MockitoJUnitRunner;
+//import org.mockito.Mock;
+//import org.mockito.junit.MockitoJUnitRunner;
 
 import bspq18_e4.GestionHotelera.server.dao.HotelDAO;
 import bspq18_e4.GestionHotelera.server.dao.IHotelDAO;
@@ -18,7 +18,7 @@ import bspq18_e4.GestionHotelera.server.data.Room;
 import bspq18_e4.GestionHotelera.server.data.User;
 import javafx.beans.binding.When;
 
-@RunWith(MockitoJUnitRunner.class)  
+//@RunWith(MockitoJUnitRunner.class)  
 public class DAOTest {
 
 	private static User user;
@@ -27,7 +27,7 @@ public class DAOTest {
 	private static Room room;
 	private static HotelDAO dao;
 	
-	@Mock
+//	@Mock
 	IHotelDAO hotelDao;
 	
 	@Before
