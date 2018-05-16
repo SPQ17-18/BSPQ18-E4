@@ -47,7 +47,7 @@ public class Rooms extends JFrame implements Serializable{
 		frame.getContentPane().setLayout(null);
 		
 		scrollPane = new JScrollPane();
-		scrollPane.setBounds(0, 216, 434, -215);
+		scrollPane.setBounds(0, 216, 434, 215);
 		frame.getContentPane().add(scrollPane);
 		
 		table = new JTable();
