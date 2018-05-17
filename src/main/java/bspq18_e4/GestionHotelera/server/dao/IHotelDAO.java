@@ -14,4 +14,5 @@ public interface IHotelDAO {
 	public void book(Reservation reservation);
 	public ArrayList<Hotel> getHotels();
 	public ArrayList<String> getCities();
+	public ArrayList<Reservation> getReservationsByUser(User user);
 }

@@ -1,13 +1,23 @@
 package bspq18_e4.GestionHotelera.client.gui;
 
 import java.awt.EventQueue;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.swing.JFrame;
 
 import bspq18_e4.GestionHotelera.client.controller.Controller;
+import bspq18_e4.GestionHotelera.server.assembler.Assemble;
+import bspq18_e4.GestionHotelera.server.dao.HotelDAO;
+import bspq18_e4.GestionHotelera.server.data.Hotel;
+import bspq18_e4.GestionHotelera.server.data.Reservation;
+import bspq18_e4.GestionHotelera.server.data.User;
 import bspq18_e4.GestionHotelera.server.dto.UserDTO;
 import javax.swing.JLabel;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
 import javax.swing.SwingConstants;
+import javax.swing.table.DefaultTableModel;
 
 public class MyAccount extends JFrame{
 
@@ -16,6 +26,9 @@ public class MyAccount extends JFrame{
 	private JFrame frame;
 	private Controller ctrl;
 	private UserDTO userDTO;
+	private JScrollPane scrollPane;
+	private JTable table;
+	private DefaultTableModel model;
 
 	
 	public MyAccount(Controller ctrl, UserDTO userDTO) {
@@ -61,5 +74,36 @@ public class MyAccount extends JFrame{
 		JLabel tcc = new JLabel(userDTO.getCc());
 		tcc.setBounds(134, 80, 102, 14);
 		frame.getContentPane().add(tcc);
+		
+		scrollPane = new JScrollPane();
+		scrollPane.setBounds(167, 80, 342, 257);
+		frame.getContentPane().add(scrollPane);
+		
+		table = new JTable();
+		table.setDefaultEditor(Object.class, null);
+		scrollPane.setViewportView(table);
+		addDataByUser(userDTO);
+	}
+	
+	private void addDataByUser(UserDTO userDTO) {
+
+		model = new DefaultTableModel();
+
+		model.addColumn("Arrival");
+		model.addColumn("Departure");
+		model.addColumn("Hotel");
+
+		HotelDAO dao = new HotelDAO();
+		Assemble ass = new Assemble();
+
+		List<Reservation> reservations = new ArrayList<Reservation>();
+		reservations = dao.getReservationsByUser(ass.userDTO(userDTO));
+		for (Reservation reservation : reservations) {
+
+			model.addRow(new Object[] { reservation.getArrival(), reservation.getDeparture(), reservation.getHotel().getName() });
+		}
+
+		table.setModel(model);
+		scrollPane.setViewportView(table);
 	}
 }

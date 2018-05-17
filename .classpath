@@ -4,7 +4,8 @@
 	<classpathentry kind="src" path="src/test/java"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
-	<classpathentry kind="lib" path="C:/Users/Javier/Downloads/lib/jcalendar-1.4.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Javier/Downloads/javax.jdo-3.2.0-m8.jar"/>
+	<classpathentry kind="lib" path="/SD01_EasyBooking_Server/lib/javax.jdo-3.2.0-m7.jar"/>
+	<classpathentry kind="lib" path="D:/lib/lib/jcalendar-1.4.jar"/>
+	<classpathentry kind="lib" path="/SD01_EasyBooking_Server/lib/datanucleus-api-jdo-5.1.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

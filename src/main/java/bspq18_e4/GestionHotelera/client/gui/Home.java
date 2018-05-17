@@ -109,7 +109,6 @@ public class Home extends JFrame {
 		});
 		bsearch.setBounds(34, 280, 89, 23);
 		frame.getContentPane().add(bsearch);
-
 		JDateChooser arrivalChooser = new JDateChooser();
 		arrivalChooser.setBounds(22, 152, 113, 20);
 		frame.getContentPane().add(arrivalChooser);
@@ -146,17 +145,24 @@ public class Home extends JFrame {
 							int id =hotel.getId();
 							hotelSel = dao.geHotelById(id);
 							Rooms rooms = new Rooms(ctrl, userDTO, hotelSel);
-							rooms.setVisible(true);
 						}
 					}
 				}
 			}
 		});
 		scrollPane.setViewportView(table);
+		
+		JButton myAccount = new JButton("My account");
+		myAccount.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				MyAccount acc = new MyAccount(ctrl, userDTO);
+			}
+		});
+		myAccount.setBounds(243, 11, 113, 23);
+		frame.getContentPane().add(myAccount);
 		frame.setVisible(true);
 
 		addData();
-
 	}
 
 	private void addData() {

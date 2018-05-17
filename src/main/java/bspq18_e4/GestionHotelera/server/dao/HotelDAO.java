@@ -163,6 +163,33 @@ public class HotelDAO implements IHotelDAO {
 		return hotels;
 	}
 	
+	public ArrayList<Reservation> getReservationsByUser(User user) {
+		ArrayList<Reservation> reservations = new ArrayList<>();
+		PersistenceManager pm = pmf.getPersistenceManager();
+		pm.getFetchPlan().setMaxFetchDepth(-1);
+		Transaction tx = pm.currentTransaction();
+
+		try {
+			tx.begin();
+			Extent<Reservation> ext = pm.getExtent(Reservation.class, true);
+			for (Reservation reservation : ext) {
+				if(reservation.getUser().getEmail().equals(user.getEmail())) {
+					reservations.add(reservation);
+				}
+			}
+			tx.commit();
+		} catch (Exception ex) {
+			System.out.println("# Error storing: " + ex.getMessage());
+		} finally {
+			if (tx != null && tx.isActive()) {
+				tx.rollback();
+			}
+			pm.close();
+		}
+		
+		return reservations;
+	}
+	
 	public ArrayList<String> getCities() {
 		ArrayList<String> cities = new ArrayList<>();
 		PersistenceManager pm = pmf.getPersistenceManager();

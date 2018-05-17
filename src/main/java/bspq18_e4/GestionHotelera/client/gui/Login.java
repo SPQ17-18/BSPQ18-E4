@@ -76,7 +76,7 @@ public class Login extends JFrame{
 								JOptionPane.showMessageDialog(null, "Welcome "+user.getName()+"!");
 								frmSignIn.dispose();
 								Home home = new Home(ctrl, user);
-								home.setVisible(true);
+								//home.setVisible(true);
 							} else {
 								JOptionPane.showMessageDialog(null, "Incorrect credentials!", "Error 509", JOptionPane.ERROR_MESSAGE);
 							}
@@ -107,5 +107,7 @@ public class Login extends JFrame{
 		lblName = new JLabel("NAME");
 		lblName.setBounds(146, 26, 51, 14);
 		frmSignIn.getContentPane().add(lblName);
+		frmSignIn.repaint();
+		frmSignIn.revalidate();
 	}
 }

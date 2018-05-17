@@ -7,8 +7,10 @@ bspq18_e4\GestionHotelera\client\gui\Signup.class
 bspq18_e4\GestionHotelera\server\data\User.class
 bspq18_e4\GestionHotelera\server\dao\HotelDAO.class
 bspq18_e4\GestionHotelera\client\controller\Controller.class
+bspq18_e4\GestionHotelera\client\gui\Rooms$2.class
 bspq18_e4\GestionHotelera\client\gui\Rooms.class
 bspq18_e4\GestionHotelera\server\dao\IHotelDAO.class
+bspq18_e4\GestionHotelera\client\gui\Home$4.class
 bspq18_e4\GestionHotelera\client\gui\Signup$2.class
 bspq18_e4\GestionHotelera\client\gui\Home$1.class
 bspq18_e4\GestionHotelera\server\dto\HotelDTO.class
