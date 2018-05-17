@@ -8,6 +8,7 @@ import bspq18_e4.GestionHotelera.server.assembler.Assemble;
 import bspq18_e4.GestionHotelera.server.dao.HotelDAO;
 import bspq18_e4.GestionHotelera.server.dao.IHotelDAO;
 import bspq18_e4.GestionHotelera.server.data.Hotel;
+import bspq18_e4.GestionHotelera.server.data.Reservation;
 import bspq18_e4.GestionHotelera.server.data.User;
 import bspq18_e4.GestionHotelera.server.dto.UserDTO;
 
@@ -32,18 +33,6 @@ public class Service extends UnicastRemoteObject implements IService {
 	}
 	
 	public void register(UserDTO userDto) throws RemoteException {
-//		User user = null;
-//		try {
-//			user = dao.getUser(userDto.getEmail(), userDto.getPass());
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		}
-//		
-//		if (user!=null) {
-//			System.out.println("User exists!!");
-//		} else {
-//			user = new User(userDto.getEmail(), userDto.getName(), userDto.getPass(), userDto.getCc());
-//		}
 		dao.register(ass.userDTO(userDto));
 	}
 	
@@ -63,4 +52,7 @@ public class Service extends UnicastRemoteObject implements IService {
 		}
 	}
 	
+	public void book(Reservation reservation) throws RemoteException {
+		dao.book(reservation);
+	}
 }
