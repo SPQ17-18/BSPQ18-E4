@@ -1,0 +1,796 @@
+\begin{theindex}
+
+  \item {add\+Reservation}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::data\+::\+User}, 
+		\hyperpage{55}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dto\+::\+User\+D\+TO}, 
+		\hyperpage{59}
+  \item {add\+Room}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::data\+::\+Reservation}, 
+		\hyperpage{38}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dto\+::\+Reservation\+D\+TO}, 
+		\hyperpage{41}
+  \item {App\+Test}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::\+App\+Test}, 
+		\hyperpage{14}
+
+  \indexspace
+
+  \item {book}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dao\+::\+Hotel\+D\+AO}, 
+		\hyperpage{26}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dao\+::\+I\+Hotel\+D\+AO}, 
+		\hyperpage{32}
+  \item {bspq18\+\_\+e4}, \hyperpage{9}
+  \item {bspq18\+\_\+e4.\+Gestion\+Hotelera}, \hyperpage{9}
+  \item {bspq18\+\_\+e4.\+Gestion\+Hotelera.\+App}, \hyperpage{13}
+  \item {bspq18\+\_\+e4.\+Gestion\+Hotelera.\+client}, \hyperpage{9}
+  \item {bspq18\+\_\+e4.\+Gestion\+Hotelera.\+client.\+controller}, 
+		\hyperpage{9}
+  \item {bspq18\+\_\+e4.\+Gestion\+Hotelera.\+client.\+controller.\+Controller}, 
+		\hyperpage{18}
+  \item {bspq18\+\_\+e4.\+Gestion\+Hotelera.\+client.\+gui}, 
+		\hyperpage{10}
+  \item {bspq18\+\_\+e4.\+Gestion\+Hotelera.\+client.\+gui.\+Home}, 
+		\hyperpage{22}
+  \item {bspq18\+\_\+e4.\+Gestion\+Hotelera.\+client.\+gui.\+Login}, 
+		\hyperpage{35}
+  \item {bspq18\+\_\+e4.\+Gestion\+Hotelera.\+client.\+gui.\+My\+Account}, 
+		\hyperpage{36}
+  \item {bspq18\+\_\+e4.\+Gestion\+Hotelera.\+client.\+gui.\+Rooms}, 
+		\hyperpage{51}
+  \item {bspq18\+\_\+e4.\+Gestion\+Hotelera.\+client.\+gui.\+Signup}, 
+		\hyperpage{54}
+  \item {bspq18\+\_\+e4.\+Gestion\+Hotelera.\+client.\+remote}, 
+		\hyperpage{10}
+  \item {bspq18\+\_\+e4.\+Gestion\+Hotelera.\+client.\+remote.\+Service\+Locator}, 
+		\hyperpage{53}
+  \item {bspq18\+\_\+e4.\+Gestion\+Hotelera.\+server}, \hyperpage{10}
+  \item {bspq18\+\_\+e4.\+Gestion\+Hotelera.\+server.\+App\+Test}, 
+		\hyperpage{13}
+  \item {bspq18\+\_\+e4.\+Gestion\+Hotelera.\+server.\+Assemble\+Test}, 
+		\hyperpage{17}
+  \item {bspq18\+\_\+e4.\+Gestion\+Hotelera.\+server.\+assembler}, 
+		\hyperpage{10}
+  \item {bspq18\+\_\+e4.\+Gestion\+Hotelera.\+server.\+assembler.\+Assemble}, 
+		\hyperpage{15}
+  \item {bspq18\+\_\+e4.\+Gestion\+Hotelera.\+server.\+D\+A\+O\+Test}, 
+		\hyperpage{20}
+  \item {bspq18\+\_\+e4.\+Gestion\+Hotelera.\+server.\+dao}, 
+		\hyperpage{10}
+  \item {bspq18\+\_\+e4.\+Gestion\+Hotelera.\+server.\+dao.\+Hotel\+D\+AO}, 
+		\hyperpage{25}
+  \item {bspq18\+\_\+e4.\+Gestion\+Hotelera.\+server.\+dao.\+I\+Hotel\+D\+AO}, 
+		\hyperpage{32}
+  \item {bspq18\+\_\+e4.\+Gestion\+Hotelera.\+server.\+data}, 
+		\hyperpage{11}
+  \item {bspq18\+\_\+e4.\+Gestion\+Hotelera.\+server.\+data.\+Hotel}, 
+		\hyperpage{22}
+  \item {bspq18\+\_\+e4.\+Gestion\+Hotelera.\+server.\+data.\+Reservation}, 
+		\hyperpage{37}
+  \item {bspq18\+\_\+e4.\+Gestion\+Hotelera.\+server.\+data.\+Room}, 
+		\hyperpage{44}
+  \item {bspq18\+\_\+e4.\+Gestion\+Hotelera.\+server.\+data.\+User}, 
+		\hyperpage{55}
+  \item {bspq18\+\_\+e4.\+Gestion\+Hotelera.\+server.\+Data\+Test}, 
+		\hyperpage{21}
+  \item {bspq18\+\_\+e4.\+Gestion\+Hotelera.\+server.\+dto}, 
+		\hyperpage{11}
+  \item {bspq18\+\_\+e4.\+Gestion\+Hotelera.\+server.\+dto.\+Hotel\+D\+TO}, 
+		\hyperpage{29}
+  \item {bspq18\+\_\+e4.\+Gestion\+Hotelera.\+server.\+dto.\+Reservation\+D\+TO}, 
+		\hyperpage{40}
+  \item {bspq18\+\_\+e4.\+Gestion\+Hotelera.\+server.\+dto.\+Room\+D\+TO}, 
+		\hyperpage{47}
+  \item {bspq18\+\_\+e4.\+Gestion\+Hotelera.\+server.\+dto.\+User\+D\+TO}, 
+		\hyperpage{58}
+  \item {bspq18\+\_\+e4.\+Gestion\+Hotelera.\+server.\+Hotel\+Server}, 
+		\hyperpage{31}
+  \item {bspq18\+\_\+e4.\+Gestion\+Hotelera.\+server.\+remote}, 
+		\hyperpage{11}
+  \item {bspq18\+\_\+e4.\+Gestion\+Hotelera.\+server.\+remote.\+I\+Service}, 
+		\hyperpage{34}
+  \item {bspq18\+\_\+e4.\+Gestion\+Hotelera.\+server.\+remote.\+Service}, 
+		\hyperpage{51}
+  \item {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::\+App}
+    \subitem {main}, \hyperpage{13}
+  \item {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::client\+::controller\+::\+Controller}
+    \subitem {Controller}, \hyperpage{18}
+    \subitem {is\+Registered}, \hyperpage{19}
+    \subitem {main}, \hyperpage{19}
+    \subitem {register}, \hyperpage{19}
+    \subitem {sign\+In}, \hyperpage{19}
+  \item {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::client\+::gui\+::\+Home}
+    \subitem {Home}, \hyperpage{22}
+  \item {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::client\+::gui\+::\+Login}
+    \subitem {Login}, \hyperpage{35}
+  \item {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::client\+::gui\+::\+My\+Account}
+    \subitem {My\+Account}, \hyperpage{36}
+  \item {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::client\+::gui\+::\+Rooms}
+    \subitem {Rooms}, \hyperpage{51}
+  \item {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::client\+::gui\+::\+Signup}
+    \subitem {Signup}, \hyperpage{54}
+  \item {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::client\+::remote\+::\+Service\+Locator}
+    \subitem {get\+Service}, \hyperpage{53}
+    \subitem {Service\+Locator}, \hyperpage{53}
+    \subitem {set\+Service}, \hyperpage{53}
+  \item {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::\+App\+Test}
+    \subitem {App\+Test}, \hyperpage{14}
+    \subitem {suite}, \hyperpage{14}
+    \subitem {test\+App}, \hyperpage{14}
+  \item {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::\+Assemble\+Test}
+    \subitem {set\+Up}, \hyperpage{17}
+    \subitem {test\+Hotel}, \hyperpage{17}
+    \subitem {test\+Hotel\+D\+TO}, \hyperpage{17}
+    \subitem {test\+User}, \hyperpage{18}
+    \subitem {test\+User\+D\+TO}, \hyperpage{18}
+  \item {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::\+D\+A\+O\+Test}
+    \subitem {set\+Up}, \hyperpage{20}
+    \subitem {test\+Hotel}, \hyperpage{20}
+    \subitem {test\+Register}, \hyperpage{20}
+    \subitem {test\+Reservation}, \hyperpage{20}
+    \subitem {test\+Room}, \hyperpage{20}
+  \item {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::\+Data\+Test}
+    \subitem {hotel\+Test}, \hyperpage{21}
+    \subitem {set\+Up}, \hyperpage{21}
+  \item {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::\+Hotel\+Server}
+    \subitem {main}, \hyperpage{32}
+  \item {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::assembler\+::\+Assemble}
+    \subitem {hotel}, \hyperpage{15}
+    \subitem {hotel\+D\+TO}, \hyperpage{15}
+    \subitem {reservation}, \hyperpage{15}
+    \subitem {reservation\+D\+TO}, \hyperpage{16}
+    \subitem {room}, \hyperpage{16}
+    \subitem {room\+D\+TO}, \hyperpage{16}
+    \subitem {user}, \hyperpage{16}
+    \subitem {user\+D\+TO}, \hyperpage{16}
+  \item {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dao\+::\+Hotel\+D\+AO}
+    \subitem {book}, \hyperpage{26}
+    \subitem {ge\+Hotel\+By\+Id}, \hyperpage{26}
+    \subitem {get\+Cities}, \hyperpage{27}
+    \subitem {get\+Hotels}, \hyperpage{27}
+    \subitem {get\+Hotels\+By\+City}, \hyperpage{27}
+    \subitem {get\+Reservations\+By\+User}, \hyperpage{27}
+    \subitem {get\+Rooms}, \hyperpage{27}
+    \subitem {get\+User}, \hyperpage{28}
+    \subitem {Hotel\+D\+AO}, \hyperpage{26}
+    \subitem {main}, \hyperpage{28}
+    \subitem {register}, \hyperpage{28}
+    \subitem {store}, \hyperpage{28}
+  \item {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dao\+::\+I\+Hotel\+D\+AO}
+    \subitem {book}, \hyperpage{32}
+    \subitem {get\+Cities}, \hyperpage{33}
+    \subitem {get\+Hotels}, \hyperpage{33}
+    \subitem {get\+Reservations\+By\+User}, \hyperpage{33}
+    \subitem {get\+User}, \hyperpage{33}
+    \subitem {register}, \hyperpage{33}
+    \subitem {store}, \hyperpage{33}
+  \item {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::data\+::\+Hotel}
+    \subitem {get\+City}, \hyperpage{23}
+    \subitem {get\+Dir}, \hyperpage{23}
+    \subitem {get\+Id}, \hyperpage{24}
+    \subitem {get\+Name}, \hyperpage{24}
+    \subitem {get\+Stars}, \hyperpage{24}
+    \subitem {Hotel}, \hyperpage{23}
+    \subitem {set\+City}, \hyperpage{24}
+    \subitem {set\+Dir}, \hyperpage{24}
+    \subitem {set\+Id}, \hyperpage{24}
+    \subitem {set\+Name}, \hyperpage{25}
+    \subitem {set\+Stars}, \hyperpage{25}
+    \subitem {to\+String}, \hyperpage{25}
+  \item {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::data\+::\+Reservation}
+    \subitem {add\+Room}, \hyperpage{38}
+    \subitem {get\+Arrival}, \hyperpage{38}
+    \subitem {get\+Departure}, \hyperpage{38}
+    \subitem {get\+Hotel}, \hyperpage{38}
+    \subitem {get\+Id}, \hyperpage{38}
+    \subitem {get\+Rooms}, \hyperpage{38}
+    \subitem {get\+User}, \hyperpage{39}
+    \subitem {remove\+Room}, \hyperpage{39}
+    \subitem {Reservation}, \hyperpage{37}
+    \subitem {set\+Arrival}, \hyperpage{39}
+    \subitem {set\+Departure}, \hyperpage{39}
+    \subitem {set\+Hotel}, \hyperpage{39}
+    \subitem {set\+Id}, \hyperpage{39}
+    \subitem {set\+Rooms}, \hyperpage{40}
+    \subitem {set\+User}, \hyperpage{40}
+    \subitem {to\+String}, \hyperpage{40}
+  \item {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::data\+::\+Room}
+    \subitem {get\+Capacity}, \hyperpage{45}
+    \subitem {get\+Hotel}, \hyperpage{45}
+    \subitem {get\+Num}, \hyperpage{45}
+    \subitem {get\+Price}, \hyperpage{45}
+    \subitem {get\+Reservation}, \hyperpage{46}
+    \subitem {get\+Type}, \hyperpage{46}
+    \subitem {Room}, \hyperpage{44, 45}
+    \subitem {set\+Capacity}, \hyperpage{46}
+    \subitem {set\+Hotel}, \hyperpage{46}
+    \subitem {set\+Num}, \hyperpage{46}
+    \subitem {set\+Price}, \hyperpage{46}
+    \subitem {set\+Reservation}, \hyperpage{47}
+    \subitem {set\+Type}, \hyperpage{47}
+    \subitem {to\+String}, \hyperpage{47}
+  \item {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::data\+::\+User}
+    \subitem {add\+Reservation}, \hyperpage{55}
+    \subitem {get\+Cc}, \hyperpage{56}
+    \subitem {get\+Email}, \hyperpage{56}
+    \subitem {get\+Name}, \hyperpage{56}
+    \subitem {get\+Pass}, \hyperpage{56}
+    \subitem {get\+Reservations}, \hyperpage{56}
+    \subitem {remove\+Reserva}, \hyperpage{56}
+    \subitem {set\+Cc}, \hyperpage{57}
+    \subitem {set\+Email}, \hyperpage{57}
+    \subitem {set\+Name}, \hyperpage{57}
+    \subitem {set\+Pass}, \hyperpage{57}
+    \subitem {set\+Reservations}, \hyperpage{57}
+    \subitem {to\+String}, \hyperpage{57}
+    \subitem {User}, \hyperpage{55}
+  \item {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dto\+::\+Hotel\+D\+TO}
+    \subitem {get\+City}, \hyperpage{29}
+    \subitem {get\+Dir}, \hyperpage{30}
+    \subitem {get\+Id}, \hyperpage{30}
+    \subitem {get\+Name}, \hyperpage{30}
+    \subitem {get\+Stars}, \hyperpage{30}
+    \subitem {Hotel\+D\+TO}, \hyperpage{29}
+    \subitem {set\+City}, \hyperpage{30}
+    \subitem {set\+Dir}, \hyperpage{30}
+    \subitem {set\+Id}, \hyperpage{31}
+    \subitem {set\+Name}, \hyperpage{31}
+    \subitem {set\+Stars}, \hyperpage{31}
+  \item {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dto\+::\+Reservation\+D\+TO}
+    \subitem {add\+Room}, \hyperpage{41}
+    \subitem {get\+Arrival}, \hyperpage{41}
+    \subitem {get\+Departure}, \hyperpage{42}
+    \subitem {get\+Hotel}, \hyperpage{42}
+    \subitem {get\+Id}, \hyperpage{42}
+    \subitem {get\+Rooms}, \hyperpage{42}
+    \subitem {get\+User}, \hyperpage{42}
+    \subitem {remove\+Reserva}, \hyperpage{42}
+    \subitem {Reservation\+D\+TO}, \hyperpage{41}
+    \subitem {set\+Arrival}, \hyperpage{43}
+    \subitem {set\+Departure}, \hyperpage{43}
+    \subitem {set\+Hotel}, \hyperpage{43}
+    \subitem {set\+Id}, \hyperpage{43}
+    \subitem {set\+Rooms}, \hyperpage{43}
+    \subitem {set\+User}, \hyperpage{43}
+  \item {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dto\+::\+Room\+D\+TO}
+    \subitem {get\+Capacity}, \hyperpage{48}
+    \subitem {get\+Hotel}, \hyperpage{48}
+    \subitem {get\+Num}, \hyperpage{49}
+    \subitem {get\+Price}, \hyperpage{49}
+    \subitem {get\+Reservation}, \hyperpage{49}
+    \subitem {get\+Type}, \hyperpage{49}
+    \subitem {Room\+D\+TO}, \hyperpage{48}
+    \subitem {set\+Capacity}, \hyperpage{49}
+    \subitem {set\+Hotel}, \hyperpage{49}
+    \subitem {set\+Num}, \hyperpage{50}
+    \subitem {set\+Price}, \hyperpage{50}
+    \subitem {set\+Reservation}, \hyperpage{50}
+    \subitem {set\+Type}, \hyperpage{50}
+  \item {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dto\+::\+User\+D\+TO}
+    \subitem {add\+Reservation}, \hyperpage{59}
+    \subitem {get\+Cc}, \hyperpage{59}
+    \subitem {get\+Email}, \hyperpage{59}
+    \subitem {get\+Name}, \hyperpage{59}
+    \subitem {get\+Pass}, \hyperpage{59}
+    \subitem {get\+Reservations}, \hyperpage{60}
+    \subitem {remove\+Reservation}, \hyperpage{60}
+    \subitem {set\+Cc}, \hyperpage{60}
+    \subitem {set\+Email}, \hyperpage{60}
+    \subitem {set\+Name}, \hyperpage{60}
+    \subitem {set\+Pass}, \hyperpage{60}
+    \subitem {set\+Reservations}, \hyperpage{61}
+    \subitem {User\+D\+TO}, \hyperpage{58}
+  \item {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::remote\+::\+I\+Service}
+    \subitem {is\+Registered}, \hyperpage{34}
+    \subitem {register}, \hyperpage{34}
+    \subitem {sign\+In}, \hyperpage{35}
+  \item {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::remote\+::\+Service}
+    \subitem {is\+Registered}, \hyperpage{52}
+    \subitem {register}, \hyperpage{52}
+    \subitem {Service}, \hyperpage{52}
+    \subitem {sign\+In}, \hyperpage{52}
+
+  \indexspace
+
+  \item {Controller}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::client\+::controller\+::\+Controller}, 
+		\hyperpage{18}
+
+  \indexspace
+
+  \item {ge\+Hotel\+By\+Id}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dao\+::\+Hotel\+D\+AO}, 
+		\hyperpage{26}
+  \item {get\+Arrival}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::data\+::\+Reservation}, 
+		\hyperpage{38}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dto\+::\+Reservation\+D\+TO}, 
+		\hyperpage{41}
+  \item {get\+Capacity}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::data\+::\+Room}, 
+		\hyperpage{45}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dto\+::\+Room\+D\+TO}, 
+		\hyperpage{48}
+  \item {get\+Cc}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::data\+::\+User}, 
+		\hyperpage{56}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dto\+::\+User\+D\+TO}, 
+		\hyperpage{59}
+  \item {get\+Cities}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dao\+::\+Hotel\+D\+AO}, 
+		\hyperpage{27}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dao\+::\+I\+Hotel\+D\+AO}, 
+		\hyperpage{33}
+  \item {get\+City}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::data\+::\+Hotel}, 
+		\hyperpage{23}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dto\+::\+Hotel\+D\+TO}, 
+		\hyperpage{29}
+  \item {get\+Departure}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::data\+::\+Reservation}, 
+		\hyperpage{38}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dto\+::\+Reservation\+D\+TO}, 
+		\hyperpage{42}
+  \item {get\+Dir}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::data\+::\+Hotel}, 
+		\hyperpage{23}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dto\+::\+Hotel\+D\+TO}, 
+		\hyperpage{30}
+  \item {get\+Email}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::data\+::\+User}, 
+		\hyperpage{56}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dto\+::\+User\+D\+TO}, 
+		\hyperpage{59}
+  \item {get\+Hotel}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::data\+::\+Reservation}, 
+		\hyperpage{38}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::data\+::\+Room}, 
+		\hyperpage{45}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dto\+::\+Reservation\+D\+TO}, 
+		\hyperpage{42}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dto\+::\+Room\+D\+TO}, 
+		\hyperpage{48}
+  \item {get\+Hotels}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dao\+::\+Hotel\+D\+AO}, 
+		\hyperpage{27}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dao\+::\+I\+Hotel\+D\+AO}, 
+		\hyperpage{33}
+  \item {get\+Hotels\+By\+City}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dao\+::\+Hotel\+D\+AO}, 
+		\hyperpage{27}
+  \item {get\+Id}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::data\+::\+Hotel}, 
+		\hyperpage{24}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::data\+::\+Reservation}, 
+		\hyperpage{38}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dto\+::\+Hotel\+D\+TO}, 
+		\hyperpage{30}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dto\+::\+Reservation\+D\+TO}, 
+		\hyperpage{42}
+  \item {get\+Name}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::data\+::\+Hotel}, 
+		\hyperpage{24}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::data\+::\+User}, 
+		\hyperpage{56}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dto\+::\+Hotel\+D\+TO}, 
+		\hyperpage{30}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dto\+::\+User\+D\+TO}, 
+		\hyperpage{59}
+  \item {get\+Num}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::data\+::\+Room}, 
+		\hyperpage{45}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dto\+::\+Room\+D\+TO}, 
+		\hyperpage{49}
+  \item {get\+Pass}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::data\+::\+User}, 
+		\hyperpage{56}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dto\+::\+User\+D\+TO}, 
+		\hyperpage{59}
+  \item {get\+Price}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::data\+::\+Room}, 
+		\hyperpage{45}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dto\+::\+Room\+D\+TO}, 
+		\hyperpage{49}
+  \item {get\+Reservation}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::data\+::\+Room}, 
+		\hyperpage{46}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dto\+::\+Room\+D\+TO}, 
+		\hyperpage{49}
+  \item {get\+Reservations}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::data\+::\+User}, 
+		\hyperpage{56}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dto\+::\+User\+D\+TO}, 
+		\hyperpage{60}
+  \item {get\+Reservations\+By\+User}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dao\+::\+Hotel\+D\+AO}, 
+		\hyperpage{27}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dao\+::\+I\+Hotel\+D\+AO}, 
+		\hyperpage{33}
+  \item {get\+Rooms}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dao\+::\+Hotel\+D\+AO}, 
+		\hyperpage{27}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::data\+::\+Reservation}, 
+		\hyperpage{38}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dto\+::\+Reservation\+D\+TO}, 
+		\hyperpage{42}
+  \item {get\+Service}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::client\+::remote\+::\+Service\+Locator}, 
+		\hyperpage{53}
+  \item {get\+Stars}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::data\+::\+Hotel}, 
+		\hyperpage{24}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dto\+::\+Hotel\+D\+TO}, 
+		\hyperpage{30}
+  \item {get\+Type}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::data\+::\+Room}, 
+		\hyperpage{46}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dto\+::\+Room\+D\+TO}, 
+		\hyperpage{49}
+  \item {get\+User}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dao\+::\+Hotel\+D\+AO}, 
+		\hyperpage{28}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dao\+::\+I\+Hotel\+D\+AO}, 
+		\hyperpage{33}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::data\+::\+Reservation}, 
+		\hyperpage{39}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dto\+::\+Reservation\+D\+TO}, 
+		\hyperpage{42}
+
+  \indexspace
+
+  \item {Home}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::client\+::gui\+::\+Home}, 
+		\hyperpage{22}
+  \item {Hotel}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::data\+::\+Hotel}, 
+		\hyperpage{23}
+  \item {hotel}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::assembler\+::\+Assemble}, 
+		\hyperpage{15}
+  \item {Hotel\+D\+AO}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dao\+::\+Hotel\+D\+AO}, 
+		\hyperpage{26}
+  \item {Hotel\+D\+TO}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dto\+::\+Hotel\+D\+TO}, 
+		\hyperpage{29}
+  \item {hotel\+D\+TO}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::assembler\+::\+Assemble}, 
+		\hyperpage{15}
+  \item {hotel\+Test}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::\+Data\+Test}, 
+		\hyperpage{21}
+
+  \indexspace
+
+  \item {is\+Registered}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::client\+::controller\+::\+Controller}, 
+		\hyperpage{19}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::remote\+::\+I\+Service}, 
+		\hyperpage{34}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::remote\+::\+Service}, 
+		\hyperpage{52}
+
+  \indexspace
+
+  \item {Login}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::client\+::gui\+::\+Login}, 
+		\hyperpage{35}
+
+  \indexspace
+
+  \item {main}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::\+App}, 
+		\hyperpage{13}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::client\+::controller\+::\+Controller}, 
+		\hyperpage{19}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::\+Hotel\+Server}, 
+		\hyperpage{32}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dao\+::\+Hotel\+D\+AO}, 
+		\hyperpage{28}
+  \item {My\+Account}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::client\+::gui\+::\+My\+Account}, 
+		\hyperpage{36}
+
+  \indexspace
+
+  \item {register}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::client\+::controller\+::\+Controller}, 
+		\hyperpage{19}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dao\+::\+Hotel\+D\+AO}, 
+		\hyperpage{28}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dao\+::\+I\+Hotel\+D\+AO}, 
+		\hyperpage{33}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::remote\+::\+I\+Service}, 
+		\hyperpage{34}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::remote\+::\+Service}, 
+		\hyperpage{52}
+  \item {remove\+Reserva}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::data\+::\+User}, 
+		\hyperpage{56}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dto\+::\+Reservation\+D\+TO}, 
+		\hyperpage{42}
+  \item {remove\+Reservation}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dto\+::\+User\+D\+TO}, 
+		\hyperpage{60}
+  \item {remove\+Room}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::data\+::\+Reservation}, 
+		\hyperpage{39}
+  \item {Reservation}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::data\+::\+Reservation}, 
+		\hyperpage{37}
+  \item {reservation}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::assembler\+::\+Assemble}, 
+		\hyperpage{15}
+  \item {Reservation\+D\+TO}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dto\+::\+Reservation\+D\+TO}, 
+		\hyperpage{41}
+  \item {reservation\+D\+TO}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::assembler\+::\+Assemble}, 
+		\hyperpage{16}
+  \item {Room}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::data\+::\+Room}, 
+		\hyperpage{44, 45}
+  \item {room}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::assembler\+::\+Assemble}, 
+		\hyperpage{16}
+  \item {Room\+D\+TO}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dto\+::\+Room\+D\+TO}, 
+		\hyperpage{48}
+  \item {room\+D\+TO}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::assembler\+::\+Assemble}, 
+		\hyperpage{16}
+  \item {Rooms}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::client\+::gui\+::\+Rooms}, 
+		\hyperpage{51}
+
+  \indexspace
+
+  \item {Service}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::remote\+::\+Service}, 
+		\hyperpage{52}
+  \item {Service\+Locator}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::client\+::remote\+::\+Service\+Locator}, 
+		\hyperpage{53}
+  \item {set\+Arrival}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::data\+::\+Reservation}, 
+		\hyperpage{39}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dto\+::\+Reservation\+D\+TO}, 
+		\hyperpage{43}
+  \item {set\+Capacity}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::data\+::\+Room}, 
+		\hyperpage{46}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dto\+::\+Room\+D\+TO}, 
+		\hyperpage{49}
+  \item {set\+Cc}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::data\+::\+User}, 
+		\hyperpage{57}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dto\+::\+User\+D\+TO}, 
+		\hyperpage{60}
+  \item {set\+City}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::data\+::\+Hotel}, 
+		\hyperpage{24}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dto\+::\+Hotel\+D\+TO}, 
+		\hyperpage{30}
+  \item {set\+Departure}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::data\+::\+Reservation}, 
+		\hyperpage{39}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dto\+::\+Reservation\+D\+TO}, 
+		\hyperpage{43}
+  \item {set\+Dir}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::data\+::\+Hotel}, 
+		\hyperpage{24}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dto\+::\+Hotel\+D\+TO}, 
+		\hyperpage{30}
+  \item {set\+Email}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::data\+::\+User}, 
+		\hyperpage{57}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dto\+::\+User\+D\+TO}, 
+		\hyperpage{60}
+  \item {set\+Hotel}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::data\+::\+Reservation}, 
+		\hyperpage{39}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::data\+::\+Room}, 
+		\hyperpage{46}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dto\+::\+Reservation\+D\+TO}, 
+		\hyperpage{43}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dto\+::\+Room\+D\+TO}, 
+		\hyperpage{49}
+  \item {set\+Id}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::data\+::\+Hotel}, 
+		\hyperpage{24}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::data\+::\+Reservation}, 
+		\hyperpage{39}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dto\+::\+Hotel\+D\+TO}, 
+		\hyperpage{31}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dto\+::\+Reservation\+D\+TO}, 
+		\hyperpage{43}
+  \item {set\+Name}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::data\+::\+Hotel}, 
+		\hyperpage{25}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::data\+::\+User}, 
+		\hyperpage{57}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dto\+::\+Hotel\+D\+TO}, 
+		\hyperpage{31}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dto\+::\+User\+D\+TO}, 
+		\hyperpage{60}
+  \item {set\+Num}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::data\+::\+Room}, 
+		\hyperpage{46}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dto\+::\+Room\+D\+TO}, 
+		\hyperpage{50}
+  \item {set\+Pass}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::data\+::\+User}, 
+		\hyperpage{57}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dto\+::\+User\+D\+TO}, 
+		\hyperpage{60}
+  \item {set\+Price}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::data\+::\+Room}, 
+		\hyperpage{46}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dto\+::\+Room\+D\+TO}, 
+		\hyperpage{50}
+  \item {set\+Reservation}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::data\+::\+Room}, 
+		\hyperpage{47}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dto\+::\+Room\+D\+TO}, 
+		\hyperpage{50}
+  \item {set\+Reservations}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::data\+::\+User}, 
+		\hyperpage{57}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dto\+::\+User\+D\+TO}, 
+		\hyperpage{61}
+  \item {set\+Rooms}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::data\+::\+Reservation}, 
+		\hyperpage{40}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dto\+::\+Reservation\+D\+TO}, 
+		\hyperpage{43}
+  \item {set\+Service}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::client\+::remote\+::\+Service\+Locator}, 
+		\hyperpage{53}
+  \item {set\+Stars}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::data\+::\+Hotel}, 
+		\hyperpage{25}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dto\+::\+Hotel\+D\+TO}, 
+		\hyperpage{31}
+  \item {set\+Type}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::data\+::\+Room}, 
+		\hyperpage{47}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dto\+::\+Room\+D\+TO}, 
+		\hyperpage{50}
+  \item {set\+Up}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::\+Assemble\+Test}, 
+		\hyperpage{17}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::\+D\+A\+O\+Test}, 
+		\hyperpage{20}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::\+Data\+Test}, 
+		\hyperpage{21}
+  \item {set\+User}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::data\+::\+Reservation}, 
+		\hyperpage{40}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dto\+::\+Reservation\+D\+TO}, 
+		\hyperpage{43}
+  \item {sign\+In}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::client\+::controller\+::\+Controller}, 
+		\hyperpage{19}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::remote\+::\+I\+Service}, 
+		\hyperpage{35}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::remote\+::\+Service}, 
+		\hyperpage{52}
+  \item {Signup}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::client\+::gui\+::\+Signup}, 
+		\hyperpage{54}
+  \item {src/main/java/bspq18\+\_\+e4/\+Gestion\+Hotelera/\+App.\+java}, 
+		\hyperpage{63}
+  \item {src/main/java/bspq18\+\_\+e4/\+Gestion\+Hotelera/client/controller/\+Controller.\+java}, 
+		\hyperpage{63}
+  \item {src/main/java/bspq18\+\_\+e4/\+Gestion\+Hotelera/client/gui/\+Home.\+java}, 
+		\hyperpage{63}
+  \item {src/main/java/bspq18\+\_\+e4/\+Gestion\+Hotelera/client/gui/\+Login.\+java}, 
+		\hyperpage{64}
+  \item {src/main/java/bspq18\+\_\+e4/\+Gestion\+Hotelera/client/gui/\+My\+Account.\+java}, 
+		\hyperpage{64}
+  \item {src/main/java/bspq18\+\_\+e4/\+Gestion\+Hotelera/client/gui/\+Rooms.\+java}, 
+		\hyperpage{64}
+  \item {src/main/java/bspq18\+\_\+e4/\+Gestion\+Hotelera/client/gui/\+Signup.\+java}, 
+		\hyperpage{64}
+  \item {src/main/java/bspq18\+\_\+e4/\+Gestion\+Hotelera/client/remote/\+Service\+Locator.\+java}, 
+		\hyperpage{65}
+  \item {src/main/java/bspq18\+\_\+e4/\+Gestion\+Hotelera/server/\+Hotel\+Server.\+java}, 
+		\hyperpage{68}
+  \item {src/main/java/bspq18\+\_\+e4/\+Gestion\+Hotelera/server/assembler/\+Assemble.\+java}, 
+		\hyperpage{65}
+  \item {src/main/java/bspq18\+\_\+e4/\+Gestion\+Hotelera/server/dao/\+Hotel\+D\+A\+O.\+java}, 
+		\hyperpage{65}
+  \item {src/main/java/bspq18\+\_\+e4/\+Gestion\+Hotelera/server/dao/\+I\+Hotel\+D\+A\+O.\+java}, 
+		\hyperpage{65}
+  \item {src/main/java/bspq18\+\_\+e4/\+Gestion\+Hotelera/server/data/\+Hotel.\+java}, 
+		\hyperpage{66}
+  \item {src/main/java/bspq18\+\_\+e4/\+Gestion\+Hotelera/server/data/\+Reservation.\+java}, 
+		\hyperpage{66}
+  \item {src/main/java/bspq18\+\_\+e4/\+Gestion\+Hotelera/server/data/\+Room.\+java}, 
+		\hyperpage{66}
+  \item {src/main/java/bspq18\+\_\+e4/\+Gestion\+Hotelera/server/data/\+User.\+java}, 
+		\hyperpage{66}
+  \item {src/main/java/bspq18\+\_\+e4/\+Gestion\+Hotelera/server/dto/\+Hotel\+D\+T\+O.\+java}, 
+		\hyperpage{67}
+  \item {src/main/java/bspq18\+\_\+e4/\+Gestion\+Hotelera/server/dto/\+Reservation\+D\+T\+O.\+java}, 
+		\hyperpage{67}
+  \item {src/main/java/bspq18\+\_\+e4/\+Gestion\+Hotelera/server/dto/\+Room\+D\+T\+O.\+java}, 
+		\hyperpage{67}
+  \item {src/main/java/bspq18\+\_\+e4/\+Gestion\+Hotelera/server/dto/\+User\+D\+T\+O.\+java}, 
+		\hyperpage{67}
+  \item {src/main/java/bspq18\+\_\+e4/\+Gestion\+Hotelera/server/remote/\+I\+Service.\+java}, 
+		\hyperpage{68}
+  \item {src/main/java/bspq18\+\_\+e4/\+Gestion\+Hotelera/server/remote/\+Service.\+java}, 
+		\hyperpage{68}
+  \item {src/test/java/bspq18\+\_\+e4/\+Gestion\+Hotelera/server/\+App\+Test.\+java}, 
+		\hyperpage{68}
+  \item {src/test/java/bspq18\+\_\+e4/\+Gestion\+Hotelera/server/\+Assemble\+Test.\+java}, 
+		\hyperpage{69}
+  \item {src/test/java/bspq18\+\_\+e4/\+Gestion\+Hotelera/server/\+D\+A\+O\+Test.\+java}, 
+		\hyperpage{69}
+  \item {src/test/java/bspq18\+\_\+e4/\+Gestion\+Hotelera/server/\+Data\+Test.\+java}, 
+		\hyperpage{69}
+  \item {store}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dao\+::\+Hotel\+D\+AO}, 
+		\hyperpage{28}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dao\+::\+I\+Hotel\+D\+AO}, 
+		\hyperpage{33}
+  \item {suite}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::\+App\+Test}, 
+		\hyperpage{14}
+
+  \indexspace
+
+  \item {test\+App}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::\+App\+Test}, 
+		\hyperpage{14}
+  \item {test\+Hotel}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::\+Assemble\+Test}, 
+		\hyperpage{17}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::\+D\+A\+O\+Test}, 
+		\hyperpage{20}
+  \item {test\+Hotel\+D\+TO}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::\+Assemble\+Test}, 
+		\hyperpage{17}
+  \item {test\+Register}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::\+D\+A\+O\+Test}, 
+		\hyperpage{20}
+  \item {test\+Reservation}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::\+D\+A\+O\+Test}, 
+		\hyperpage{20}
+  \item {test\+Room}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::\+D\+A\+O\+Test}, 
+		\hyperpage{20}
+  \item {test\+User}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::\+Assemble\+Test}, 
+		\hyperpage{18}
+  \item {test\+User\+D\+TO}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::\+Assemble\+Test}, 
+		\hyperpage{18}
+  \item {to\+String}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::data\+::\+Hotel}, 
+		\hyperpage{25}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::data\+::\+Reservation}, 
+		\hyperpage{40}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::data\+::\+Room}, 
+		\hyperpage{47}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::data\+::\+User}, 
+		\hyperpage{57}
+
+  \indexspace
+
+  \item {User}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::data\+::\+User}, 
+		\hyperpage{55}
+  \item {user}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::assembler\+::\+Assemble}, 
+		\hyperpage{16}
+  \item {User\+D\+TO}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::dto\+::\+User\+D\+TO}, 
+		\hyperpage{58}
+  \item {user\+D\+TO}
+    \subitem {bspq18\+\_\+e4\+::\+Gestion\+Hotelera\+::server\+::assembler\+::\+Assemble}, 
+		\hyperpage{16}
+
+\end{theindex}
