@@ -18,6 +18,9 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.SwingConstants;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class MyAccount extends JFrame{
 
@@ -50,38 +53,47 @@ public class MyAccount extends JFrame{
 		
 		JLabel lblEmail = new JLabel("Email");
 		lblEmail.setHorizontalAlignment(SwingConstants.LEFT);
-		lblEmail.setBounds(51, 30, 46, 14);
+		lblEmail.setBounds(25, 11, 46, 14);
 		frame.getContentPane().add(lblEmail);
 		
 		JLabel lblName = new JLabel("Name");
 		lblName.setHorizontalAlignment(SwingConstants.LEFT);
-		lblName.setBounds(51, 55, 46, 14);
+		lblName.setBounds(25, 30, 46, 14);
 		frame.getContentPane().add(lblName);
 		
 		JLabel lblCreditCard = new JLabel("Credit Card");
 		lblCreditCard.setHorizontalAlignment(SwingConstants.LEFT);
-		lblCreditCard.setBounds(51, 78, 72, 14);
+		lblCreditCard.setBounds(25, 50, 72, 14);
 		frame.getContentPane().add(lblCreditCard);
 		
 		JLabel tmail = new JLabel(userDTO.getEmail());
-		tmail.setBounds(134, 30, 102, 14);
+		tmail.setBounds(108, 11, 102, 14);
 		frame.getContentPane().add(tmail);
 		
 		JLabel tname = new JLabel(userDTO.getName());
-		tname.setBounds(134, 55, 102, 14);
+		tname.setBounds(108, 30, 102, 14);
 		frame.getContentPane().add(tname);
 		
 		JLabel tcc = new JLabel(userDTO.getCc());
-		tcc.setBounds(134, 80, 102, 14);
+		tcc.setBounds(108, 50, 102, 14);
 		frame.getContentPane().add(tcc);
 		
 		scrollPane = new JScrollPane();
-		scrollPane.setBounds(167, 80, 342, 257);
+		scrollPane.setBounds(10, 104, 414, 147);
 		frame.getContentPane().add(scrollPane);
 		
 		table = new JTable();
 		table.setDefaultEditor(Object.class, null);
 		scrollPane.setViewportView(table);
+		
+		JButton bclose = new JButton("Close");
+		bclose.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				frame.dispose();
+			}
+		});
+		bclose.setBounds(335, 11, 89, 23);
+		frame.getContentPane().add(bclose);
 		addDataByUser(userDTO);
 	}
 	
