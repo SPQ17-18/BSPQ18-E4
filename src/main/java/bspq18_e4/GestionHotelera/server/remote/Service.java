@@ -9,6 +9,7 @@ import bspq18_e4.GestionHotelera.server.dao.HotelDAO;
 import bspq18_e4.GestionHotelera.server.dao.IHotelDAO;
 import bspq18_e4.GestionHotelera.server.data.Hotel;
 import bspq18_e4.GestionHotelera.server.data.Reservation;
+import bspq18_e4.GestionHotelera.server.data.Room;
 import bspq18_e4.GestionHotelera.server.data.User;
 import bspq18_e4.GestionHotelera.server.dto.UserDTO;
 
@@ -52,7 +53,7 @@ public class Service extends UnicastRemoteObject implements IService {
 		}
 	}
 	
-	public void book(Reservation reservation) throws RemoteException {
-		dao.book(reservation);
+	public void book(Reservation reservation, Room room) throws RemoteException {
+		dao.book(reservation, room);
 	}
 }

@@ -31,7 +31,7 @@ public class HotelDAO implements IHotelDAO {
 			pm.makePersistent(objeto);
 			tx.commit();
 		} catch (Exception ex) {
-			System.out.println("# Error storing: " + ex.getMessage());
+			System.out.println("# Error storing object: " + ex.getMessage());
 		} finally {
 			if (tx != null && tx.isActive()) {
 				tx.rollback();
@@ -89,7 +89,7 @@ public class HotelDAO implements IHotelDAO {
 			}
 			tx.commit();
 		} catch (Exception ex) {
-			System.out.println("# Error getting user: " + ex.getMessage());
+			System.out.println("# Error getting hotelbyid: " + ex.getMessage());
 		} finally {
 			if (tx != null && tx.isActive()) {
 				tx.rollback();
@@ -100,8 +100,34 @@ public class HotelDAO implements IHotelDAO {
 		return hotelSel;
 	}
 	
-	public void book(Reservation reservation) {
-		store(reservation);
+	public void book(Reservation reservation, Room room) {
+		PersistenceManager pm = pmf.getPersistenceManager();
+		Transaction tx = pm.currentTransaction();
+
+		try {
+			tx.begin();
+			
+			Extent<User> extent = pm.getExtent(User.class, true);
+			
+			for (User user : extent) {
+				if (reservation.getUser().getEmail().equals(user.getEmail())) {
+					reservation.setUser(user);
+					reservation.addRoom(room);
+					user.addReservation(reservation);
+					pm.makePersistent(user);
+					break;
+				}
+			}
+			tx.commit();
+		} catch (Exception ex) {
+			System.out.println("# Error booking: " + ex.getMessage());
+		} finally {
+			if (tx != null && tx.isActive()) {
+				tx.rollback();
+			}
+			pm.close();
+		}
+
 	}
 	
 	public ArrayList<Hotel> getHotels() {
@@ -118,7 +144,7 @@ public class HotelDAO implements IHotelDAO {
 			}
 			tx.commit();
 		} catch (Exception ex) {
-			System.out.println("# Error storing: " + ex.getMessage());
+			System.out.println("# Error gtting hotels: " + ex.getMessage());
 		} finally {
 			if (tx != null && tx.isActive()) {
 				tx.rollback();
@@ -152,7 +178,7 @@ public class HotelDAO implements IHotelDAO {
 			}
 			tx.commit();
 		} catch (Exception ex) {
-			System.out.println("# Error storing: " + ex.getMessage());
+			System.out.println("# Error getting hotelsbycity: " + ex.getMessage());
 		} finally {
 			if (tx != null && tx.isActive()) {
 				tx.rollback();
@@ -179,7 +205,7 @@ public class HotelDAO implements IHotelDAO {
 			}
 			tx.commit();
 		} catch (Exception ex) {
-			System.out.println("# Error storing: " + ex.getMessage());
+			System.out.println("# Error getting reservationsbyuser: " + ex.getMessage());
 		} finally {
 			if (tx != null && tx.isActive()) {
 				tx.rollback();
@@ -206,7 +232,7 @@ public class HotelDAO implements IHotelDAO {
 			}
 			tx.commit();
 		} catch (Exception ex) {
-			System.out.println("# Error storing: " + ex.getMessage());
+			System.out.println("# Error getting cities: " + ex.getMessage());
 		} finally {
 			if (tx != null && tx.isActive()) {
 				tx.rollback();
@@ -228,13 +254,12 @@ public class HotelDAO implements IHotelDAO {
 			Extent<Room> ext = pm.getExtent(Room.class, true);
 			for(Room room : ext){
 				if(room.getHotel().getId() == hotel.getId()) {
-					System.out.println(room);
 					rooms.add(room);
 				}
 			}
 			tx.commit();
 		} catch (Exception ex) {
-			System.out.println("# Error storing: " + ex.getMessage());
+			System.out.println("# Error getting rooms: " + ex.getMessage());
 		} finally {
 			if (tx != null && tx.isActive()) {
 				tx.rollback();
@@ -245,86 +270,13 @@ public class HotelDAO implements IHotelDAO {
 		return rooms;
 	}
 	
-//	public ArrayList<Room> getRoomss(int id) {
-//		ArrayList<Room> rooms = new ArrayList<>();
-//		PersistenceManager pm = pmf.getPersistenceManager();
-//		pm.getFetchPlan().setMaxFetchDepth(3);
-//		Transaction tx = pm.currentTransaction();
-//
-//		try {
-//			tx.begin();
-//			Extent<Hotel> ext = pm.getExtent(Hotel.class, true);
-//			Extent<Room> ext2 = pm.getExtent(Room.class, true);
-//			System.out.println("idddddd "+id);
-//				for (Room room : ext2) {
-//					for(Hotel hotel : ext){		
-//					if (hotel.getId()==id) {
-//						rooms.add(room);
-//						System.out.println(room.getPrice());
-//					}
-//					}
-//				}
-//			
-//			tx.commit();
-//		} catch (Exception ex) {
-//			System.out.println("# Error storing: " + ex.getMessage());
-//		} finally {
-//			if (tx != null && tx.isActive()) {
-//				tx.rollback();
-//			}
-//			pm.close();
-//		}
-//		
-//		return rooms;
-//	}
-	
-//	public ArrayList<Room> getRooms(int id) {
-//		ArrayList<Hotel> hotels = new ArrayList<>();
-//		ArrayList<Room> rooms = new ArrayList<>();
-//		int selId=0;
-//		PersistenceManager pm = pmf.getPersistenceManager();
-//		pm.getFetchPlan().setMaxFetchDepth(3);
-//		Transaction tx = pm.currentTransaction();
-//
-//		try {
-//			tx.begin();
-//			Extent<Hotel> ext = pm.getExtent(Hotel.class, true);
-//			for(Hotel hotel : ext){
-//				if (hotel.getId()==id) {
-//					hotels.add(hotel);
-//				}
-//				for (int i = 0; i < hotels.size(); i++) {
-//					if (hotels.get(i).getId()==id) {
-//						selId = hotels.get(i).getId();
-//					}
-//				}
-//			}			
-//			try {
-//				
-//			} catch (Exception e) {
-//				e.printStackTrace();
-//			}
-//			
-//			tx.commit();
-//		} catch (Exception ex) {
-//			System.out.println("# Error storing: " + ex.getMessage());
-//		} finally {
-//			if (tx != null && tx.isActive()) {
-//				tx.rollback();
-//			}
-//			pm.close();
-//		}
-//		
-//		return rooms;
-//	}
-	
 	public static void main(String[] args) {
 		IHotelDAO dao = new HotelDAO();
 		User user1 = new User("aa", "bb", "1234", "123456789");
 		User user2 = new User("cc", "dd", "1234", "987654321");
 
-		dao.register(user1);
-		dao.register(user2);
+//		dao.register(user1);
+//		dao.register(user2);
 	}
-	
+
 }

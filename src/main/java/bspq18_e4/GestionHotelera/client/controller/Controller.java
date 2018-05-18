@@ -10,6 +10,7 @@ import bspq18_e4.GestionHotelera.client.remote.ServiceLocator;
 import bspq18_e4.GestionHotelera.server.dao.HotelDAO;
 import bspq18_e4.GestionHotelera.server.dao.IHotelDAO;
 import bspq18_e4.GestionHotelera.server.data.Reservation;
+import bspq18_e4.GestionHotelera.server.data.Room;
 import bspq18_e4.GestionHotelera.server.data.User;
 import bspq18_e4.GestionHotelera.server.dto.UserDTO;
 
@@ -40,8 +41,8 @@ public class Controller {
 		return sl.getService().isRegistered(userDto);
 	}
 
-	public void book(Reservation reservation) throws RemoteException {
-		sl.getService().book(reservation);
+	public void book(Reservation reservation, Room room) throws RemoteException {
+		sl.getService().book(reservation, room);
 	}
 	
 	public static void main(String[] args) throws RemoteException {

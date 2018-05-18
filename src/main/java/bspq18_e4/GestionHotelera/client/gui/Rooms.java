@@ -19,6 +19,7 @@ import javax.swing.JButton;
 import javax.swing.JScrollPane;
 import java.awt.event.ActionListener;
 import java.io.Serializable;
+import java.rmi.RemoteException;
 import java.util.ArrayList;
 import java.util.List;
 import java.awt.event.ActionEvent;
@@ -68,13 +69,27 @@ public class Rooms extends JFrame implements Serializable{
 				String type = (String) table.getValueAt(rowSelected, 1);
 				int capacity = (int) table.getValueAt(rowSelected, 2);
 				double price = (double) table.getValueAt(rowSelected, 3);
+				
+//				System.out.println("Hotel solamente: "+hotel);
+	
 				Reservation reservation = new Reservation(0, null, null, ass.userDTO(userDTO), hotel);
-				dao.book(reservation);
+				
+//				System.out.println("Reserva solamente: "+reservation );
+//				
+//				System.out.println("User reserva: " + reservation.getUser());
+//				
+//				System.out.println("Hotel reserva: " + reservation.getHotel());
+
+				
 				ArrayList<Room> rooms = new ArrayList<Room>();
 				rooms = dao.getRooms(hotel);
 				for (Room room : rooms) {
 					if (room.getNum()==number && room.getType().equals(type) && room.getCapacity() == capacity && room.getPrice() == price) {
-						reservation.addRoom(room);
+						try {
+							ctrl.book(reservation, room);
+						} catch (RemoteException e1) {
+							e1.printStackTrace();
+						}
 					}
 				}
 			}
@@ -113,9 +128,7 @@ private void addData(Hotel hotel) {
 		for (Room room : rooms) {
 
 			model.addRow(new Object[] { room.getNum(), room.getType(), room.getCapacity(), room.getPrice() });
-			System.out.println(room.getNum()+ room.getType()+ room.getCapacity()+ room.getPrice());
 		}
-		System.out.println(model.getRowCount() + " " + model.getColumnCount());
 		table.setModel(model);
 		scrollPane.setViewportView(table);
 		table.setVisible(true);
