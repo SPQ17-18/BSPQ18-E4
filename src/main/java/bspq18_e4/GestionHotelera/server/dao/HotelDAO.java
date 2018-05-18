@@ -103,7 +103,7 @@ public class HotelDAO implements IHotelDAO {
 
 	public void book(Reservation reservation, ArrayList<Room> rooms) {
 		PersistenceManager pm = pmf.getPersistenceManager();
-		pm.getFetchPlan().setMaxFetchDepth(-1);
+		pm.getFetchPlan().setMaxFetchDepth(2);
 		Transaction tx = pm.currentTransaction();
 
 		try {

@@ -20,10 +20,18 @@ import javax.swing.JScrollPane;
 import java.awt.event.ActionListener;
 import java.io.Serializable;
 import java.rmi.RemoteException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.awt.event.ActionEvent;
 import javax.swing.ListSelectionModel;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
+import java.awt.Font;
+import com.toedter.calendar.JDateChooser;
 
 public class Rooms extends JFrame implements Serializable {
 
@@ -36,6 +44,9 @@ public class Rooms extends JFrame implements Serializable {
 	private Hotel hotel;
 	private JScrollPane scrollPane;
 	private DefaultTableModel model;
+	private Date a;
+	private JDateChooser darrival;
+	private JDateChooser ddeparture;
 
 	public Rooms(Controller ctrl, UserDTO userDTO, Hotel hotel) {
 		this.ctrl = ctrl;
@@ -52,7 +63,7 @@ public class Rooms extends JFrame implements Serializable {
 		frame.getContentPane().setLayout(null);
 
 		scrollPane = new JScrollPane();
-		scrollPane.setBounds(10, 11, 414, 200);
+		scrollPane.setBounds(10, 11, 414, 174);
 		frame.getContentPane().add(scrollPane);
 
 		table = new JTable();
@@ -64,41 +75,58 @@ public class Rooms extends JFrame implements Serializable {
 			public void actionPerformed(ActionEvent e) {
 				HotelDAO dao = new HotelDAO();
 				Assemble ass = new Assemble();
+				// DateFormat df = new SimpleDateFormat("yy-MM-dd");
+				// System.out.println(df.format(darrival.getDate()));
 				int[] rowSelected = table.getSelectedRows();
 				int[] number = new int[table.getSelectedRowCount()];
 				String[] type = new String[table.getSelectedRowCount()];
 				int[] capacity = new int[table.getSelectedRowCount()];
 				double[] price = new double[table.getSelectedRowCount()];
+				if (table.getSelectedRowCount() > 0) {
+					if (!(darrival.getDate()==null) && !(ddeparture.getDate()==null)) {
+						if (darrival.getDate().before(ddeparture.getDate())) {
+							for (int i = 0; i < rowSelected.length; i++) {
+								number[i] = (int) table.getValueAt(rowSelected[i], 0);
+								type[i] = (String) table.getValueAt(rowSelected[i], 1);
+								capacity[i] = (int) table.getValueAt(rowSelected[i], 2);
+								price[i] = (double) table.getValueAt(rowSelected[i], 3);
+							}
 
-				for (int i = 0; i < rowSelected.length; i++) {
-					number[i] = (int) table.getValueAt(rowSelected[i], 0);
-					type[i] = (String) table.getValueAt(rowSelected[i], 1);
-					capacity[i] = (int) table.getValueAt(rowSelected[i], 2);
-					price[i] = (double) table.getValueAt(rowSelected[i], 3);
-				}
+							Reservation reservation = new Reservation(0, darrival.getDate(), ddeparture.getDate(),
+									ass.userDTO(userDTO), hotel);
 
-				Reservation reservation = new Reservation(0, null, null, ass.userDTO(userDTO), hotel);
+							ArrayList<Room> rooms = new ArrayList<Room>();
+							rooms = dao.getRooms(hotel);
+							ArrayList<Room> roomSelected = new ArrayList<Room>();
 
-				ArrayList<Room> rooms = new ArrayList<Room>();
-				rooms = dao.getRooms(hotel);
-				ArrayList<Room> roomSelected = new ArrayList<Room>();
-
-				for (Room room : rooms) {
-					for (int i = 0; i < rowSelected.length; i++) {
-						if (room.getNum() == number[i] && room.getType().equals(type[i])
-								&& room.getCapacity() == capacity[i] && room.getPrice() == price[i]) {
-							roomSelected.add(room);
+							for (Room room : rooms) {
+								for (int i = 0; i < rowSelected.length; i++) {
+									if (room.getNum() == number[i] && room.getType().equals(type[i])
+											&& room.getCapacity() == capacity[i] && room.getPrice() == price[i]) {
+										roomSelected.add(room);
+									}
+								}
+							}
+							try {
+								ctrl.book(reservation, roomSelected);
+							} catch (RemoteException e1) {
+								e1.printStackTrace();
+							}
+						} else {
+							JOptionPane.showMessageDialog(frame, "Departure date must be after arrival!", "Error 102",
+									JOptionPane.ERROR_MESSAGE);
 						}
+					} else {
+						JOptionPane.showMessageDialog(frame, "Select arrival and departure dates!", "Error 325",
+								JOptionPane.ERROR_MESSAGE);
 					}
-				}
-				try {
-					ctrl.book(reservation, roomSelected);
-				} catch (RemoteException e1) {
-					e1.printStackTrace();
+				} else {
+					JOptionPane.showMessageDialog(frame, "Select at least one room!", "Error 234",
+							JOptionPane.ERROR_MESSAGE);
 				}
 			}
 		});
-		bbook.setBounds(86, 228, 89, 23);
+		bbook.setBounds(335, 198, 89, 23);
 		frame.getContentPane().add(bbook);
 
 		JButton bcancel = new JButton("Cancel");
@@ -107,8 +135,26 @@ public class Rooms extends JFrame implements Serializable {
 				frame.dispose();
 			}
 		});
-		bcancel.setBounds(243, 228, 89, 23);
+		bcancel.setBounds(335, 228, 89, 23);
 		frame.getContentPane().add(bcancel);
+
+		JLabel labelarrival = new JLabel("Arrival Day");
+		labelarrival.setFont(new Font("Tahoma", Font.BOLD, 16));
+		labelarrival.setBounds(20, 196, 113, 23);
+		frame.getContentPane().add(labelarrival);
+
+		JLabel labeldeparture = new JLabel("Departure Day");
+		labeldeparture.setFont(new Font("Tahoma", Font.BOLD, 16));
+		labeldeparture.setBounds(168, 193, 130, 27);
+		frame.getContentPane().add(labeldeparture);
+
+		darrival = new JDateChooser();
+		darrival.setBounds(20, 230, 113, 20);
+		frame.getContentPane().add(darrival);
+
+		ddeparture = new JDateChooser();
+		ddeparture.setBounds(168, 231, 113, 20);
+		frame.getContentPane().add(ddeparture);
 
 		addData(hotel);
 
@@ -137,5 +183,4 @@ public class Rooms extends JFrame implements Serializable {
 		scrollPane.setViewportView(table);
 		table.setVisible(true);
 	}
-
 }

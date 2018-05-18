@@ -73,12 +73,12 @@ public class Login extends JFrame{
 						try {
 							 UserDTO user = ctrl.signIn(tmail.getText(), String.valueOf(pass));
 							if (user!=null) {
-								JOptionPane.showMessageDialog(null, "Welcome "+user.getName()+"!");
+								JOptionPane.showMessageDialog(frmSignIn, "Welcome "+user.getName()+"!");
 								frmSignIn.dispose();
 								Home home = new Home(ctrl, user);
 								//home.setVisible(true);
 							} else {
-								JOptionPane.showMessageDialog(null, "Incorrect credentials!", "Error 509", JOptionPane.ERROR_MESSAGE);
+								JOptionPane.showMessageDialog(frmSignIn, "Incorrect credentials!", "Error 509", JOptionPane.ERROR_MESSAGE);
 							}
 						} catch (Exception e) {
 							e.printStackTrace();
@@ -87,7 +87,7 @@ public class Login extends JFrame{
 						e.printStackTrace();
 					}
 				} else {
-					JOptionPane.showMessageDialog(null, "Write something!", "Error 507", JOptionPane.ERROR_MESSAGE);
+					JOptionPane.showMessageDialog(frmSignIn, "Write something!", "Error 507", JOptionPane.ERROR_MESSAGE);
 				}
 			}
 		});

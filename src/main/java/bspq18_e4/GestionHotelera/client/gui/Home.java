@@ -16,6 +16,7 @@ import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JToolBar;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.JComboBox;
@@ -32,6 +33,7 @@ import com.toedter.calendar.JDateChooser;
 import java.awt.Color;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import javax.swing.SwingConstants;
 
 public class Home extends JFrame {
 
@@ -40,12 +42,11 @@ public class Home extends JFrame {
 	private JFrame frame;
 	private Controller ctrl;
 	private UserDTO userDTO;
-	private HotelDAO dao;
-	private JTable retable;
-	private DefaultTableModel model2;
 	private JTable table;
 	private JScrollPane scrollPane;
 	private DefaultTableModel model;
+	private JLabel lbl;
+	private JLabel label;
 
 	public Home(Controller ctrl, UserDTO userDTO) {
 		this.ctrl = ctrl;
@@ -56,7 +57,7 @@ public class Home extends JFrame {
 	private void initialize() {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 535, 387);
-		frame.setTitle("Logged as "+ userDTO.getName());
+		frame.setTitle("Logged as " + userDTO.getName());
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 
@@ -76,7 +77,7 @@ public class Home extends JFrame {
 		frame.getContentPane().add(lblListOfHotels);
 
 		final JComboBox<String> citybox = new JComboBox<String>();
-		citybox.setBounds(22, 77, 113, 20);
+		citybox.setBounds(25, 260, 113, 20);
 		frame.getContentPane().add(citybox);
 
 		HotelDAO dao = new HotelDAO();
@@ -88,18 +89,8 @@ public class Home extends JFrame {
 
 		JLabel lblCity = new JLabel("City");
 		lblCity.setFont(new Font("Tahoma", Font.BOLD, 16));
-		lblCity.setBounds(22, 46, 95, 23);
+		lblCity.setBounds(25, 229, 95, 23);
 		frame.getContentPane().add(lblCity);
-
-		JLabel lblFirstDay = new JLabel("Arrival Day");
-		lblFirstDay.setFont(new Font("Tahoma", Font.BOLD, 16));
-		lblFirstDay.setBounds(22, 118, 113, 23);
-		frame.getContentPane().add(lblFirstDay);
-
-		JLabel lblNewLabel = new JLabel("Departure Day");
-		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 16));
-		lblNewLabel.setBounds(22, 191, 130, 27);
-		frame.getContentPane().add(lblNewLabel);
 
 		JButton bsearch = new JButton("Search");
 		bsearch.addActionListener(new ActionListener() {
@@ -107,19 +98,8 @@ public class Home extends JFrame {
 				addDataByCity(String.valueOf(citybox.getSelectedItem()));
 			}
 		});
-		bsearch.setBounds(34, 280, 89, 23);
+		bsearch.setBounds(35, 303, 89, 23);
 		frame.getContentPane().add(bsearch);
-		JDateChooser arrivalChooser = new JDateChooser();
-		arrivalChooser.setBounds(22, 152, 113, 20);
-		frame.getContentPane().add(arrivalChooser);
-
-		JDateChooser departureChooser = new JDateChooser();
-		departureChooser.setBounds(22, 229, 113, 20);
-		frame.getContentPane().add(departureChooser);
-
-		JButton bBook = new JButton("Book");
-		bBook.setBounds(34, 314, 89, 23);
-		frame.getContentPane().add(bBook);
 
 		scrollPane = new JScrollPane();
 		scrollPane.setBounds(167, 80, 342, 257);
@@ -141,17 +121,23 @@ public class Home extends JFrame {
 					String address = (String) table.getValueAt(rowSelected, 2);
 					int stars = (int) table.getValueAt(rowSelected, 3);
 					for (Hotel hotel : hotels) {
-						if (hotel.getName().equals(name)&&hotel.getCity().equals(city)&&hotel.getDir().equals(address)&&hotel.getStars()==stars) {
-							int id =hotel.getId();
+						if (hotel.getName().equals(name) && hotel.getCity().equals(city)
+								&& hotel.getDir().equals(address) && hotel.getStars() == stars) {
+							int id = hotel.getId();
 							hotelSel = dao.geHotelById(id);
-							Rooms rooms = new Rooms(ctrl, userDTO, hotelSel);
+							if (!dao.getRooms(hotelSel).isEmpty()) {
+								Rooms rooms = new Rooms(ctrl, userDTO, hotelSel);
+							} else {
+								lbl.setText("No available");
+								label.setText("rooms");
+							}
 						}
 					}
 				}
 			}
 		});
 		scrollPane.setViewportView(table);
-		
+
 		JButton myAccount = new JButton("My account");
 		myAccount.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -160,25 +146,28 @@ public class Home extends JFrame {
 		});
 		myAccount.setBounds(243, 11, 113, 23);
 		frame.getContentPane().add(myAccount);
+
+		lbl = new JLabel("");
+		lbl.setHorizontalAlignment(SwingConstants.CENTER);
+		lbl.setForeground(Color.RED);
+		lbl.setFont(new Font("Tahoma", Font.PLAIN, 22));
+		lbl.setBounds(10, 104, 147, 66);
+		frame.getContentPane().add(lbl);
+		
+		label = new JLabel("");
+		label.setHorizontalAlignment(SwingConstants.CENTER);
+		label.setForeground(Color.RED);
+		label.setFont(new Font("Tahoma", Font.PLAIN, 22));
+		label.setBounds(10, 137, 147, 66);
+		frame.getContentPane().add(label);
 		frame.setVisible(true);
 
 		addData();
-		
-		
-		/*
-		 * 
-		 * 
-		 * 
-		 * Donde están los jdate poner un label (.red) if(!no habitaciones)
-		 * 
-		 * 
-		 * 
-		 * 
-		 */
+
 	}
 
 	private void addData() {
-		
+
 		model = new DefaultTableModel();
 
 		model.addColumn("Name");
