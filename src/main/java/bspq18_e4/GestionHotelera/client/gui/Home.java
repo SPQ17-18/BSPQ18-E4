@@ -25,6 +25,8 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
+import java.util.ResourceBundle;
 import java.awt.event.ActionEvent;
 import javax.swing.JTable;
 import javax.swing.JTextField;
@@ -46,10 +48,17 @@ public class Home extends JFrame {
 	private JTable table;
 	private JScrollPane scrollPane;
 	private DefaultTableModel model;
+	private ResourceBundle resourcebundle;
+	private JComboBox<String> cmbLanguage;
+	private JButton btnCambio;
+	int cont=0;
+	Locale currentLocale = null;
 
 	public Home(Controller ctrl, UserDTO userDTO) {
 		this.ctrl = ctrl;
 		this.userDTO = userDTO;
+		currentLocale = new Locale("en", "US");
+		resourcebundle = ResourceBundle.getBundle("lang/translations", currentLocale);
 		initialize();
 	}
 
@@ -60,7 +69,7 @@ public class Home extends JFrame {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 
-		JButton logOut = new JButton("Log out");
+		final JButton logOut = new JButton(resourcebundle.getString("logout"));
 		logOut.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				frame.dispose();
@@ -70,9 +79,22 @@ public class Home extends JFrame {
 		logOut.setBounds(420, 11, 89, 23);
 		frame.getContentPane().add(logOut);
 
-		JLabel lblListOfHotels = new JLabel("List of hotels");
+		cmbLanguage = new JComboBox<String>();
+		cmbLanguage.setBounds(287, 12, 94, 20);
+		cmbLanguage.addItem(resourcebundle.getString("espanol"));
+		cmbLanguage.addItem(resourcebundle.getString("ingles"));
+		frame.getContentPane().add(cmbLanguage);
+		cmbLanguage.setVisible(true);
+		
+		btnCambio = new JButton();
+		btnCambio.setText(resourcebundle.getString("translate"));
+		btnCambio.setBounds(287, 43, 94, 14);
+		frame.getContentPane().add(btnCambio);
+		
+		btnCambio.setVisible(true);
+		final JLabel lblListOfHotels = new JLabel(resourcebundle.getString("lista"));
 		lblListOfHotels.setFont(new Font("Tahoma", Font.BOLD, 16));
-		lblListOfHotels.setBounds(91, 13, 130, 14);
+		lblListOfHotels.setBounds(22, 13, 130, 14);
 		frame.getContentPane().add(lblListOfHotels);
 
 		final JComboBox<String> citybox = new JComboBox<String>();
@@ -81,27 +103,27 @@ public class Home extends JFrame {
 
 		HotelDAO dao = new HotelDAO();
 		ArrayList<String> cities = dao.getCities();
-		citybox.addItem("All");
+		citybox.addItem(resourcebundle.getString("all"));
 		for (int i = 0; i < cities.size(); i++) {
 			citybox.addItem(cities.get(i));
 		}
 
-		JLabel lblCity = new JLabel("City");
+		final JLabel lblCity = new JLabel(resourcebundle.getString("city"));
 		lblCity.setFont(new Font("Tahoma", Font.BOLD, 16));
 		lblCity.setBounds(22, 46, 95, 23);
 		frame.getContentPane().add(lblCity);
 
-		JLabel lblFirstDay = new JLabel("Arrival Day");
+		final JLabel lblFirstDay = new JLabel(resourcebundle.getString("arrive"));
 		lblFirstDay.setFont(new Font("Tahoma", Font.BOLD, 16));
 		lblFirstDay.setBounds(22, 118, 113, 23);
 		frame.getContentPane().add(lblFirstDay);
 
-		JLabel lblNewLabel = new JLabel("Departure Day");
+		final JLabel lblNewLabel = new JLabel(resourcebundle.getString("back"));
 		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 16));
 		lblNewLabel.setBounds(22, 191, 130, 27);
 		frame.getContentPane().add(lblNewLabel);
 
-		JButton bsearch = new JButton("Search");
+		final JButton bsearch = new JButton(resourcebundle.getString("search"));
 		bsearch.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				addDataByCity(String.valueOf(citybox.getSelectedItem()));
@@ -117,7 +139,7 @@ public class Home extends JFrame {
 		departureChooser.setBounds(22, 229, 113, 20);
 		frame.getContentPane().add(departureChooser);
 
-		JButton bBook = new JButton("Book");
+		final JButton bBook = new JButton(resourcebundle.getString("book"));
 		bBook.setBounds(34, 314, 89, 23);
 		frame.getContentPane().add(bBook);
 
@@ -152,17 +174,55 @@ public class Home extends JFrame {
 		});
 		scrollPane.setViewportView(table);
 		
-		JButton myAccount = new JButton("My account");
+		final JButton myAccount = new JButton(resourcebundle.getString("account"));
 		myAccount.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				MyAccount acc = new MyAccount(ctrl, userDTO);
 			}
 		});
-		myAccount.setBounds(243, 11, 113, 23);
+		myAccount.setBounds(144, 11, 113, 23);
 		frame.getContentPane().add(myAccount);
 		frame.setVisible(true);
 
 		addData();
+		do {
+			btnCambio.addMouseListener(new MouseAdapter() {
+				@Override
+				public void mouseClicked(MouseEvent e) {
+					
+					switch(cmbLanguage.getSelectedIndex()){
+
+			        case 0:
+			        	currentLocale = new Locale("es", "ES");
+						resourcebundle = ResourceBundle.getBundle("lang/translations", currentLocale);					
+						btnCambio.setText(resourcebundle.getString("translate"));
+						lblListOfHotels.setText(resourcebundle.getString("lista"));
+						lblCity.setText(resourcebundle.getString("city"));
+						lblFirstDay.setText(resourcebundle.getString("arrive"));
+						lblNewLabel.setText(resourcebundle.getString("back"));
+						bsearch.setText(resourcebundle.getString("search"));
+						bBook.setText(resourcebundle.getString("book"));
+						myAccount.setText(resourcebundle.getString("account"));
+						logOut.setText(resourcebundle.getString("logout"));
+			            break;
+			        case 1:
+			        	currentLocale = new Locale("en", "US");
+						resourcebundle = ResourceBundle.getBundle("lang/translations", currentLocale);						
+						btnCambio.setText(resourcebundle.getString("translate"));
+						lblListOfHotels.setText(resourcebundle.getString("lista"));
+						lblCity.setText(resourcebundle.getString("city"));
+						lblFirstDay.setText(resourcebundle.getString("arrive"));
+						lblNewLabel.setText(resourcebundle.getString("back"));
+						bsearch.setText(resourcebundle.getString("search"));
+						bBook.setText(resourcebundle.getString("book"));
+						myAccount.setText(resourcebundle.getString("account"));
+						logOut.setText(resourcebundle.getString("logout"));
+			            break;
+			    }
+				}
+				});
+			cont++;
+			}while(cont!=100);
 	}
 
 	private void addData() {
