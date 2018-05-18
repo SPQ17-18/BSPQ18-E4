@@ -53,7 +53,7 @@ public class Service extends UnicastRemoteObject implements IService {
 		}
 	}
 	
-	public void book(Reservation reservation, Room room) throws RemoteException {
-		dao.book(reservation, room);
+	public void book(Reservation reservation, ArrayList<Room> rooms) throws RemoteException {
+		dao.book(reservation, rooms);
 	}
 }

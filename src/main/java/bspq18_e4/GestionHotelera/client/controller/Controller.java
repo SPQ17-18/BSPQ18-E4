@@ -1,6 +1,7 @@
 package bspq18_e4.GestionHotelera.client.controller;
 
 import java.rmi.RemoteException;
+import java.util.ArrayList;
 
 import javax.swing.UIManager;
 import javax.swing.UIManager.LookAndFeelInfo;
@@ -41,8 +42,8 @@ public class Controller {
 		return sl.getService().isRegistered(userDto);
 	}
 
-	public void book(Reservation reservation, Room room) throws RemoteException {
-		sl.getService().book(reservation, room);
+	public void book(Reservation reservation, ArrayList<Room> rooms) throws RemoteException {
+		sl.getService().book(reservation, rooms);
 	}
 	
 	public static void main(String[] args) throws RemoteException {

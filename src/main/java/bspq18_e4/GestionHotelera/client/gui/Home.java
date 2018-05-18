@@ -163,6 +163,18 @@ public class Home extends JFrame {
 		frame.setVisible(true);
 
 		addData();
+		
+		
+		/*
+		 * 
+		 * 
+		 * 
+		 * Donde están los jdate poner un label (.red) if(!no habitaciones)
+		 * 
+		 * 
+		 * 
+		 * 
+		 */
 	}
 
 	private void addData() {

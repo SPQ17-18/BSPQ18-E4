@@ -12,7 +12,7 @@ public interface IHotelDAO {
 	public void store(Object objeto);
 	public void register(User user);
 	public User getUser(String email, String pass);
-	public void book(Reservation reservation, Room room);
+	public void book(Reservation reservation, ArrayList<Room> room);
 	public ArrayList<Hotel> getHotels();
 	public ArrayList<String> getCities();
 	public ArrayList<Reservation> getReservationsByUser(User user);

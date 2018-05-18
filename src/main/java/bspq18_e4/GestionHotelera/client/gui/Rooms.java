@@ -25,10 +25,10 @@ import java.util.List;
 import java.awt.event.ActionEvent;
 import javax.swing.ListSelectionModel;
 
-public class Rooms extends JFrame implements Serializable{
+public class Rooms extends JFrame implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-	
+
 	private JFrame frame;
 	private JTable table;
 	private Controller ctrl;
@@ -47,56 +47,60 @@ public class Rooms extends JFrame implements Serializable{
 	private void initialize() {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 450, 300);
-		frame.setTitle("Hotel name "+ hotel.getName());
+		frame.setTitle("Hotel name " + hotel.getName());
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
-		
+
 		scrollPane = new JScrollPane();
 		scrollPane.setBounds(10, 11, 414, 200);
 		frame.getContentPane().add(scrollPane);
-		
+
 		table = new JTable();
 		table.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
 		table.setDefaultEditor(Object.class, null);
-		
+
 		JButton bbook = new JButton("Book");
 		bbook.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				HotelDAO dao = new HotelDAO();
 				Assemble ass = new Assemble();
-				int rowSelected = table.getSelectedRow();
-				int number = (int) table.getValueAt(rowSelected, 0);
-				String type = (String) table.getValueAt(rowSelected, 1);
-				int capacity = (int) table.getValueAt(rowSelected, 2);
-				double price = (double) table.getValueAt(rowSelected, 3);
-				
-//				System.out.println("Hotel solamente: "+hotel);
-	
-				Reservation reservation = new Reservation(0, null, null, ass.userDTO(userDTO), hotel);
-				
-//				System.out.println("Reserva solamente: "+reservation );
-//				
-//				System.out.println("User reserva: " + reservation.getUser());
-//				
-//				System.out.println("Hotel reserva: " + reservation.getHotel());
+				int[] rowSelected = table.getSelectedRows();
+				int[] number = new int[table.getSelectedRowCount()];
+				String[] type = new String[table.getSelectedRowCount()];
+				int[] capacity = new int[table.getSelectedRowCount()];
+				double[] price = new double[table.getSelectedRowCount()];
 
-				
+				for (int i = 0; i < rowSelected.length; i++) {
+					number[i] = (int) table.getValueAt(rowSelected[i], 0);
+					type[i] = (String) table.getValueAt(rowSelected[i], 1);
+					capacity[i] = (int) table.getValueAt(rowSelected[i], 2);
+					price[i] = (double) table.getValueAt(rowSelected[i], 3);
+				}
+
+				Reservation reservation = new Reservation(0, null, null, ass.userDTO(userDTO), hotel);
+
 				ArrayList<Room> rooms = new ArrayList<Room>();
 				rooms = dao.getRooms(hotel);
+				ArrayList<Room> roomSelected = new ArrayList<Room>();
+
 				for (Room room : rooms) {
-					if (room.getNum()==number && room.getType().equals(type) && room.getCapacity() == capacity && room.getPrice() == price) {
-						try {
-							ctrl.book(reservation, room);
-						} catch (RemoteException e1) {
-							e1.printStackTrace();
+					for (int i = 0; i < rowSelected.length; i++) {
+						if (room.getNum() == number[i] && room.getType().equals(type[i])
+								&& room.getCapacity() == capacity[i] && room.getPrice() == price[i]) {
+							roomSelected.add(room);
 						}
 					}
+				}
+				try {
+					ctrl.book(reservation, roomSelected);
+				} catch (RemoteException e1) {
+					e1.printStackTrace();
 				}
 			}
 		});
 		bbook.setBounds(86, 228, 89, 23);
 		frame.getContentPane().add(bbook);
-		
+
 		JButton bcancel = new JButton("Cancel");
 		bcancel.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -105,14 +109,14 @@ public class Rooms extends JFrame implements Serializable{
 		});
 		bcancel.setBounds(243, 228, 89, 23);
 		frame.getContentPane().add(bcancel);
-		
+
 		addData(hotel);
-		
+
 		frame.setVisible(true);
 	}
-	
-private void addData(Hotel hotel) {
-		
+
+	private void addData(Hotel hotel) {
+
 		model = new DefaultTableModel();
 
 		model.addColumn("Number");

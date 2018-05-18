@@ -1,5 +1,6 @@
 package bspq18_e4.GestionHotelera.server.dao;
 
+import java.sql.Array;
 import java.util.ArrayList;
 
 import javax.jdo.JDOHelper;
@@ -49,13 +50,13 @@ public class HotelDAO implements IHotelDAO {
 		PersistenceManager pm = pmf.getPersistenceManager();
 		pm.getFetchPlan().setMaxFetchDepth(3);
 		Transaction tx = pm.currentTransaction();
-		User userSel=null;
-		
+		User userSel = null;
+
 		try {
 			tx.begin();
 			Extent<User> ext = pm.getExtent(User.class, true);
-			for(User user : ext){
-				if(user.getEmail().equals(email)&& user.getPass().equals(pass)) {
+			for (User user : ext) {
+				if (user.getEmail().equals(email) && user.getPass().equals(pass)) {
 					userSel = user;
 					break;
 				}
@@ -69,23 +70,23 @@ public class HotelDAO implements IHotelDAO {
 			}
 			pm.close();
 		}
-		
+
 		return userSel;
 	}
-	
+
 	public Hotel geHotelById(int id) {
 		PersistenceManager pm = pmf.getPersistenceManager();
 		pm.getFetchPlan().setMaxFetchDepth(3);
 		Transaction tx = pm.currentTransaction();
-		Hotel hotelSel=null;
-		
+		Hotel hotelSel = null;
+
 		try {
 			tx.begin();
 			Extent<Hotel> ext = pm.getExtent(Hotel.class, true);
-			for(Hotel hotel : ext){
-					if (hotel.getId()==id) {
-						hotelSel = hotel;
-					}
+			for (Hotel hotel : ext) {
+				if (hotel.getId() == id) {
+					hotelSel = hotel;
+				}
 			}
 			tx.commit();
 		} catch (Exception ex) {
@@ -96,26 +97,38 @@ public class HotelDAO implements IHotelDAO {
 			}
 			pm.close();
 		}
-		
+
 		return hotelSel;
 	}
-	
-	public void book(Reservation reservation, Room room) {
+
+	public void book(Reservation reservation, ArrayList<Room> rooms) {
 		PersistenceManager pm = pmf.getPersistenceManager();
+		pm.getFetchPlan().setMaxFetchDepth(-1);
 		Transaction tx = pm.currentTransaction();
 
 		try {
 			tx.begin();
-			
-			Extent<User> extent = pm.getExtent(User.class, true);
-			
-			for (User user : extent) {
-				if (reservation.getUser().getEmail().equals(user.getEmail())) {
-					reservation.setUser(user);
-					reservation.addRoom(room);
-					user.addReservation(reservation);
-					pm.makePersistent(user);
-					break;
+
+			Extent<User> extentUser = pm.getExtent(User.class, true);
+			Extent<Room> extentRoom = pm.getExtent(Room.class, true);
+
+			for (User user : extentUser) {
+				for (Room room : extentRoom) {
+					if (reservation.getUser().getEmail().equals(user.getEmail())) {
+						reservation.setUser(user);
+
+						for (int i = 0; i < rooms.size(); i++) {
+							if (room.getNum() == rooms.get(i).getNum()
+									&& room.getHotel().equals(rooms.get(i).getHotel())) {
+								reservation.addRoom(rooms.get(i));
+								room.setReservation(reservation);
+								pm.makePersistent(room);
+							}
+						}
+						user.addReservation(reservation);
+						pm.makePersistent(user);
+						break;
+					}
 				}
 			}
 			tx.commit();
@@ -129,7 +142,7 @@ public class HotelDAO implements IHotelDAO {
 		}
 
 	}
-	
+
 	public ArrayList<Hotel> getHotels() {
 		ArrayList<Hotel> hotels = new ArrayList<>();
 		PersistenceManager pm = pmf.getPersistenceManager();
@@ -139,7 +152,7 @@ public class HotelDAO implements IHotelDAO {
 		try {
 			tx.begin();
 			Extent<Hotel> ext = pm.getExtent(Hotel.class, true);
-			for(Hotel hotel : ext){
+			for (Hotel hotel : ext) {
 				hotels.add(hotel);
 			}
 			tx.commit();
@@ -151,10 +164,10 @@ public class HotelDAO implements IHotelDAO {
 			}
 			pm.close();
 		}
-		
+
 		return hotels;
 	}
-	
+
 	public ArrayList<Hotel> getHotelsByCity(String city) {
 		ArrayList<Hotel> hotels = new ArrayList<>();
 		PersistenceManager pm = pmf.getPersistenceManager();
@@ -164,14 +177,13 @@ public class HotelDAO implements IHotelDAO {
 		try {
 			tx.begin();
 			Extent<Hotel> ext = pm.getExtent(Hotel.class, true);
-			if(city.equals("All")) {
-				for(Hotel hotel : ext){
+			if (city.equals("All")) {
+				for (Hotel hotel : ext) {
 					hotels.add(hotel);
 				}
-			}
-			else {
-				for(Hotel hotel : ext){
-					if(hotel.getCity().equals(city)) {
+			} else {
+				for (Hotel hotel : ext) {
+					if (hotel.getCity().equals(city)) {
 						hotels.add(hotel);
 					}
 				}
@@ -185,10 +197,10 @@ public class HotelDAO implements IHotelDAO {
 			}
 			pm.close();
 		}
-		
+
 		return hotels;
 	}
-	
+
 	public ArrayList<Reservation> getReservationsByUser(User user) {
 		ArrayList<Reservation> reservations = new ArrayList<>();
 		PersistenceManager pm = pmf.getPersistenceManager();
@@ -199,7 +211,7 @@ public class HotelDAO implements IHotelDAO {
 			tx.begin();
 			Extent<Reservation> ext = pm.getExtent(Reservation.class, true);
 			for (Reservation reservation : ext) {
-				if(reservation.getUser().getEmail().equals(user.getEmail())) {
+				if (reservation.getUser().getEmail().equals(user.getEmail())) {
 					reservations.add(reservation);
 				}
 			}
@@ -212,10 +224,10 @@ public class HotelDAO implements IHotelDAO {
 			}
 			pm.close();
 		}
-		
+
 		return reservations;
 	}
-	
+
 	public ArrayList<String> getCities() {
 		ArrayList<String> cities = new ArrayList<>();
 		PersistenceManager pm = pmf.getPersistenceManager();
@@ -225,8 +237,8 @@ public class HotelDAO implements IHotelDAO {
 		try {
 			tx.begin();
 			Extent<Hotel> ext = pm.getExtent(Hotel.class, true);
-			for(Hotel hotel : ext){
-				if(!cities.contains(hotel.getCity())) {
+			for (Hotel hotel : ext) {
+				if (!cities.contains(hotel.getCity())) {
 					cities.add(hotel.getCity());
 				}
 			}
@@ -239,10 +251,10 @@ public class HotelDAO implements IHotelDAO {
 			}
 			pm.close();
 		}
-		
+
 		return cities;
 	}
-	
+
 	public ArrayList<Room> getRooms(Hotel hotel) {
 		ArrayList<Room> rooms = new ArrayList<>();
 		PersistenceManager pm = pmf.getPersistenceManager();
@@ -252,8 +264,8 @@ public class HotelDAO implements IHotelDAO {
 		try {
 			tx.begin();
 			Extent<Room> ext = pm.getExtent(Room.class, true);
-			for(Room room : ext){
-				if(room.getHotel().getId() == hotel.getId()) {
+			for (Room room : ext) {
+				if (room.getHotel().getId() == hotel.getId()) {
 					rooms.add(room);
 				}
 			}
@@ -266,17 +278,17 @@ public class HotelDAO implements IHotelDAO {
 			}
 			pm.close();
 		}
-		
+
 		return rooms;
 	}
-	
+
 	public static void main(String[] args) {
 		IHotelDAO dao = new HotelDAO();
 		User user1 = new User("aa", "bb", "1234", "123456789");
 		User user2 = new User("cc", "dd", "1234", "987654321");
 
-//		dao.register(user1);
-//		dao.register(user2);
+		// dao.register(user1);
+		// dao.register(user2);
 	}
 
 }
