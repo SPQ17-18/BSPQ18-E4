@@ -12,6 +12,7 @@ import javax.swing.JPasswordField;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.SwingConstants;
+import javax.swing.UIManager;
 
 import bspq18_e4.GestionHotelera.client.controller.Controller;
 import bspq18_e4.GestionHotelera.server.data.User;
@@ -53,7 +54,12 @@ public class Login extends JFrame{
 	}
 
 	private void initialize() {
-		
+	
+		try {
+		UIManager.setLookAndFeel("com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel");
+	} catch (Exception ex) {
+        ex.printStackTrace();
+    }
 		frmSignIn = new JFrame();
 		frmSignIn.setTitle("Sign in");
 		frmSignIn.setBounds(450, 350, 347, 246);
