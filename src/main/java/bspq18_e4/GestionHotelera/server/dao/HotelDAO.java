@@ -216,7 +216,6 @@ public class HotelDAO implements IHotelDAO {
 			Extent<Reservation> ext = pm.getExtent(Reservation.class, true);
 			for (Reservation reservation : ext) {
 				if (reservation.getUser().getEmail().equals(user.getEmail())) {
-					//System.out.println(reservation.getArrival()+ "dep: "+reservation.getDeparture()+"user: "+ reservation.getUser()+"hotel: "+ reservation.getHotel());
 					reservations.add(new Reservation(0, reservation.getArrival(), reservation.getDeparture(), reservation.getUser(), reservation.getHotel()));
 				}
 			}
