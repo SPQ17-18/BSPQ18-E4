@@ -8,7 +8,7 @@ import javax.jdo.annotations.PersistenceCapable;
 public class Room implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-	private int num; // 101 -> fllor 1, 325 -> floor 3
+	private int num; // 101 -> floor 1, 325 -> floor 3
 	private String type;
 	private int capacity;
 	private double price;
