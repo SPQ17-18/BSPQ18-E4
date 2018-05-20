@@ -14,6 +14,7 @@ import bspq18_e4.GestionHotelera.server.data.Reservation;
 import bspq18_e4.GestionHotelera.server.data.Room;
 import bspq18_e4.GestionHotelera.server.dto.HotelDTO;
 import bspq18_e4.GestionHotelera.server.dto.UserDTO;
+import bspq18_e4.GestionHotelera.server.logger.ErrorLogger;
 
 import javax.swing.JButton;
 import javax.swing.JScrollPane;
@@ -47,6 +48,7 @@ public class Rooms extends JFrame implements Serializable {
 	private Date a;
 	private JDateChooser darrival;
 	private JDateChooser ddeparture;
+	private ErrorLogger logger;
 
 	public Rooms(Controller ctrl, UserDTO userDTO, Hotel hotel) {
 		this.ctrl = ctrl;
@@ -73,7 +75,7 @@ public class Rooms extends JFrame implements Serializable {
 		JButton bbook = new JButton("Book");
 		bbook.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				HotelDAO dao = new HotelDAO();
+				HotelDAO dao = new HotelDAO(logger);
 				Assemble ass = new Assemble();
 				
 				int[] rowSelected = table.getSelectedRows();
@@ -169,7 +171,7 @@ public class Rooms extends JFrame implements Serializable {
 		model.addColumn("Capacity");
 		model.addColumn("Price");
 
-		HotelDAO dao = new HotelDAO();
+		HotelDAO dao = new HotelDAO(logger);
 
 		List<Room> rooms = new ArrayList<Room>();
 		rooms = dao.getRooms(hotel);

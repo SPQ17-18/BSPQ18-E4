@@ -11,6 +11,7 @@ import bspq18_e4.GestionHotelera.server.dao.HotelDAO;
 import bspq18_e4.GestionHotelera.server.data.Hotel;
 import bspq18_e4.GestionHotelera.server.dto.HotelDTO;
 import bspq18_e4.GestionHotelera.server.dto.UserDTO;
+import bspq18_e4.GestionHotelera.server.logger.ErrorLogger;
 
 import javax.swing.JButton;
 import javax.swing.JPanel;
@@ -54,6 +55,7 @@ public class Home extends JFrame {
 	private JButton btnCambio;
 	int cont = 0;
 	Locale currentLocale = null;
+	private ErrorLogger logger;
 
 	public Home(Controller ctrl, UserDTO userDTO) {
 		this.ctrl = ctrl;
@@ -101,7 +103,7 @@ public class Home extends JFrame {
 		citybox.setBounds(25, 260, 113, 20);
 		frame.getContentPane().add(citybox);
 
-		HotelDAO dao = new HotelDAO();
+		HotelDAO dao = new HotelDAO(logger);
 		ArrayList<String> cities = dao.getCities();
 		citybox.addItem(resourceBundle.getString("all"));
 		for (int i = 0; i < cities.size(); i++) {
@@ -133,7 +135,7 @@ public class Home extends JFrame {
 			public void mousePressed(MouseEvent e) {
 				ArrayList<Hotel> hotels = new ArrayList<>();
 				Hotel hotelSel = null;
-				HotelDAO dao = new HotelDAO();
+				HotelDAO dao = new HotelDAO(logger);
 				hotels = dao.getHotels();
 				if (e.getClickCount() == 2) {
 					int rowSelected = table.getSelectedRow();
@@ -230,7 +232,7 @@ public class Home extends JFrame {
 		model.addColumn("Address");
 		model.addColumn("Stars");
 
-		HotelDAO dao = new HotelDAO();
+		HotelDAO dao = new HotelDAO(logger);
 
 		List<Hotel> hotels = new ArrayList<Hotel>();
 		hotels = dao.getHotels();
@@ -253,7 +255,7 @@ public class Home extends JFrame {
 		model.addColumn("Address");
 		model.addColumn("Stars");
 
-		HotelDAO dao = new HotelDAO();
+		HotelDAO dao = new HotelDAO(logger);
 
 		List<Hotel> hotels = new ArrayList<Hotel>();
 		hotels = dao.getHotelsByCity(city);

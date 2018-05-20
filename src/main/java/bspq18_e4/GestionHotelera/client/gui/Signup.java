@@ -28,22 +28,7 @@ public class Signup extends JFrame {
 	private Controller ctrl;
 	private boolean registered;
 
-//	public static void main(String[] args) {
-//		EventQueue.invokeLater(new Runnable() {
-//			public void run() {
-//				try {
-//					Signup window = new Signup();
-//					window.frmSignUp.setVisible(true);
-//				} catch (Exception e) {
-//					e.printStackTrace();
-//				}
-//			}
-//		});
-//	}
 
-	/**
-	 * Create the application.
-	 */
 	public Signup(Controller ctrl) {
 		this.ctrl = ctrl;
 		initialize();

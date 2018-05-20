@@ -16,6 +16,7 @@ import bspq18_e4.GestionHotelera.server.data.Hotel;
 import bspq18_e4.GestionHotelera.server.data.Reservation;
 import bspq18_e4.GestionHotelera.server.data.Room;
 import bspq18_e4.GestionHotelera.server.data.User;
+import bspq18_e4.GestionHotelera.server.logger.ErrorLogger;
 import javafx.beans.binding.When;
 
 //@RunWith(MockitoJUnitRunner.class)  
@@ -26,6 +27,7 @@ public class DAOTest {
 	private static Hotel hotel;
 	private static Room room;
 	private static HotelDAO dao;
+	private ErrorLogger logger;
 	
 //	@Mock
 	IHotelDAO hotelDao;
@@ -42,7 +44,7 @@ public class DAOTest {
 	
 	@Test
 	public void testRegister() {
-		dao = new HotelDAO();
+		dao = new HotelDAO(logger);
 		dao.register(user);
 		User myUser = dao.getUser(user.getEmail(), user.getPass());
 		assertEquals("mail@gmail.com", myUser.getEmail());
@@ -50,7 +52,7 @@ public class DAOTest {
 	
 	@Test
 	public void testHotel() {
-		dao = new HotelDAO();
+		dao = new HotelDAO(logger);
 		dao.store(hotel);
 		Hotel myHotel = dao.geHotelById(hotel.getId());
 		assertEquals("Bilbao", myHotel.getCity());
@@ -59,7 +61,7 @@ public class DAOTest {
 	
 	@Test
 	public void testRoom() {
-		dao = new HotelDAO();
+		dao = new HotelDAO(logger);
 		room.setHotel(hotel);
 		assertEquals(hotel.getName(), room.getHotel().getName());
 	}
@@ -67,7 +69,7 @@ public class DAOTest {
 	
 	@Test
 	public void testReservation() {
-		dao = new HotelDAO();
+		dao = new HotelDAO(logger);
 		assertEquals(1, reservation.getId());
 		assertEquals("mail@gmail.com", reservation.getUser().getEmail());
 		assertEquals(user.getEmail(), reservation.getUser().getEmail());

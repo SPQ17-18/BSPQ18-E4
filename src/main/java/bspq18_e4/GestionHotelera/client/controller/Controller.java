@@ -14,15 +14,17 @@ import bspq18_e4.GestionHotelera.server.data.Reservation;
 import bspq18_e4.GestionHotelera.server.data.Room;
 import bspq18_e4.GestionHotelera.server.data.User;
 import bspq18_e4.GestionHotelera.server.dto.UserDTO;
+import bspq18_e4.GestionHotelera.server.logger.ErrorLogger;
 
 public class Controller {
 
 	private ServiceLocator sl;
+	private ErrorLogger logger;
 	
 	public Controller(String[] args) throws RemoteException {
 		sl = new ServiceLocator();
 		sl.setService("127.0.0.1", "1099", "OrderService");
-		IHotelDAO dao = new HotelDAO();
+		IHotelDAO dao = new HotelDAO(logger);
 		User user1 = new User("aa", "bb", "1234", "123456789");
 		User user2 = new User("cc", "dd", "1234", "987654321");
 //		dao.register(user1);

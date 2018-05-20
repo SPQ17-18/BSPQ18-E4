@@ -16,13 +16,16 @@ import bspq18_e4.GestionHotelera.server.data.ReservationRooms;
 import bspq18_e4.GestionHotelera.server.data.Room;
 import bspq18_e4.GestionHotelera.server.data.User;
 import bspq18_e4.GestionHotelera.server.dto.HotelDTO;
+import bspq18_e4.GestionHotelera.server.logger.ErrorLogger;
 
 public class HotelDAO implements IHotelDAO {
 
 	private PersistenceManagerFactory pmf;
-
-	public HotelDAO() {
+	private static ErrorLogger logger;
+	
+	public HotelDAO(ErrorLogger logger) {
 		pmf = JDOHelper.getPersistenceManagerFactory("datanucleus.properties");
+		this.logger = logger;
 	}
 
 	public void store(Object objeto) {
@@ -34,7 +37,7 @@ public class HotelDAO implements IHotelDAO {
 			pm.makePersistent(objeto);
 			tx.commit();
 		} catch (Exception ex) {
-			System.out.println("# Error storing object: " + ex.getMessage());
+			logger.getLogger().error("# Error storing object: " + ex.getMessage());
 		} finally {
 			if (tx != null && tx.isActive()) {
 				tx.rollback();
@@ -61,15 +64,17 @@ public class HotelDAO implements IHotelDAO {
 			for (User user : ext) {
 				if (user.getEmail().equals(email) && user.getPass().equals(pass)) {
 					if (user.getReservations().isEmpty()) {
+						//logger.getLogger().info("# Error storing object: " );
 						userSel = user;
 						break;
+					} else {
+						userSel = new User(user.getEmail(), user.getName(), user.getPass(), user.getCc());
 					}
-					// userSel = ass.u
 				}
 			}
 			tx.commit();
 		} catch (Exception ex) {
-			System.out.println("# Error getting user: " + ex.getMessage());
+			//logger.getLogger().error("# Error getting user: " + ex.getMessage());
 		} finally {
 			if (tx != null && tx.isActive()) {
 				tx.rollback();
@@ -96,7 +101,7 @@ public class HotelDAO implements IHotelDAO {
 			}
 			tx.commit();
 		} catch (Exception ex) {
-			System.out.println("# Error getting hotelbyid: " + ex.getMessage());
+			logger.getLogger().error("# Error getting hotelbyid: " + ex.getMessage());
 		} finally {
 			if (tx != null && tx.isActive()) {
 				tx.rollback();
@@ -132,7 +137,7 @@ public class HotelDAO implements IHotelDAO {
 			}
 			tx.commit();
 		} catch (Exception ex) {
-			System.out.println("# Error booking: " + ex.getMessage());
+			logger.getLogger().error("# Error booking: " + ex.getMessage());
 		} finally {
 			if (tx != null && tx.isActive()) {
 				tx.rollback();
@@ -156,7 +161,7 @@ public class HotelDAO implements IHotelDAO {
 			}
 			tx.commit();
 		} catch (Exception ex) {
-			System.out.println("# Error gtting hotels: " + ex.getMessage());
+			logger.getLogger().error("# Error gtting hotels: " + ex.getMessage());
 		} finally {
 			if (tx != null && tx.isActive()) {
 				tx.rollback();
@@ -189,7 +194,7 @@ public class HotelDAO implements IHotelDAO {
 			}
 			tx.commit();
 		} catch (Exception ex) {
-			System.out.println("# Error getting hotelsbycity: " + ex.getMessage());
+			logger.getLogger().error("# Error getting hotelsbycity: " + ex.getMessage());
 		} finally {
 			if (tx != null && tx.isActive()) {
 				tx.rollback();
@@ -211,12 +216,13 @@ public class HotelDAO implements IHotelDAO {
 			Extent<Reservation> ext = pm.getExtent(Reservation.class, true);
 			for (Reservation reservation : ext) {
 				if (reservation.getUser().getEmail().equals(user.getEmail())) {
-					reservations.add(reservation);
+					//System.out.println(reservation.getArrival()+ "dep: "+reservation.getDeparture()+"user: "+ reservation.getUser()+"hotel: "+ reservation.getHotel());
+					reservations.add(new Reservation(0, reservation.getArrival(), reservation.getDeparture(), reservation.getUser(), reservation.getHotel()));
 				}
 			}
 			tx.commit();
 		} catch (Exception ex) {
-			System.out.println("# Error getting reservationsbyuser: " + ex.getMessage());
+			logger.getLogger().error("# Error getting reservationsbyuser: " + ex.getMessage());
 		} finally {
 			if (tx != null && tx.isActive()) {
 				tx.rollback();
@@ -243,7 +249,7 @@ public class HotelDAO implements IHotelDAO {
 			}
 			tx.commit();
 		} catch (Exception ex) {
-			System.out.println("# Error getting cities: " + ex.getMessage());
+			logger.getLogger().error("# Error getting cities: " + ex.getMessage());
 		} finally {
 			if (tx != null && tx.isActive()) {
 				tx.rollback();
@@ -270,7 +276,7 @@ public class HotelDAO implements IHotelDAO {
 			}
 			tx.commit();
 		} catch (Exception ex) {
-			System.out.println("# Error getting rooms: " + ex.getMessage());
+			logger.getLogger().error("# Error getting rooms: " + ex.getMessage());
 		} finally {
 			if (tx != null && tx.isActive()) {
 				tx.rollback();
@@ -282,7 +288,7 @@ public class HotelDAO implements IHotelDAO {
 	}
 
 	public static void main(String[] args) {
-		IHotelDAO dao = new HotelDAO();
+		IHotelDAO dao = new HotelDAO(logger);
 		User user1 = new User("aa", "bb", "1234", "123456789");
 		User user2 = new User("cc", "dd", "1234", "987654321");
 

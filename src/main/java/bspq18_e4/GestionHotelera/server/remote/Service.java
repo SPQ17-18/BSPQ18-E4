@@ -12,15 +12,17 @@ import bspq18_e4.GestionHotelera.server.data.Reservation;
 import bspq18_e4.GestionHotelera.server.data.Room;
 import bspq18_e4.GestionHotelera.server.data.User;
 import bspq18_e4.GestionHotelera.server.dto.UserDTO;
+import bspq18_e4.GestionHotelera.server.logger.ErrorLogger;
 
 public class Service extends UnicastRemoteObject implements IService {
 
 	private static final long serialVersionUID = 1L;
 	private IHotelDAO dao;
 	private Assemble ass;
+	private ErrorLogger logger;
 
 	public Service() throws RemoteException {
-		dao = new HotelDAO();
+		dao = new HotelDAO(logger);
 		ass = new Assemble();
 	}
 	
