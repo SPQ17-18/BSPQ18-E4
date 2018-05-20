@@ -9,8 +9,10 @@ import javax.jdo.PersistenceManagerFactory;
 import javax.jdo.Transaction;
 import javax.jdo.Extent;
 
+import bspq18_e4.GestionHotelera.server.assembler.Assemble;
 import bspq18_e4.GestionHotelera.server.data.Hotel;
 import bspq18_e4.GestionHotelera.server.data.Reservation;
+import bspq18_e4.GestionHotelera.server.data.ReservationRooms;
 import bspq18_e4.GestionHotelera.server.data.Room;
 import bspq18_e4.GestionHotelera.server.data.User;
 import bspq18_e4.GestionHotelera.server.dto.HotelDTO;
@@ -47,6 +49,7 @@ public class HotelDAO implements IHotelDAO {
 	}
 
 	public User getUser(String email, String pass) {
+		Assemble ass = new Assemble();
 		PersistenceManager pm = pmf.getPersistenceManager();
 		pm.getFetchPlan().setMaxFetchDepth(3);
 		Transaction tx = pm.currentTransaction();
@@ -57,8 +60,11 @@ public class HotelDAO implements IHotelDAO {
 			Extent<User> ext = pm.getExtent(User.class, true);
 			for (User user : ext) {
 				if (user.getEmail().equals(email) && user.getPass().equals(pass)) {
-					userSel = user;
-					break;
+					if (user.getReservations().isEmpty()) {
+						userSel = user;
+						break;
+					}
+					// userSel = ass.u
 				}
 			}
 			tx.commit();
@@ -103,7 +109,7 @@ public class HotelDAO implements IHotelDAO {
 
 	public void book(Reservation reservation, ArrayList<Room> rooms) {
 		PersistenceManager pm = pmf.getPersistenceManager();
-		pm.getFetchPlan().setMaxFetchDepth(2);
+		// pm.getFetchPlan().setMaxFetchDepth(2);
 		Transaction tx = pm.currentTransaction();
 
 		try {
@@ -116,16 +122,9 @@ public class HotelDAO implements IHotelDAO {
 				for (Room room : extentRoom) {
 					if (reservation.getUser().getEmail().equals(user.getEmail())) {
 						reservation.setUser(user);
-
 						for (int i = 0; i < rooms.size(); i++) {
-							if (room.getNum() == rooms.get(i).getNum()
-									&& room.getHotel().equals(rooms.get(i).getHotel())) {
-								reservation.addRoom(rooms.get(i));
-								room.setReservation(reservation);
-								pm.makePersistent(room);
-							}
+							pm.makePersistent(new ReservationRooms(rooms.get(i), reservation));
 						}
-						user.addReservation(reservation);
 						pm.makePersistent(user);
 						break;
 					}

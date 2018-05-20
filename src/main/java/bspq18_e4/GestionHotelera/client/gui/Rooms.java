@@ -75,8 +75,7 @@ public class Rooms extends JFrame implements Serializable {
 			public void actionPerformed(ActionEvent e) {
 				HotelDAO dao = new HotelDAO();
 				Assemble ass = new Assemble();
-				// DateFormat df = new SimpleDateFormat("yy-MM-dd");
-				// System.out.println(df.format(darrival.getDate()));
+				
 				int[] rowSelected = table.getSelectedRows();
 				int[] number = new int[table.getSelectedRowCount()];
 				String[] type = new String[table.getSelectedRowCount()];

@@ -10,21 +10,22 @@ import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
 
-@PersistenceCapable(detachable = "true")
+@PersistenceCapable
 public class Reservation implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	@PrimaryKey
-	@Persistent(valueStrategy=IdGeneratorStrategy.INCREMENT)
+	@Persistent(valueStrategy = IdGeneratorStrategy.INCREMENT)
 	private int id;
 	private Date arrival;
 	private Date departure;
 	private User user;
 	private Hotel hotel;
-	
-	@Persistent(defaultFetchGroup="true", mappedBy="reservation", dependentElement = "true")
-	@Join
-	private ArrayList<Room> rooms;
+
+	// @Persistent(defaultFetchGroup="true", mappedBy="reservation",
+	// dependentElement = "true")
+	// @Join
+	// private ArrayList<Room> rooms;
 
 	public Reservation(int id, Date arrival, Date departure, User user, Hotel hotel) {
 		this.id = id;
@@ -32,11 +33,11 @@ public class Reservation implements Serializable {
 		this.departure = departure;
 		this.user = user;
 		this.hotel = hotel;
-		rooms = new ArrayList<Room>();
+		// rooms = new ArrayList<Room>();
 	}
-	
+
 	public Reservation() {
-		
+
 	}
 
 	public int getId() {
@@ -62,14 +63,14 @@ public class Reservation implements Serializable {
 	public void setHotel(Hotel hotel) {
 		this.hotel = hotel;
 	}
-
-	public ArrayList<Room> getRooms() {
-		return rooms;
-	}
-
-	public void setRooms(ArrayList<Room> rooms) {
-		this.rooms = rooms;
-	}
+	//
+	// public ArrayList<Room> getRooms() {
+	// return rooms;
+	// }
+	//
+	// public void setRooms(ArrayList<Room> rooms) {
+	// this.rooms = rooms;
+	// }
 
 	public Date getArrival() {
 		return arrival;
@@ -87,23 +88,24 @@ public class Reservation implements Serializable {
 		this.departure = departure;
 	}
 
-	public void addRoom(Room room) {
-		Room newRoom = new Room();
-		newRoom.setNum(room.getNum());
-		newRoom.setType(room.getType());
-		newRoom.setCapacity(room.getCapacity());
-		newRoom.setPrice(room.getPrice());
-		newRoom.setHotel(room.getHotel());
-		rooms.add(newRoom);
-	}
-	public void removeRoom(Room room) {
-		rooms.remove(room);
-	}
-	
+	// public void addRoom(Room room) {
+	// Room newRoom = new Room();
+	// newRoom.setNum(room.getNum());
+	// newRoom.setType(room.getType());
+	// newRoom.setCapacity(room.getCapacity());
+	// newRoom.setPrice(room.getPrice());
+	// newRoom.setHotel(room.getHotel());
+	// rooms.add(newRoom);
+	// }
+	// public void removeRoom(Room room) {
+	// rooms.remove(room);
+	// }
+
 	@Override
 	public String toString() {
 		return "Reservation [id=" + id + ", arrival=" + arrival + ", departure=" + departure + ", user=" + user
-				+ ", hotel=" + hotel + ", rooms=" + rooms + "]";
+				+ ", hotel=" + hotel + ", rooms=" + /** rooms + **/
+				"]";
 	}
 
 }
