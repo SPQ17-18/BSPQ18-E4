@@ -20,7 +20,7 @@ import bspq18_e4.GestionHotelera.server.dto.RoomDTO;
 import bspq18_e4.GestionHotelera.server.dto.ReservationDTO;
 
 public class AssembleTest {
-
+	
 	private static Assemble ass;
 	private static User user;
 	private static UserDTO userDTO;
@@ -112,4 +112,5 @@ public class AssembleTest {
 		assertEquals(reservationDTO.getArrival(),reservation.getArrival() );
 		assertEquals(reservationDTO.getDeparture(),reservation.getDeparture());
 	}
+	
 }
