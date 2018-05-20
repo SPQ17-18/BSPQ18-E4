@@ -37,7 +37,7 @@ public class HotelDAO implements IHotelDAO {
 			pm.makePersistent(objeto);
 			tx.commit();
 		} catch (Exception ex) {
-			logger.getLogger().error("# Error storing object: " + ex.getMessage());
+			//logger.getLogger().error("# Error storing object: " + ex.getMessage());
 		} finally {
 			if (tx != null && tx.isActive()) {
 				tx.rollback();
@@ -101,7 +101,7 @@ public class HotelDAO implements IHotelDAO {
 			}
 			tx.commit();
 		} catch (Exception ex) {
-			logger.getLogger().error("# Error getting hotelbyid: " + ex.getMessage());
+			//logger.getLogger().error("# Error getting hotelbyid: " + ex.getMessage());
 		} finally {
 			if (tx != null && tx.isActive()) {
 				tx.rollback();
@@ -137,7 +137,7 @@ public class HotelDAO implements IHotelDAO {
 			}
 			tx.commit();
 		} catch (Exception ex) {
-			logger.getLogger().error("# Error booking: " + ex.getMessage());
+			//logger.getLogger().error("# Error booking: " + ex.getMessage());
 		} finally {
 			if (tx != null && tx.isActive()) {
 				tx.rollback();
@@ -161,7 +161,7 @@ public class HotelDAO implements IHotelDAO {
 			}
 			tx.commit();
 		} catch (Exception ex) {
-			logger.getLogger().error("# Error gtting hotels: " + ex.getMessage());
+			//logger.getLogger().error("# Error gtting hotels: " + ex.getMessage());
 		} finally {
 			if (tx != null && tx.isActive()) {
 				tx.rollback();
@@ -194,7 +194,7 @@ public class HotelDAO implements IHotelDAO {
 			}
 			tx.commit();
 		} catch (Exception ex) {
-			logger.getLogger().error("# Error getting hotelsbycity: " + ex.getMessage());
+			//logger.getLogger().error("# Error getting hotelsbycity: " + ex.getMessage());
 		} finally {
 			if (tx != null && tx.isActive()) {
 				tx.rollback();
@@ -221,7 +221,7 @@ public class HotelDAO implements IHotelDAO {
 			}
 			tx.commit();
 		} catch (Exception ex) {
-			logger.getLogger().error("# Error getting reservationsbyuser: " + ex.getMessage());
+			//logger.getLogger().error("# Error getting reservationsbyuser: " + ex.getMessage());
 		} finally {
 			if (tx != null && tx.isActive()) {
 				tx.rollback();
@@ -248,7 +248,7 @@ public class HotelDAO implements IHotelDAO {
 			}
 			tx.commit();
 		} catch (Exception ex) {
-			logger.getLogger().error("# Error getting cities: " + ex.getMessage());
+			//logger.getLogger().error("# Error getting cities: " + ex.getMessage());
 		} finally {
 			if (tx != null && tx.isActive()) {
 				tx.rollback();
@@ -275,7 +275,7 @@ public class HotelDAO implements IHotelDAO {
 			}
 			tx.commit();
 		} catch (Exception ex) {
-			logger.getLogger().error("# Error getting rooms: " + ex.getMessage());
+			//logger.getLogger().error("# Error getting rooms: " + ex.getMessage());
 		} finally {
 			if (tx != null && tx.isActive()) {
 				tx.rollback();
