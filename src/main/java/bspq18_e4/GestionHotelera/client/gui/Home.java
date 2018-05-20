@@ -90,13 +90,13 @@ public class Home extends JFrame {
 		cmbLanguage.setVisible(true);
 		btnCambio = new JButton();
 		btnCambio.setText(resourceBundle.getString("translate"));
-		btnCambio.setBounds(287, 43, 94, 14);
+		btnCambio.setBounds(287, 43, 94, 20);
 		frame.getContentPane().add(btnCambio);
 		btnCambio.setVisible(true);
 
 		final JLabel lblListOfHotels = new JLabel(resourceBundle.getString("lista"));
 		lblListOfHotels.setFont(new Font("Tahoma", Font.BOLD, 16));
-		lblListOfHotels.setBounds(22, 13, 130, 14);
+		lblListOfHotels.setBounds(8, 13, 130, 14);
 		frame.getContentPane().add(lblListOfHotels);
 
 		final JComboBox<String> citybox = new JComboBox<String>();

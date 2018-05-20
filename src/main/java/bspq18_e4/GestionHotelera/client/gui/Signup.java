@@ -65,22 +65,22 @@ public class Signup extends JFrame {
 		frmSignUp.getContentPane().add(cc);
 		
 		tmail = new JTextField();
-		tmail.setBounds(156, 67, 101, 20);
+		tmail.setBounds(156, 67, 101, 23);
 		frmSignUp.getContentPane().add(tmail);
 		tmail.setColumns(10);
 		
 		tuser = new JTextField();
-		tuser.setBounds(156, 97, 101, 20);
+		tuser.setBounds(156, 97, 101, 22);
 		frmSignUp.getContentPane().add(tuser);
 		tuser.setColumns(10);
 		
 		tcc = new JTextField();
-		tcc.setBounds(156, 162, 101, 20);
+		tcc.setBounds(156, 162, 101, 23);
 		frmSignUp.getContentPane().add(tcc);
 		tcc.setColumns(10);
 		
 		tpass = new JPasswordField();
-		tpass.setBounds(156, 130, 101, 20);
+		tpass.setBounds(156, 130, 101, 23);
 		frmSignUp.getContentPane().add(tpass);
 		
 		JButton bsignup = new JButton("Sign up");
