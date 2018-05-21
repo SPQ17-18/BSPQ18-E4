@@ -64,7 +64,7 @@ public class HotelDAO implements IHotelDAO {
 			for (User user : ext) {
 				if (user.getEmail().equals(email) && user.getPass().equals(pass)) {
 					if (user.getReservations().isEmpty()) {
-						//logger.getLogger().info("# Error storing object: " );
+						logger.getLogger().info("# Error storing object: " );
 						userSel = user;
 						break;
 					} else {

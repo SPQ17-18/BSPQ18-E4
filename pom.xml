@@ -170,13 +170,13 @@
 						</excludes>
 					</instrumentation>
 					<check>
-						<branchRate>50</branchRate>
-						<lineRate>60</lineRate>
+						<branchRate>70</branchRate>
+						<lineRate>70</lineRate>
 						<haltOnFailure>true</haltOnFailure>
-						<totalBranchRate>50</totalBranchRate>
-						<totalLineRate>60</totalLineRate>
-						<packageLineRate>50</packageLineRate>
-						<packageBranchRate>50</packageBranchRate>
+						<totalBranchRate>70</totalBranchRate>
+						<totalLineRate>70</totalLineRate>
+						<packageLineRate>70</packageLineRate>
+						<packageBranchRate>70</packageBranchRate>
 						<regexes>
 							<!-- <regex> <pattern>com.example.boringcode.*</pattern> <branchRate>40</branchRate> 
 								<lineRate>30</lineRate> </regex> -->
