@@ -3,13 +3,19 @@ package bspq18_e4.GestionHotelera.server;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 
+import java.util.Date;
+
 import org.junit.Before;
 import org.junit.Test;
 
 import bspq18_e4.GestionHotelera.server.assembler.Assemble;
 import bspq18_e4.GestionHotelera.server.data.Hotel;
+import bspq18_e4.GestionHotelera.server.data.Reservation;
+import bspq18_e4.GestionHotelera.server.data.Room;
 import bspq18_e4.GestionHotelera.server.data.User;
 import bspq18_e4.GestionHotelera.server.dto.HotelDTO;
+import bspq18_e4.GestionHotelera.server.dto.ReservationDTO;
+import bspq18_e4.GestionHotelera.server.dto.RoomDTO;
 import bspq18_e4.GestionHotelera.server.dto.UserDTO;
 
 public class AssembleTest {
@@ -19,12 +25,20 @@ public class AssembleTest {
 	private static UserDTO userDTO;
 	private static Hotel hotel;
 	private static HotelDTO hotelDTO;
+	private static Room room;
+ 	private static RoomDTO roomDTO;
+ 	private static Reservation reservation;
+ 	private static ReservationDTO reservationDTO;	
 	
 	@Before
 	public void setUp() {
 		ass = new Assemble();
 		user = new User("mail@gmail.com", "name", "pass", "1234");
 		hotel = new Hotel(1, "Carton", "Bilbao", "Moyua 33", 5);
+		Date arrival = new Date(1234);
+ 		Date departure = new Date(4321);
+ 		reservation = new Reservation(1, arrival, departure, user, hotel);
+ 		room = new Room(1, "Familiar", 5, 80, hotel, reservation);
 	}
 	
 	@Test
@@ -65,4 +79,41 @@ public class AssembleTest {
 		assertEquals(hotelDTO.getCity(), hotel.getCity());
 		assertEquals(hotelDTO.getStars(), hotel.getStars());
 	}
+	
+	@Test
+ 	public void testRoom() {
+ 		roomDTO = ass.room(room);
+ 		room = ass.roomDTO(roomDTO);
+ 		assertEquals(room.getCapacity(),roomDTO.getCapacity());
+ 		assertEquals(room.getNum(),roomDTO.getNum());
+ 		assertEquals(room.getType(), roomDTO.getType());
+// 		assertEquals(room.getReservation(), roomDTO.getReservation());
+ 	}
+ 	@Test
+ 	public void testRoomDTO() {
+ 		roomDTO = ass.room(room);
+ 		assertEquals(roomDTO.getCapacity(),room.getCapacity());
+ 		assertEquals(roomDTO.getNum(),room.getNum());
+ 		assertEquals(roomDTO.getType(),room.getType());
+// 		assertEquals(room.getReservation(), roomDTO.getReservation());
+ 	}
+ 	@Test
+ 	public void testReservation() {
+ 		reservationDTO = ass.reservation(reservation);
+ 		reservation = ass.reservationDTO(reservationDTO);
+ 		assertEquals(reservation.getId(), reservationDTO.getId());
+ 		assertEquals(reservation.getArrival(), reservationDTO.getArrival());
+ 		assertEquals(reservation.getDeparture(), reservationDTO.getDeparture());
+// 		assertEquals(reservation.getHotel(), reservationDTO.getHotel());
+ 	}
+ 	
+ 	@Test
+ 	public void testReservationDTO() {
+ 		
+ 		reservationDTO = ass.reservation(reservation);
+ 		assertEquals(reservationDTO.getId(),reservation.getId());
+ 		assertEquals(reservationDTO.getArrival(),reservation.getArrival() );
+ 		assertEquals(reservationDTO.getDeparture(),reservation.getDeparture());
+// 		assertEquals(reservationDTO.getHotel(), reservation.getHotel());
+ 	}
 }
