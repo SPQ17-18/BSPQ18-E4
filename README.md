@@ -18,3 +18,6 @@ To test (do not forget to stop the RMIRegistry)
 
 To generate cobertura reports
 - mvn cobertura:cobertura
+
+Doxygen GitHub pages
+https://spq17-18.github.io/BSPQ18-E4/
