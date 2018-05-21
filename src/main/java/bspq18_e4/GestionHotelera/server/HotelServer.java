@@ -20,17 +20,17 @@ public class HotelServer {
 		String name = "//" + args[0] + ":" + args[1] + "/" + args[2];
 
 		try {
-			IService deustoBox = new Service();
-			Naming.rebind(name, deustoBox);
+			IService hotelServer = new Service();
+			Naming.rebind(name, hotelServer);
 
-			System.out.println("alelya");
+			System.out.println("Server ready and waiting...");
 
 			java.io.InputStreamReader inputStreamReader = new java.io.InputStreamReader(System.in);
 			java.io.BufferedReader stdin = new java.io.BufferedReader(inputStreamReader);
 			String line = stdin.readLine();
 			
 		} catch (Exception e) {
-			System.err.println("$ DeustoBox exception: " + e.getMessage());
+			System.err.println("$ Hotel exception: " + e.getMessage());
 			e.printStackTrace();
 		}
 	}

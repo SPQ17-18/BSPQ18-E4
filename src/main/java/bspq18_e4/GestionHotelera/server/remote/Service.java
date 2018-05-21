@@ -8,17 +8,21 @@ import bspq18_e4.GestionHotelera.server.assembler.Assemble;
 import bspq18_e4.GestionHotelera.server.dao.HotelDAO;
 import bspq18_e4.GestionHotelera.server.dao.IHotelDAO;
 import bspq18_e4.GestionHotelera.server.data.Hotel;
+import bspq18_e4.GestionHotelera.server.data.Reservation;
+import bspq18_e4.GestionHotelera.server.data.Room;
 import bspq18_e4.GestionHotelera.server.data.User;
 import bspq18_e4.GestionHotelera.server.dto.UserDTO;
+import bspq18_e4.GestionHotelera.server.logger.ErrorLogger;
 
 public class Service extends UnicastRemoteObject implements IService {
 
 	private static final long serialVersionUID = 1L;
 	private IHotelDAO dao;
 	private Assemble ass;
+	private ErrorLogger logger;
 
 	public Service() throws RemoteException {
-		dao = new HotelDAO();
+		dao = new HotelDAO(logger);
 		ass = new Assemble();
 	}
 	
@@ -31,9 +35,27 @@ public class Service extends UnicastRemoteObject implements IService {
 		}
 	}
 	
-	public void register(UserDTO userDTO) throws RemoteException {
-		dao.register(ass.userDTO(userDTO));
+	public void register(UserDTO userDto) throws RemoteException {
+		dao.register(ass.userDTO(userDto));
 	}
 	
+	public boolean isRegistered(UserDTO userDto) throws RemoteException {
+		User user = null;
+		try {
+			user = dao.getUser(userDto.getEmail(), userDto.getPass());
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		if (user!=null) {
+			return true;
+		} else {
+			user = new User(userDto.getEmail(), userDto.getName(), userDto.getPass(), userDto.getCc());
+			return false;
+		}
+	}
 	
+	public void book(Reservation reservation, ArrayList<Room> rooms) throws RemoteException {
+		dao.book(reservation, rooms);
+	}
 }

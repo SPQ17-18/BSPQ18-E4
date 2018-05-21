@@ -13,15 +13,21 @@ public class Room implements Serializable {
 	private int capacity;
 	private double price;
 	private Hotel hotel;
+	private Reservation reservation;
 
-	public Room(int num, String type, int capacity, double price, Hotel hotel) {
+	public Room(int num, String type, int capacity, double price, Hotel hotel, Reservation reservation) {
 		this.num = num;
 		this.type = type;
 		this.capacity = capacity;
 		this.price = price;
 		this.hotel = hotel;
+		this.reservation = reservation;
 	}
 
+	public Room() {
+		
+	}
+	
 	public int getNum() {
 		return num;
 	}
@@ -62,6 +68,14 @@ public class Room implements Serializable {
 		this.hotel = hotel;
 	}
 
+	public Reservation getReservation() {
+		return reservation;
+	}
+
+	public void setReservation(Reservation reservation) {
+		this.reservation = reservation;
+	}
+	
 	@Override
 	public String toString() {
 		return "Room [num=" + num + ", type=" + type + ", capacity=" + capacity + ", price=" + price + ", hotel="

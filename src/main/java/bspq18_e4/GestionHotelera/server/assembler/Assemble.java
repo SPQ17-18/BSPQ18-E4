@@ -52,12 +52,12 @@ public class Assemble {
 	}
 	
 	public RoomDTO room(Room room) {
-		RoomDTO roomDTO = new RoomDTO(room.getNum(),room.getType(), room.getCapacity(), room.getPrice(), hotel(room.getHotel()));
+		RoomDTO roomDTO = new RoomDTO(room.getNum(),room.getType(), room.getCapacity(), room.getPrice(), hotel(room.getHotel()), reservation(room.getReservation()));
 		return roomDTO;
 	}
 	
 	public Room roomDTO(RoomDTO roomDTO) {
-		Room room = new Room(roomDTO.getNum(),roomDTO.getType(), roomDTO.getCapacity(), roomDTO.getPrice(), hotelDTO(roomDTO.getHotel()));
+		Room room = new Room(roomDTO.getNum(),roomDTO.getType(), roomDTO.getCapacity(), roomDTO.getPrice(), hotelDTO(roomDTO.getHotel()), reservationDTO(roomDTO.getReservation()));
 		return room;
 	}
 
